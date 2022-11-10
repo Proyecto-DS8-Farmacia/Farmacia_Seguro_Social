@@ -399,7 +399,7 @@ Partial Class Form1
         Me.btnInicioSesion.ForeColor = System.Drawing.Color.White
         Me.btnInicioSesion.Image = Global.CapaPresentacion.My.Resources.Resources.logologin1
         Me.btnInicioSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnInicioSesion.Location = New System.Drawing.Point(0, 11)
+        Me.btnInicioSesion.Location = New System.Drawing.Point(0, 3)
         Me.btnInicioSesion.Name = "btnInicioSesion"
         Me.btnInicioSesion.Size = New System.Drawing.Size(215, 58)
         Me.btnInicioSesion.TabIndex = 8
