@@ -63,7 +63,7 @@ Partial Class Encargado
         '
         'btnReStock
         '
-        Me.btnReStock.Location = New System.Drawing.Point(632, 219)
+        Me.btnReStock.Location = New System.Drawing.Point(377, 183)
         Me.btnReStock.Name = "btnReStock"
         Me.btnReStock.Size = New System.Drawing.Size(156, 30)
         Me.btnReStock.TabIndex = 10
@@ -222,6 +222,12 @@ Partial Class Encargado
         Me.btnMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.btnMenu.TabIndex = 0
         Me.btnMenu.TabStop = False
+        '
+        'tmMostrarMenu
+        '
+        '
+        'tmOcultarMenu
+        '
         '
         'Encargado
         '
