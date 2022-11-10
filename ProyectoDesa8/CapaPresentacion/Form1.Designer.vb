@@ -209,7 +209,7 @@ Partial Class Form1
         '
         Me.txtContraseña.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.txtContraseña.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.txtContraseña.Location = New System.Drawing.Point(206, 200)
+        Me.txtContraseña.Location = New System.Drawing.Point(206, 229)
         Me.txtContraseña.Name = "txtContraseña"
         Me.txtContraseña.Size = New System.Drawing.Size(180, 26)
         Me.txtContraseña.TabIndex = 4
