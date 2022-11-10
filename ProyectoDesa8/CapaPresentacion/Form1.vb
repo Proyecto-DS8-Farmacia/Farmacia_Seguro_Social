@@ -73,5 +73,8 @@
         Me.Hide()
     End Sub
 
-
+    Private Sub btnAdministrador_Click(sender As Object, e As EventArgs) Handles btnAdministrador.Click
+        Administrador.Show()
+        Me.Hide()
+    End Sub
 End Class
