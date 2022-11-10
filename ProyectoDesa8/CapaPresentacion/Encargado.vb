@@ -44,15 +44,6 @@
         Me.Show()
     End Sub
 
-    Private Sub btnFarmaceuta_Click(sender As Object, e As EventArgs) Handles btnFarmaceuta.Click
-        Farmaceuta.Show()
-        Me.Hide()
-    End Sub
-
-    Private Sub btnPaciente_Click(sender As Object, e As EventArgs) Handles btnPaciente.Click
-        Paciente.Show()
-        Me.Hide()
-    End Sub
 
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
         Form1.Close()

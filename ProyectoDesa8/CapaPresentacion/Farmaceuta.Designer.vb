@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Farmaceuta
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Farmaceuta
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.btnRegistrarRe = New System.Windows.Forms.Button()
@@ -29,6 +29,7 @@ Partial Class Farmaceuta
         Me.PanelMenu = New System.Windows.Forms.Panel()
         Me.btnSalir = New System.Windows.Forms.Button()
         Me.PanelMenuSmall = New System.Windows.Forms.Panel()
+        Me.btnAdministrador = New System.Windows.Forms.Button()
         Me.btnInicioSesion = New System.Windows.Forms.Button()
         Me.btnPaciente = New System.Windows.Forms.Button()
         Me.btnFarmaceuta = New System.Windows.Forms.Button()
@@ -37,6 +38,7 @@ Partial Class Farmaceuta
         Me.btnMenu = New System.Windows.Forms.PictureBox()
         Me.tmOcultarMenu = New System.Windows.Forms.Timer(Me.components)
         Me.tmMostrarMenu = New System.Windows.Forms.Timer(Me.components)
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.PanelMenu.SuspendLayout()
         Me.PanelMenuSmall.SuspendLayout()
         CType(Me.btnMenu, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -102,6 +104,7 @@ Partial Class Farmaceuta
         'PanelMenuSmall
         '
         Me.PanelMenuSmall.BackColor = System.Drawing.Color.Transparent
+        Me.PanelMenuSmall.Controls.Add(Me.btnAdministrador)
         Me.PanelMenuSmall.Controls.Add(Me.btnInicioSesion)
         Me.PanelMenuSmall.Controls.Add(Me.btnPaciente)
         Me.PanelMenuSmall.Controls.Add(Me.btnFarmaceuta)
@@ -109,8 +112,26 @@ Partial Class Farmaceuta
         Me.PanelMenuSmall.Controls.Add(Me.btnPerfil)
         Me.PanelMenuSmall.Location = New System.Drawing.Point(3, 80)
         Me.PanelMenuSmall.Name = "PanelMenuSmall"
-        Me.PanelMenuSmall.Size = New System.Drawing.Size(214, 334)
+        Me.PanelMenuSmall.Size = New System.Drawing.Size(214, 378)
         Me.PanelMenuSmall.TabIndex = 1
+        '
+        'btnAdministrador
+        '
+        Me.btnAdministrador.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnAdministrador.FlatAppearance.BorderSize = 0
+        Me.btnAdministrador.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnAdministrador.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnAdministrador.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAdministrador.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.btnAdministrador.ForeColor = System.Drawing.Color.White
+        Me.btnAdministrador.Image = Global.CapaPresentacion.My.Resources.Resources.empleados
+        Me.btnAdministrador.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnAdministrador.Location = New System.Drawing.Point(-1, 320)
+        Me.btnAdministrador.Name = "btnAdministrador"
+        Me.btnAdministrador.Size = New System.Drawing.Size(215, 58)
+        Me.btnAdministrador.TabIndex = 15
+        Me.btnAdministrador.Text = "    Administrador"
+        Me.btnAdministrador.UseVisualStyleBackColor = True
         '
         'btnInicioSesion
         '
@@ -213,12 +234,28 @@ Partial Class Farmaceuta
         Me.btnMenu.TabIndex = 0
         Me.btnMenu.TabStop = False
         '
+        'tmOcultarMenu
+        '
+        '
+        'tmMostrarMenu
+        '
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(609, 311)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(156, 50)
+        Me.Button2.TabIndex = 18
+        Me.Button2.Text = "Pacientes De la Farmacia"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'Farmaceuta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(1084, 561)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.PanelMenu)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.btnRegistrarRe)
@@ -245,4 +282,6 @@ Partial Class Farmaceuta
     Friend WithEvents btnMenu As PictureBox
     Friend WithEvents tmOcultarMenu As Timer
     Friend WithEvents tmMostrarMenu As Timer
+    Friend WithEvents btnAdministrador As Button
+    Friend WithEvents Button2 As Button
 End Class

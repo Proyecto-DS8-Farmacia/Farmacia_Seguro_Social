@@ -29,6 +29,7 @@ Partial Class Perfil
         Me.PanelMenu = New System.Windows.Forms.Panel()
         Me.btnSalir = New System.Windows.Forms.Button()
         Me.PanelMenuSmall = New System.Windows.Forms.Panel()
+        Me.btnAdministrador = New System.Windows.Forms.Button()
         Me.btnInicioSesion = New System.Windows.Forms.Button()
         Me.btnPaciente = New System.Windows.Forms.Button()
         Me.btnFarmaceuta = New System.Windows.Forms.Button()
@@ -63,7 +64,7 @@ Partial Class Perfil
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(398, 132)
+        Me.Label2.Location = New System.Drawing.Point(241, 307)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(275, 15)
         Me.Label2.TabIndex = 8
@@ -102,6 +103,7 @@ Partial Class Perfil
         'PanelMenuSmall
         '
         Me.PanelMenuSmall.BackColor = System.Drawing.Color.Transparent
+        Me.PanelMenuSmall.Controls.Add(Me.btnAdministrador)
         Me.PanelMenuSmall.Controls.Add(Me.btnInicioSesion)
         Me.PanelMenuSmall.Controls.Add(Me.btnPaciente)
         Me.PanelMenuSmall.Controls.Add(Me.btnFarmaceuta)
@@ -109,8 +111,26 @@ Partial Class Perfil
         Me.PanelMenuSmall.Controls.Add(Me.btnPerfil)
         Me.PanelMenuSmall.Location = New System.Drawing.Point(3, 80)
         Me.PanelMenuSmall.Name = "PanelMenuSmall"
-        Me.PanelMenuSmall.Size = New System.Drawing.Size(214, 334)
+        Me.PanelMenuSmall.Size = New System.Drawing.Size(214, 390)
         Me.PanelMenuSmall.TabIndex = 1
+        '
+        'btnAdministrador
+        '
+        Me.btnAdministrador.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnAdministrador.FlatAppearance.BorderSize = 0
+        Me.btnAdministrador.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnAdministrador.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnAdministrador.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAdministrador.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.btnAdministrador.ForeColor = System.Drawing.Color.White
+        Me.btnAdministrador.Image = Global.CapaPresentacion.My.Resources.Resources.empleados
+        Me.btnAdministrador.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnAdministrador.Location = New System.Drawing.Point(-1, 329)
+        Me.btnAdministrador.Name = "btnAdministrador"
+        Me.btnAdministrador.Size = New System.Drawing.Size(215, 58)
+        Me.btnAdministrador.TabIndex = 16
+        Me.btnAdministrador.Text = "    Administrador"
+        Me.btnAdministrador.UseVisualStyleBackColor = True
         '
         'btnInicioSesion
         '
@@ -252,4 +272,5 @@ Partial Class Perfil
     Friend WithEvents btnInicioSesion As Button
     Friend WithEvents tmMostrarMenu As Timer
     Friend WithEvents tmOcultarMenu As Timer
+    Friend WithEvents btnAdministrador As Button
 End Class
