@@ -438,6 +438,16 @@ from Proveedor as p join Farmacia_Proveedor as fp on p.cod_proveedor = fp.cod_pr
 -----------------------
 --Dividir x pantallas--
 -----------------------
+--Pantalla: Inicio Sesión 
+create procedure inicio_sesion
+@CORREO_E varchar(25),
+@CONTRASEÑA varchar(30)
+as
+select * from usuario
+where correo_e = @CORREO_E and contraseña = @CONTRASEÑA
+
+
+
 --Pantalla: Consultar Inventario
 create procedure Pa_ListarTablaSustanciaPorNombreFarmacia
 as
