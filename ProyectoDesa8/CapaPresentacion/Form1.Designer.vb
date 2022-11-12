@@ -211,6 +211,7 @@ Partial Class Form1
         Me.txtContraseña.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.txtContraseña.Location = New System.Drawing.Point(206, 214)
         Me.txtContraseña.Name = "txtContraseña"
+        Me.txtContraseña.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtContraseña.Size = New System.Drawing.Size(180, 26)
         Me.txtContraseña.TabIndex = 4
         '

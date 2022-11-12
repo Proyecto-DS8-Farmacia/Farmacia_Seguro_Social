@@ -13,4 +13,21 @@ Public Class Metodos
             End Using
         End Using
     End Function
+
+    Public Shared Function INICIAR_SESION(CORREO As String, CONTRASEÑA As String) As String
+        Using CN As New SqlConnection(My.Settings.Conexion)
+            Using CMD As New SqlCommand("inicio_sesion", CN)
+                CMD.CommandType = CommandType.StoredProcedure
+                'CMD.Parameters.AddWithValue("@ENSQLSERVER", ENVISUALSTUDIO)
+                CMD.Parameters.AddWithValue("@CORREO_E", CORREO)
+                CMD.Parameters.AddWithValue("@CONTRASEÑA", CONTRASEÑA)
+                CN.Open()
+                Return CMD.ExecuteReader().HasRows.ToString
+
+            End Using
+        End Using
+
+    End Function
+
+
 End Class

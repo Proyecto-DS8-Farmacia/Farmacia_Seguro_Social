@@ -1,4 +1,7 @@
-﻿Public Class Form1
+﻿Imports System.Text.RegularExpressions
+
+Public Class Form1
+    Dim correo_e, contraseña, tipoUsuario As String
 
     Private Sub PanelContenidoSmall_Paint(sender As Object, e As PaintEventArgs) Handles PanelContenidoSmall.Paint
         PanelContenidoSmall.BackColor = Color.FromArgb(100, 0, 45, 0)
@@ -61,7 +64,47 @@
     End Sub
 
     Private Sub btnIngresar_Click(sender As Object, e As EventArgs) Handles btnIngresar.Click
+        Dim regex As Regex = New Regex("^[^@\s]+@[^@\s]+\.[^@\s]+$")
+        Dim validocorreo As Boolean = regex.IsMatch(txtCorreo.Text.Trim)
 
+        'correo_e = txtCorreo.Text
+        'contraseña = txtContraseña.Text
+
+        If (txtCorreo.Text.Equals("") Or txtContraseña.Text.Equals("")) Then
+            MessageBox.Show("Ingrese sus datos correctamente.", "Aviso!!", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Else
+            If Not validocorreo Then
+                MessageBox.Show("Ingrese un correo valido.", "Aviso!!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Else
+                If (CapaDatos.Metodos.INICIAR_SESION(txtCorreo.Text.ToString, txtContraseña.Text.ToString)) Then
+
+                    If (optAdmin.Checked) Then
+                        Administrador.Show()
+                        Me.Hide()
+                    ElseIf (optEncargadoInv.Checked) Then
+                        Encargado.Show()
+                        Me.Hide()
+                    ElseIf (optFarmaceuta.Checked) Then
+                        Farmaceuta.Show()
+                        Me.Hide()
+                    ElseIf (optPaciente.Checked) Then
+                        Farmaceuta.Show()
+                        Me.Hide()
+                    ElseIf optAdmin.Checked = False Or optEncargadoInv.Checked = False Or optFarmaceuta.Checked = False Or optPaciente.Checked = False Then
+                        MessageBox.Show("Seleccione su tipo de usuario", "Aviso!!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                    End If
+
+                Else
+                    MessageBox.Show("No se inicio sesion.", "Aviso!!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                End If
+                'Administrador.Show()
+                'Me.Hide()
+            End If
+
+            'If (optAdmin.Checked) Then
+            'Administrador.Show()
+            'End If
+        End If
     End Sub
 
     Private Sub btnRegistrar_Click(sender As Object, e As EventArgs) Handles btnRegistrar.Click
