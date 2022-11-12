@@ -227,7 +227,7 @@ Partial Class Form1
         '
         Me.txtCorreo.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.txtCorreo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.txtCorreo.Location = New System.Drawing.Point(257, 159)
+        Me.txtCorreo.Location = New System.Drawing.Point(235, 158)
         Me.txtCorreo.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtCorreo.Name = "txtCorreo"
         Me.txtCorreo.Size = New System.Drawing.Size(205, 30)
