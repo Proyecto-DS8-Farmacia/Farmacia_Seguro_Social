@@ -212,7 +212,7 @@ Partial Class Form1
         Me.txtContraseña.Location = New System.Drawing.Point(206, 214)
         Me.txtContraseña.Name = "txtContraseña"
         Me.txtContraseña.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtContraseña.Size = New System.Drawing.Size(180, 26)
+        Me.txtContraseña.Size = New System.Drawing.Size(325, 26)
         Me.txtContraseña.TabIndex = 4
         '
         'txtCorreo
@@ -221,7 +221,7 @@ Partial Class Form1
         Me.txtCorreo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.txtCorreo.Location = New System.Drawing.Point(206, 120)
         Me.txtCorreo.Name = "txtCorreo"
-        Me.txtCorreo.Size = New System.Drawing.Size(180, 26)
+        Me.txtCorreo.Size = New System.Drawing.Size(325, 26)
         Me.txtCorreo.TabIndex = 3
         '
         'PictureBox2

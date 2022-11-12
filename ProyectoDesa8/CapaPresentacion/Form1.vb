@@ -95,7 +95,7 @@ Public Class Form1
                     End If
 
                 Else
-                    MessageBox.Show("No se inicio sesion.", "Aviso!!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                    MessageBox.Show("No se inicio sesion. Revise sus credenciales.", "Aviso!!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                 End If
                 'Administrador.Show()
                 'Me.Hide()
