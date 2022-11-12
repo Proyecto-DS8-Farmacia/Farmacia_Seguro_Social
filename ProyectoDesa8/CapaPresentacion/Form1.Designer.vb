@@ -176,7 +176,7 @@ Partial Class Form1
         Me.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnIngresar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.btnIngresar.ForeColor = System.Drawing.Color.White
-        Me.btnIngresar.Location = New System.Drawing.Point(30, 419)
+        Me.btnIngresar.Location = New System.Drawing.Point(29, 419)
         Me.btnIngresar.Name = "btnIngresar"
         Me.btnIngresar.Size = New System.Drawing.Size(167, 35)
         Me.btnIngresar.TabIndex = 7
