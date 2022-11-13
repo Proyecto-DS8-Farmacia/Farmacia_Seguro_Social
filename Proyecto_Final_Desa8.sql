@@ -446,6 +446,18 @@ as
 select * from usuario
 where correo_e = @CORREO_E and contraseña = @CONTRASEÑA
 
+------------------------------------------------------------------------------------------------
+------------------------CREACION PROCEDIMIENTOS INICIO-------------------------------------
+------------------------------------------------------------------------------------------------
+create procedure inicio_sesionB
+@CORREO_E varchar(25),
+@CONTRASEÑA varchar(30),
+@TIPO varchar(30)
+as
+
+select * from Usuario   --@CORREO_E @CONTRASEÑA 
+where correo_e = 'jose567@gmail.com'  and contraseña =  'ochoxd12' and tipo=' encargado_inventario'
+
 
 
 --Pantalla: Consultar Inventario
