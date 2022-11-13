@@ -76,30 +76,25 @@ Public Class Form1
             If Not validocorreo Then
                 MessageBox.Show("Ingrese un correo valido.", "Aviso!!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Else
-                If (CapaDatos.Metodos.INICIAR_SESION(txtCorreo.Text.ToString, txtContraseña.Text.ToString)) Then
 
-                    If (optAdmin.Checked) Then
-                        Administrador.Show()
-                        Me.Hide()
-                    ElseIf (optEncargadoInv.Checked) Then
-                        Encargado.Show()
-                        Me.Hide()
-                    ElseIf (optFarmaceuta.Checked) Then
-                        Farmaceuta.Show()
-                        Me.Hide()
-                    ElseIf (optPaciente.Checked) Then
-                        Farmaceuta.Show()
-                        Me.Hide()
-                    ElseIf optAdmin.Checked = False Or optEncargadoInv.Checked = False Or optFarmaceuta.Checked = False Or optPaciente.Checked = False Then
-                        MessageBox.Show("Seleccione su tipo de usuario", "Aviso!!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-                    End If
 
+                If (CapaDatos.Metodos.INICIAR_SESION(txtCorreo.Text.ToString, txtContraseña.Text.ToString, "administrador")) Then
+                    Administrador.Show()
+                    Me.Hide()
+                ElseIf (CapaDatos.Metodos.INICIAR_SESION(txtCorreo.Text.ToString, txtContraseña.Text.ToString, " encargado_inventario")) Then
+                    Encargado.Show()
+                    Me.Hide()
+                ElseIf (CapaDatos.Metodos.INICIAR_SESION(txtCorreo.Text.ToString, txtContraseña.Text.ToString, "farmaceuta")) Then
+                    Farmaceuta.Show()
+                    Me.Hide()
                 Else
                     MessageBox.Show("No se inicio sesion. Revise sus credenciales.", "Aviso!!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                    End If
+
+
+                    'Administrador.Show()
+                    'Me.Hide()
                 End If
-                'Administrador.Show()
-                'Me.Hide()
-            End If
 
             'If (optAdmin.Checked) Then
             'Administrador.Show()
