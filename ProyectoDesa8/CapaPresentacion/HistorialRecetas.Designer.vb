@@ -29,7 +29,7 @@ Partial Class HistorialRecetas
         'dgvHistorialRe
         '
         Me.dgvHistorialRe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvHistorialRe.Location = New System.Drawing.Point(121, 125)
+        Me.dgvHistorialRe.Location = New System.Drawing.Point(65, 58)
         Me.dgvHistorialRe.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.dgvHistorialRe.Name = "dgvHistorialRe"
         Me.dgvHistorialRe.RowHeadersWidth = 51
