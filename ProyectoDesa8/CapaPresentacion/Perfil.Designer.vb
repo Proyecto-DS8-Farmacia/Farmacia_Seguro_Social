@@ -46,27 +46,27 @@ Partial Class Perfil
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(398, 44)
+        Me.Label1.Location = New System.Drawing.Point(388, 91)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(296, 15)
+        Me.Label1.Size = New System.Drawing.Size(305, 15)
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "Traer datos del admin/encargado/farmaceuta/paciente"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(398, 83)
+        Me.Label4.Location = New System.Drawing.Point(388, 198)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(323, 15)
+        Me.Label4.Size = New System.Drawing.Size(328, 15)
         Me.Label4.TabIndex = 7
         Me.Label4.Text = "Actualizar datos del admin/encargado/farmaceuta/paciente"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(241, 307)
+        Me.Label2.Location = New System.Drawing.Point(454, 326)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(275, 15)
+        Me.Label2.Size = New System.Drawing.Size(284, 15)
         Me.Label2.TabIndex = 8
         Me.Label2.Text = "Eliminar datos del encargado/farmaceuta/paciente"
         '
