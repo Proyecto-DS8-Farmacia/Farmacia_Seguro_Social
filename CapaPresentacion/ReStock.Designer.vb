@@ -262,7 +262,7 @@ Partial Class ReStock
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button1.Font = New System.Drawing.Font("Arial Rounded MT Bold", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(667, 590)
+        Me.Button1.Location = New System.Drawing.Point(670, 594)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(251, 51)
         Me.Button1.TabIndex = 28
