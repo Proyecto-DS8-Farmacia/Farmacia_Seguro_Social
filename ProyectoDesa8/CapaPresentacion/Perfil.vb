@@ -56,4 +56,53 @@
         Form1.Close()
     End Sub
 
+    Private Sub Perfil_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim tiposusuario As New DataView(CapaDatos.Metodos.TIPOSDEUSUARIO)
+        Dim farmacias As New DataView(CapaDatos.Metodos.FARMACIAS)
+        cboFarmacia.ValueMember = "nombre"
+        cboFarmacia.DisplayMember = "nombre"
+        cboTiposUsuario.ValueMember = "tipo"
+        cboTiposUsuario.DisplayMember = "tipo"
+        cboFarmacia.DataSource = farmacias
+        cboTiposUsuario.DataSource = tiposusuario
+    End Sub
+
+    Private Sub cboFarmacia_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboFarmacia.SelectedValueChanged
+        Dim Data As New DataView(CapaDatos.Metodos.DATOSDEUSUARIO)
+        If (cboFarmacia.SelectedValue IsNot Nothing And cboTiposUsuario.SelectedValue IsNot Nothing) Then
+            Data.RowFilter = "farmacia like '" & cboFarmacia.SelectedValue.ToString & "' and tipo like '" & cboTiposUsuario.SelectedValue.ToString & "' "
+            cboCedula.ValueMember = "cedula"
+            cboCedula.DisplayMember = "cedula"
+            cboCedula.DataSource = Data
+        End If
+    End Sub
+
+    Private Sub cboTiposUsuario_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboTiposUsuario.SelectedIndexChanged
+        Dim Data As New DataView(CapaDatos.Metodos.DATOSDEUSUARIO)
+        If (cboFarmacia.SelectedValue IsNot Nothing And cboTiposUsuario.SelectedValue IsNot Nothing) Then
+            Data.RowFilter = "farmacia like '" & cboFarmacia.SelectedValue.ToString & "' and tipo like '" & cboTiposUsuario.SelectedValue.ToString & "' "
+            cboCedula.ValueMember = "cedula"
+            cboCedula.DisplayMember = "cedula"
+            cboCedula.DataSource = Data
+        End If
+    End Sub
+
+    Private Sub btnConsultar_Click(sender As Object, e As EventArgs) Handles btnConsultar.Click
+        Dim Data As New DataView(CapaDatos.Metodos.DATOSDEUSUARIO)
+        Dim tiposusuario As String
+        Dim toupper As String
+        Data.RowFilter = "farmacia = '" & cboFarmacia.SelectedValue.ToString &
+            "' and tipo = '" & cboTiposUsuario.SelectedValue.ToString &
+            "' and cedula = '" & cboCedula.SelectedValue.ToString & "'"
+        DataGridView1.DataSource = Data
+        lblTipodeUsuario.Text = DataGridView1.Rows(0).Cells(4).Value
+        lblNombre.Text = DataGridView1.Rows(0).Cells(2).Value
+        txtcedula.Text = DataGridView1.Rows(0).Cells(0).Value
+        txtCorreo.Text = DataGridView1.Rows(0).Cells(1).Value
+        txtTelefono.Text = DataGridView1.Rows(0).Cells(3).Value
+        txtFarmacia.Text = DataGridView1.Rows(0).Cells(5).Value
+
+    End Sub
+
+
 End Class
