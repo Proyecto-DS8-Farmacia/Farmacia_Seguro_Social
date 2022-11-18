@@ -112,7 +112,9 @@
 
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Dim Data As New DataView(CapaDatos.Metodos.ActualizarUSUARIO(txtcedula.Text.ToString, txtPerfilNombre.Text.ToString, txtPerfilapellido.Text.ToString, txtCorreo.Text.ToString, txtTelefono.Text.ToString, "2"))
-
+        CapaDatos.Metodos.ActualizarUSUARIO(txtcedula.Text.ToString, txtPerfilNombre.Text.ToString, txtPerfilapellido.Text.ToString, txtCorreo.Text.ToString, txtTelefono.Text.ToString, "2")
+        If (False) Then
+            MsgBox("DATOS EDITADOS CORRECTAMENTE")
+        End If
     End Sub
 End Class
