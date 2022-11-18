@@ -89,20 +89,30 @@
 
     Private Sub btnConsultar_Click(sender As Object, e As EventArgs) Handles btnConsultar.Click
         Dim Data As New DataView(CapaDatos.Metodos.DATOSDEUSUARIO)
+
         Dim tiposusuario As String
         Dim toupper As String
+
         Data.RowFilter = "farmacia = '" & cboFarmacia.SelectedValue.ToString &
             "' and tipo = '" & cboTiposUsuario.SelectedValue.ToString &
             "' and cedula = '" & cboCedula.SelectedValue.ToString & "'"
         DataGridView1.DataSource = Data
-        lblTipodeUsuario.Text = DataGridView1.Rows(0).Cells(4).Value
-        lblNombre.Text = DataGridView1.Rows(0).Cells(2).Value
-        txtcedula.Text = DataGridView1.Rows(0).Cells(0).Value
-        txtCorreo.Text = DataGridView1.Rows(0).Cells(1).Value
-        txtTelefono.Text = DataGridView1.Rows(0).Cells(3).Value
-        txtFarmacia.Text = DataGridView1.Rows(0).Cells(5).Value
+
+        lblTipodeUsuario.Text = DataGridView1.Rows(0).Cells(4).Value      'TipodeUsuario'
+        lblNombre.Text = DataGridView1.Rows(0).Cells(2).Value + " " + DataGridView1.Rows(0).Cells(3).Value             'Nombre'
+        txtPerfilNombre.Text = DataGridView1.Rows(0).Cells(2).Value
+        txtPerfilapellido.Text = DataGridView1.Rows(0).Cells(3).Value 'Apellido'
+
+        '' txtcedula.Text = DataGridView1.Rows(0).Cells(0).Value             'Cedula' 
+        txtCorreo.Text = DataGridView1.Rows(0).Cells(1).Value             'Correo'
+        txtTelefono.Text = DataGridView1.Rows(0).Cells(4).Value           'Telefono'
+        txtFarmacia.Text = DataGridView1.Rows(0).Cells(6).Value           'Farmacia'
 
     End Sub
 
 
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Dim Data As New DataView(CapaDatos.Metodos.ActualizarUSUARIO(txtcedula.Text.ToString, txtPerfilNombre.Text.ToString, txtPerfilapellido.Text.ToString, txtCorreo.Text.ToString, txtTelefono.Text.ToString, "2"))
+
+    End Sub
 End Class
