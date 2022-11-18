@@ -5,18 +5,23 @@ PARTES AGREGADAS
 
 
 [X][Inicio session]
+<p>
+[ ] Registrar paciente <br> 
+[ ] Recuperar Contraseña <br>
+[ ] Traer Datos de usuario <br>
+[ ] Actualizar datos de usuario <br>
+[ ] Eliminar datos de usuario <br>
+[ ] registrar sustancia <br>
+[ ] Consultar inventario <br>
+[ ] actualizar inventario <br>
+Farmaceuta <br>
+[ ]  Consultar inventario<br>
 
-[ ] Registrar paciente //n
-[ ] Recuperar Contraseña
-[ ] Traer Datos de usuario
-[ ] Actualizar datos de usuario
-[ ] Eliminar datos de usuario
-[ ] registrar sustancia
-[ ] Consultar inventario
-[ ] actualizar inventario
-Farmaceuta 
-[ ]  Consultar inventario
+Paciente <br>
+[ ]  Consultar inventario de farmacias<br>
+[ ]    Historial de recetas<br>
 
-Paciente 
-[ ]  Consultar inventario de farmacias
-[ ]    Historial de recetas
+
+</p>
+
+
