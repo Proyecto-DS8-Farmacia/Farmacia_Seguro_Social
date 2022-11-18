@@ -5,7 +5,8 @@ PARTES AGREGADAS
 
 
 [X][Inicio session]
-[ ] Registrar paciente
+
+[ ] Registrar paciente //n
 [ ] Recuperar Contraseña
 [ ] Traer Datos de usuario
 [ ] Actualizar datos de usuario
