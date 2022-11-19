@@ -141,12 +141,12 @@
         If (CheckBox1.Checked) Then
             cboFarmacia_Select.Enabled = True
 
+
             Farmacia = (cboFarmacia_Select.SelectedIndex + 1).ToString
         Else
             cboFarmacia_Select.Enabled = False
             Farmacia = (cboFarmacia.SelectedIndex + 1).ToString
         End If
     End Sub
-
 
 End Class
