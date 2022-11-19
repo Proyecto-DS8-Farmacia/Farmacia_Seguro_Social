@@ -44,12 +44,12 @@ Partial Class Perfil
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.txtnombre = New System.Windows.Forms.Panel()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.cboFarmacia_Select = New System.Windows.Forms.ComboBox()
         Me.txtPerfilapellido = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtPerfilNombre = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.txtFarmacia = New System.Windows.Forms.TextBox()
         Me.txtTelefono = New System.Windows.Forms.TextBox()
         Me.txtCorreo = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -335,12 +335,12 @@ Partial Class Perfil
         'txtnombre
         '
         Me.txtnombre.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtnombre.Controls.Add(Me.CheckBox1)
         Me.txtnombre.Controls.Add(Me.cboFarmacia_Select)
         Me.txtnombre.Controls.Add(Me.txtPerfilapellido)
         Me.txtnombre.Controls.Add(Me.Label2)
         Me.txtnombre.Controls.Add(Me.txtPerfilNombre)
         Me.txtnombre.Controls.Add(Me.Label1)
-        Me.txtnombre.Controls.Add(Me.txtFarmacia)
         Me.txtnombre.Controls.Add(Me.txtTelefono)
         Me.txtnombre.Controls.Add(Me.txtCorreo)
         Me.txtnombre.Controls.Add(Me.Label8)
@@ -352,11 +352,20 @@ Partial Class Perfil
         Me.txtnombre.Size = New System.Drawing.Size(406, 348)
         Me.txtnombre.TabIndex = 8
         '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Location = New System.Drawing.Point(43, 293)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(18, 17)
+        Me.CheckBox1.TabIndex = 17
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
         'cboFarmacia_Select
         '
         Me.cboFarmacia_Select.FormattingEnabled = True
         Me.cboFarmacia_Select.Items.AddRange(New Object() {"-"})
-        Me.cboFarmacia_Select.Location = New System.Drawing.Point(181, 301)
+        Me.cboFarmacia_Select.Location = New System.Drawing.Point(181, 291)
         Me.cboFarmacia_Select.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.cboFarmacia_Select.Name = "cboFarmacia_Select"
         Me.cboFarmacia_Select.Size = New System.Drawing.Size(189, 28)
@@ -398,14 +407,6 @@ Partial Class Perfil
         Me.Label1.TabIndex = 12
         Me.Label1.Text = "Nombre: "
         '
-        'txtFarmacia
-        '
-        Me.txtFarmacia.Location = New System.Drawing.Point(181, 266)
-        Me.txtFarmacia.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.txtFarmacia.Name = "txtFarmacia"
-        Me.txtFarmacia.Size = New System.Drawing.Size(161, 27)
-        Me.txtFarmacia.TabIndex = 11
-        '
         'txtTelefono
         '
         Me.txtTelefono.Location = New System.Drawing.Point(181, 218)
@@ -426,7 +427,7 @@ Partial Class Perfil
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label8.Location = New System.Drawing.Point(67, 269)
+        Me.Label8.Location = New System.Drawing.Point(67, 291)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(86, 19)
         Me.Label8.TabIndex = 7
@@ -594,4 +595,5 @@ Partial Class Perfil
     Friend WithEvents Label1 As Label
     Friend WithEvents cboFarmacia_Select As ComboBox
     Friend WithEvents Button2 As Button
+    Friend WithEvents CheckBox1 As CheckBox
 End Class
