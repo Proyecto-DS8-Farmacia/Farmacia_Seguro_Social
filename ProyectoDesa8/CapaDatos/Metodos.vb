@@ -30,13 +30,6 @@ Public Class Metodos
 
     End Function
 
-
-
-
-
-
-
-
     Public Shared Function DATOSPACIENTEPORNOMBRE() As DataTable
 
         Using CN As New SqlConnection(My.Settings.Conexion)
@@ -109,7 +102,28 @@ Public Class Metodos
         End Using
     End Function
 
+    Public Shared Function REGISTRARPACIENTE(cedula As String, nombre As String, apellido As String, carne_salud As String, fvence_Cs As String,
+                                             beneficiario As String, ced_familiar As String, correo As String, contraseña As String, telefono As String)
+        Using CN As New SqlConnection(My.Settings.Conexion)
+            Using CMD As New SqlCommand("Pa_Registro_paciente", CN)
+                CMD.CommandType = CommandType.StoredProcedure
+                CMD.Parameters.AddWithValue("@cedula", cedula)
+                CMD.Parameters.AddWithValue("@nombre", nombre)
+                CMD.Parameters.AddWithValue("@apellido", apellido)
+                CMD.Parameters.AddWithValue("@carne_salud ", carne_salud)
+                CMD.Parameters.AddWithValue("@fvence_cs", fvence_Cs)
+                CMD.Parameters.AddWithValue("@beneficiario", beneficiario)
+                CMD.Parameters.AddWithValue("@f_principal", ced_familiar)
+                CMD.Parameters.AddWithValue("@correo_e", correo)
+                CMD.Parameters.AddWithValue("@contraseña ", contraseña)
+                CMD.Parameters.AddWithValue("@telefono", telefono)
 
+                CN.Open()
+                CMD.ExecuteNonQuery()
+            End Using
+        End Using
+
+    End Function
 
 
 

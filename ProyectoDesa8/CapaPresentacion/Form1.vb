@@ -106,6 +106,17 @@ Public Class Form1
         Registrar.Show()
         Me.Hide()
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
+        RegistrarPaciente.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub btnRegistrarPaciente_Click(sender As Object, e As EventArgs) Handles btnRegistrarPaciente.Click
+        RegistrarPaciente.Show()
+        Me.Hide()
+    End Sub
+
     Private Sub btnRecuperarContra_Click(sender As Object, e As EventArgs) Handles btnRecuperarContra.Click
         Recuperar_Contraseña.Show()
         Me.Hide()
