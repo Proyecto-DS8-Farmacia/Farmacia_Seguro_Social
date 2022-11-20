@@ -438,6 +438,28 @@ from Proveedor as p join Farmacia_Proveedor as fp on p.cod_proveedor = fp.cod_pr
 -----------------------
 --Dividir x pantallas--
 -----------------------
+--Pantalla: Inicio Sesión 
+create procedure inicio_sesion
+@CORREO_E varchar(25),
+@CONTRASEÑA varchar(30)
+as
+select * from usuario
+where correo_e = @CORREO_E and contraseña = @CONTRASEÑA
+
+------------------------------------------------------------------------------------------------
+------------------------CREACION PROCEDIMIENTOS INICIO-------------------------------------
+------------------------------------------------------------------------------------------------
+create procedure inicio_sesionB
+@CORREO_E varchar(25),
+@CONTRASEÑA varchar(30),
+@TIPO varchar(30)
+as
+
+select * from Usuario   --@CORREO_E @CONTRASEÑA 
+where correo_e = 'jose567@gmail.com'  and contraseña =  'ochoxd12' and tipo=' encargado_inventario'
+
+
+
 --Pantalla: Consultar Inventario
 create procedure Pa_ListarTablaSustanciaPorNombreFarmacia
 as
@@ -455,3 +477,25 @@ select s.cod_sustancia,s.nombre,s.tipo,s.lote_fabricacion,s.fecha_expira,s.cant_
 from Sustancia as s join Farmacia_Sustancia as fs on s.cod_sustancia = fs.cod_sustancia
 					join Farmacia as f on fs.cod_farmacia = f.cod_farm
 where f.cod_farm = @CODFARM*/
+
+------------------------------------------------------------------------------------------------
+------------------------CREACION PROCEDIMIENTOS Actualizar-------------------------------------
+------------------------------------------------------------------------------------------------
+
+create procedure Pa_Actualizar
+  @Cedula   varchar(20), @nombre  varchar(20),  @apellido  Varchar(20) ,  @telefono  Varchar(20) ,  @correo  Varchar(20) ,  @farma Varchar(20)
+as
+begin
+UPDATE [dbo].[Usuario] SET [nombre] = @nombre  ,[apellido] = @apellido, telefono =@telefono ,[correo_e] =@correo,[cod_farm] =  @farma 
+ WHERE cedula=@Cedula 
+ end
+
+
+------------------------------------------------------------------------------------------------
+------------------------CREACION PROCEDIMIENTOS Lista de usaurio-------------------------------------
+------------------------------------------------------------------------------------------------
+create procedure Pa_ListarDatosDeUsuario
+as
+select u.cedula, u.correo_e, u.nombre as nombre , u.apellido as apellido, u.telefono, u.tipo, f.nombre as farmacia
+from Usuario as u join Farmacia as f  on u.cod_farm = f.cod_farm
+
