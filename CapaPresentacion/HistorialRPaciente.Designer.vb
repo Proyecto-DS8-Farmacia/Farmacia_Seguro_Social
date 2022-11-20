@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class ReStock
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class HistorialRPaciente
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()>
+    <System.Diagnostics.DebuggerNonUserCode()> _
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,9 +20,9 @@ Partial Class ReStock
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()>
+    <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.PanelMenu = New System.Windows.Forms.Panel()
         Me.btnSalir = New System.Windows.Forms.Button()
         Me.PanelMenuSmall = New System.Windows.Forms.Panel()
@@ -32,24 +32,34 @@ Partial Class ReStock
         Me.btnPerfil = New System.Windows.Forms.Button()
         Me.btnInicioSesion = New System.Windows.Forms.Button()
         Me.btnMenu = New System.Windows.Forms.PictureBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.cbx_Sustancia = New System.Windows.Forms.ComboBox()
-        Me.btn_ConfirmarPedido = New System.Windows.Forms.Button()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.cbx_Proveedor = New System.Windows.Forms.ComboBox()
-        Me.BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.cbx_Farmacia = New System.Windows.Forms.ComboBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.btn_registrar = New System.Windows.Forms.Button()
-        Me.btn_Limpiar = New System.Windows.Forms.Button()
-        Me.txt_Cantidad = New System.Windows.Forms.TextBox()
+        Me.dtp_FechaReceta = New System.Windows.Forms.DateTimePicker()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.cbx_Med = New System.Windows.Forms.ComboBox()
+        Me.cbx_Farmaco = New System.Windows.Forms.ComboBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.farmaco = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MedCant = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Fecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Med = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CodReceta = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PanelMenu.SuspendLayout()
         Me.PanelMenuSmall.SuspendLayout()
         CType(Me.btnMenu, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Arial Rounded MT Bold", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(542, 62)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(415, 46)
+        Me.Label1.TabIndex = 19
+        Me.Label1.Text = "Historial de Recetas"
         '
         'PanelMenu
         '
@@ -61,7 +71,7 @@ Partial Class ReStock
         Me.PanelMenu.Location = New System.Drawing.Point(0, 0)
         Me.PanelMenu.Name = "PanelMenu"
         Me.PanelMenu.Size = New System.Drawing.Size(251, 748)
-        Me.PanelMenu.TabIndex = 17
+        Me.PanelMenu.TabIndex = 20
         '
         'btnSalir
         '
@@ -189,170 +199,144 @@ Partial Class ReStock
         '
         Me.btnMenu.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnMenu.Image = Global.CapaPresentacion.My.Resources.Resources.Mobile_Menu_Icon
-        Me.btnMenu.Location = New System.Drawing.Point(243, 3)
+        Me.btnMenu.Location = New System.Drawing.Point(294, 3)
         Me.btnMenu.Name = "btnMenu"
         Me.btnMenu.Size = New System.Drawing.Size(56, 43)
         Me.btnMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.btnMenu.TabIndex = 0
         Me.btnMenu.TabStop = False
         '
-        'Label1
+        'Label5
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Arial Rounded MT Bold", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(653, 50)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(198, 46)
-        Me.Label1.TabIndex = 18
-        Me.Label1.Text = "Re-Stock"
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label5.ForeColor = System.Drawing.Color.White
+        Me.Label5.Location = New System.Drawing.Point(361, 290)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(70, 23)
+        Me.Label5.TabIndex = 34
+        Me.Label5.Text = "Fecha"
+        '
+        'dtp_FechaReceta
+        '
+        Me.dtp_FechaReceta.CalendarTitleForeColor = System.Drawing.SystemColors.ActiveCaption
+        Me.dtp_FechaReceta.CalendarTrailingForeColor = System.Drawing.Color.Navy
+        Me.dtp_FechaReceta.Location = New System.Drawing.Point(510, 288)
+        Me.dtp_FechaReceta.Name = "dtp_FechaReceta"
+        Me.dtp_FechaReceta.Size = New System.Drawing.Size(286, 27)
+        Me.dtp_FechaReceta.TabIndex = 35
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(386, 231)
+        Me.Label2.Location = New System.Drawing.Point(361, 190)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(117, 23)
-        Me.Label2.TabIndex = 19
-        Me.Label2.Text = "Sustancias"
+        Me.Label2.Size = New System.Drawing.Size(81, 23)
+        Me.Label2.TabIndex = 36
+        Me.Label2.Text = "Medico"
+        '
+        'cbx_Med
+        '
+        Me.cbx_Med.FormattingEnabled = True
+        Me.cbx_Med.Location = New System.Drawing.Point(510, 185)
+        Me.cbx_Med.Name = "cbx_Med"
+        Me.cbx_Med.Size = New System.Drawing.Size(151, 28)
+        Me.cbx_Med.TabIndex = 37
+        '
+        'cbx_Farmaco
+        '
+        Me.cbx_Farmaco.FormattingEnabled = True
+        Me.cbx_Farmaco.Location = New System.Drawing.Point(510, 239)
+        Me.cbx_Farmaco.Name = "cbx_Farmaco"
+        Me.cbx_Farmaco.Size = New System.Drawing.Size(151, 28)
+        Me.cbx_Farmaco.TabIndex = 39
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(970, 231)
+        Me.Label3.Location = New System.Drawing.Point(361, 239)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(99, 23)
-        Me.Label3.TabIndex = 20
-        Me.Label3.Text = "Cantidad"
+        Me.Label3.Size = New System.Drawing.Size(142, 23)
+        Me.Label3.TabIndex = 38
+        Me.Label3.Text = "Medicamento"
         '
-        'cbx_Sustancia
+        'DataGridView1
         '
-        Me.cbx_Sustancia.FormattingEnabled = True
-        Me.cbx_Sustancia.Items.AddRange(New Object() {"Panadol", "Tylenol", "Amikacina"})
-        Me.cbx_Sustancia.Location = New System.Drawing.Point(368, 264)
-        Me.cbx_Sustancia.Name = "cbx_Sustancia"
-        Me.cbx_Sustancia.Size = New System.Drawing.Size(151, 28)
-        Me.cbx_Sustancia.TabIndex = 22
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.farmaco, Me.MedCant, Me.Fecha, Me.Med, Me.CodReceta})
+        Me.DataGridView1.Location = New System.Drawing.Point(398, 366)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.RowHeadersWidth = 51
+        Me.DataGridView1.RowTemplate.Height = 29
+        Me.DataGridView1.Size = New System.Drawing.Size(676, 331)
+        Me.DataGridView1.TabIndex = 40
         '
-        'btn_ConfirmarPedido
+        'farmaco
         '
-        Me.btn_ConfirmarPedido.BackColor = System.Drawing.Color.Black
-        Me.btn_ConfirmarPedido.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btn_ConfirmarPedido.Font = New System.Drawing.Font("Arial Rounded MT Bold", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.btn_ConfirmarPedido.ForeColor = System.Drawing.Color.White
-        Me.btn_ConfirmarPedido.Location = New System.Drawing.Point(629, 548)
-        Me.btn_ConfirmarPedido.Name = "btn_ConfirmarPedido"
-        Me.btn_ConfirmarPedido.Size = New System.Drawing.Size(251, 51)
-        Me.btn_ConfirmarPedido.TabIndex = 28
-        Me.btn_ConfirmarPedido.Text = "CONFIRMAR PEDIDO"
-        Me.btn_ConfirmarPedido.UseVisualStyleBackColor = False
+        Me.farmaco.HeaderText = "Medicamento"
+        Me.farmaco.MinimumWidth = 6
+        Me.farmaco.Name = "farmaco"
+        Me.farmaco.Width = 125
         '
-        'Label4
+        'MedCant
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(791, 150)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(113, 23)
-        Me.Label4.TabIndex = 29
-        Me.Label4.Text = "Proveedor"
+        Me.MedCant.HeaderText = "Cantidad"
+        Me.MedCant.MinimumWidth = 6
+        Me.MedCant.Name = "MedCant"
+        Me.MedCant.Width = 125
         '
-        'cbx_Proveedor
+        'Fecha
         '
-        Me.cbx_Proveedor.FormattingEnabled = True
-        Me.cbx_Proveedor.Items.AddRange(New Object() {"Panadol", "Tylenol", "Amikacina"})
-        Me.cbx_Proveedor.Location = New System.Drawing.Point(934, 150)
-        Me.cbx_Proveedor.Name = "cbx_Proveedor"
-        Me.cbx_Proveedor.Size = New System.Drawing.Size(151, 28)
-        Me.cbx_Proveedor.TabIndex = 30
+        Me.Fecha.HeaderText = "Fecha"
+        Me.Fecha.MinimumWidth = 6
+        Me.Fecha.Name = "Fecha"
+        Me.Fecha.Width = 125
         '
-        'cbx_Farmacia
+        'Med
         '
-        Me.cbx_Farmacia.FormattingEnabled = True
-        Me.cbx_Farmacia.Items.AddRange(New Object() {"Panadol", "Tylenol", "Amikacina"})
-        Me.cbx_Farmacia.Location = New System.Drawing.Point(487, 150)
-        Me.cbx_Farmacia.Name = "cbx_Farmacia"
-        Me.cbx_Farmacia.Size = New System.Drawing.Size(151, 28)
-        Me.cbx_Farmacia.TabIndex = 32
+        Me.Med.HeaderText = "Medico"
+        Me.Med.MinimumWidth = 6
+        Me.Med.Name = "Med"
+        Me.Med.Width = 125
         '
-        'Label5
+        'CodReceta
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(368, 150)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(102, 23)
-        Me.Label5.TabIndex = 33
-        Me.Label5.Text = "Farmacia"
+        Me.CodReceta.HeaderText = "Receta "
+        Me.CodReceta.MinimumWidth = 6
+        Me.CodReceta.Name = "CodReceta"
+        Me.CodReceta.Width = 125
         '
-        'btn_registrar
+        'HistorialRPaciente
         '
-        Me.btn_registrar.BackColor = System.Drawing.Color.Black
-        Me.btn_registrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btn_registrar.Font = New System.Drawing.Font("Arial Rounded MT Bold", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.btn_registrar.ForeColor = System.Drawing.Color.White
-        Me.btn_registrar.Location = New System.Drawing.Point(344, 548)
-        Me.btn_registrar.Name = "btn_registrar"
-        Me.btn_registrar.Size = New System.Drawing.Size(177, 51)
-        Me.btn_registrar.TabIndex = 34
-        Me.btn_registrar.Text = "REGISTRAR"
-        Me.btn_registrar.UseVisualStyleBackColor = False
-        '
-        'btn_Limpiar
-        '
-        Me.btn_Limpiar.BackColor = System.Drawing.Color.Black
-        Me.btn_Limpiar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btn_Limpiar.Font = New System.Drawing.Font("Arial Rounded MT Bold", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.btn_Limpiar.ForeColor = System.Drawing.Color.White
-        Me.btn_Limpiar.Location = New System.Drawing.Point(959, 548)
-        Me.btn_Limpiar.Name = "btn_Limpiar"
-        Me.btn_Limpiar.Size = New System.Drawing.Size(177, 51)
-        Me.btn_Limpiar.TabIndex = 35
-        Me.btn_Limpiar.Text = "LIMPIAR"
-        Me.btn_Limpiar.UseVisualStyleBackColor = False
-        '
-        'txt_Cantidad
-        '
-        Me.txt_Cantidad.Location = New System.Drawing.Point(983, 264)
-        Me.txt_Cantidad.Name = "txt_Cantidad"
-        Me.txt_Cantidad.Size = New System.Drawing.Size(75, 27)
-        Me.txt_Cantidad.TabIndex = 36
-        '
-        'ReStock
-        '
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Navy
         Me.ClientSize = New System.Drawing.Size(1239, 748)
-        Me.Controls.Add(Me.txt_Cantidad)
-        Me.Controls.Add(Me.btn_Limpiar)
-        Me.Controls.Add(Me.btn_registrar)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.cbx_Farmacia)
-        Me.Controls.Add(Me.cbx_Proveedor)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.btn_ConfirmarPedido)
-        Me.Controls.Add(Me.cbx_Sustancia)
+        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.cbx_Farmaco)
         Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.cbx_Med)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.dtp_FechaReceta)
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.PanelMenu)
-        Me.Name = "ReStock"
-        Me.Text = "ReStock"
+        Me.Controls.Add(Me.Label1)
+        Me.Name = "HistorialRPaciente"
+        Me.Text = "HistorialRPaciente"
         Me.PanelMenu.ResumeLayout(False)
         Me.PanelMenuSmall.ResumeLayout(False)
         CType(Me.btnMenu, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
+    Friend WithEvents Label1 As Label
     Friend WithEvents PanelMenu As Panel
     Friend WithEvents btnSalir As Button
     Friend WithEvents PanelMenuSmall As Panel
@@ -362,17 +346,16 @@ Partial Class ReStock
     Friend WithEvents btnPerfil As Button
     Friend WithEvents btnInicioSesion As Button
     Friend WithEvents btnMenu As PictureBox
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents cbx_Sustancia As ComboBox
-    Friend WithEvents btn_ConfirmarPedido As Button
-    Friend WithEvents Label4 As Label
-    Friend WithEvents cbx_Proveedor As ComboBox
-    Friend WithEvents BindingSource1 As BindingSource
-    Friend WithEvents cbx_Farmacia As ComboBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents btn_registrar As Button
-    Friend WithEvents btn_Limpiar As Button
-    Friend WithEvents txt_Cantidad As TextBox
+    Friend WithEvents dtp_FechaReceta As DateTimePicker
+    Friend WithEvents Label2 As Label
+    Friend WithEvents cbx_Med As ComboBox
+    Friend WithEvents cbx_Farmaco As ComboBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents farmaco As DataGridViewTextBoxColumn
+    Friend WithEvents MedCant As DataGridViewTextBoxColumn
+    Friend WithEvents Fecha As DataGridViewTextBoxColumn
+    Friend WithEvents Med As DataGridViewTextBoxColumn
+    Friend WithEvents CodReceta As DataGridViewTextBoxColumn
 End Class
