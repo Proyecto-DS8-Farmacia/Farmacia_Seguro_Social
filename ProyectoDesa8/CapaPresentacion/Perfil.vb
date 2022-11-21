@@ -135,6 +135,7 @@
         If (CapaDatos.Metodos.ActualizarUSUARIO(DataGridView1.Rows(0).Cells(0).Value, txtPerfilNombre.Text.ToString, txtPerfilapellido.Text.ToString, txtCorreo.Text.ToString, txtTelefono.Text.ToString, Farmacia.ToString)) Then
             MsgBox("DATOS EDITADOS CORRECTAMENTE")
         End If
+        cboFarmacia_Select.Enabled = False
     End Sub
 
     Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
