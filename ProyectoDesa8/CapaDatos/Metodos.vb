@@ -80,6 +80,31 @@ Public Class Metodos
         End Using
 
 
+
+    End Function
+
+    Public Shared Function RegistrarUsuario(cedula As String, nombre As String, apellido As String, correo As String, telefono As String, contraseña As String, tipo As String, farmacia As Integer) As String
+        Using CN As New SqlConnection(My.Settings.Conexion)
+            Using CMD As New SqlCommand("Registrar", CN)
+                CMD.CommandType = CommandType.StoredProcedure
+                'CMD.Parameters.AddWithValue("@ENSQLSERVER", ENVISUALSTUDIO)
+                CMD.Parameters.AddWithValue("@Cedula", cedula)
+                CMD.Parameters.AddWithValue("@nombre", nombre)
+                CMD.Parameters.AddWithValue("@apellido", apellido)
+                CMD.Parameters.AddWithValue("@telefono", telefono)
+                CMD.Parameters.AddWithValue("@correo", correo)
+                CMD.Parameters.AddWithValue("@Contraseña", contraseña)
+                CMD.Parameters.AddWithValue("@tipo", tipo)
+                CMD.Parameters.AddWithValue("@farma", farmacia)
+
+                CN.Open()
+                Return CMD.ExecuteReader().HasRows.ToString
+
+            End Using
+        End Using
+
+
+
     End Function
 
 

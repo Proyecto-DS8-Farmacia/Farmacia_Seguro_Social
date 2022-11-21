@@ -103,7 +103,7 @@ Public Class Form1
     End Sub
 
     Private Sub btnRegistrar_Click(sender As Object, e As EventArgs) Handles btnRegistrar.Click
-        Registrar.Show()
+        Registrar_Usuariovb.Show()
         Me.Hide()
     End Sub
     Private Sub btnRecuperarContra_Click(sender As Object, e As EventArgs) Handles btnRecuperarContra.Click
