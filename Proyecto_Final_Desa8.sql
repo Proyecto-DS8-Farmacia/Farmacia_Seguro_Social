@@ -499,3 +499,44 @@ as
 select u.cedula, u.correo_e, u.nombre as nombre , u.apellido as apellido, u.telefono, u.tipo, f.nombre as farmacia
 from Usuario as u join Farmacia as f  on u.cod_farm = f.cod_farm
 
+------------------------------------------------------------------------------------------------
+------------------------CREACION PROCEDIMIENTOS FARMACIA-------------------------------------
+------------------------------------------------------------------------------------------------
+Create procedure Pa_Farmacia
+as
+Select * from Farmacia
+
+------------------------------------------------------------------------------------------------
+------------------------CREACION PROCEDIMIENTOS ProveedoresPorFarmacia-------------------------------------
+------------------------------------------------------------------------------------------------
+Create procedure Pa_ProveedoresPorFarmacia
+as 
+Select p.nombre as nproveedor, fp.cod_farmacia, f.nombre as nfarmacia, s.nombre as nsustancia, s.cod_sustancia
+from Proveedor as p join Farmacia_Proveedor as fp on p.cod_proveedor = fp.cod_proveedor
+join farmacia as f on f.cod_farm = fp.cod_farmacia
+join Sustancia_Proveedor as sp on p.cod_proveedor = sp.cod_proveedor
+join Sustancia as s on sp.cod_sustancia = s.cod_sustancia 
+
+------------------------------------------------------------------------------------------------
+------------------------CREACION PROCEDIMIENTOS PROVEDOR-------------------------------------
+------------------------------------------------------------------------------------------------
+
+Create Procedure Pa_Proveedor 
+As 
+Select p.nombre as nproveedor, p.cod_proveedor, fp.cod_farmacia
+from Proveedor as p join Farmacia_Proveedor as fp on p.cod_proveedor = fp.cod_proveedor
+------------------------------------------------------------------------------------------------
+------------------------CREACION PROCEDIMIENTOS RE-STOCK-------------------------------------
+------------------------------------------------------------------------------------------------
+Create procedure Pa_ReStock
+
+@cf int,
+@cs int,
+@cants int
+
+as
+declare
+@cant_anterior int
+Select @cant_anterior = cant_disp from Farmacia_Sustancia where cod_farmacia = @cf and cod_sustancia = @cs
+update Farmacia_Sustancia set cant_disp = @cant_anterior + @cants where cod_farmacia = @cf and cod_sustancia = @cs
+
