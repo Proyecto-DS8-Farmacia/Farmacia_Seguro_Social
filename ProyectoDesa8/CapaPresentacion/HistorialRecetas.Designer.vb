@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class HistorialRPaciente
+Partial Class HistorialRecetas
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -22,16 +22,31 @@ Partial Class HistorialRPaciente
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.dgvHistorialRe = New System.Windows.Forms.DataGridView()
+        CType(Me.dgvHistorialRe, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'HistorialRPaciente
+        'dgvHistorialRe
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.dgvHistorialRe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvHistorialRe.Location = New System.Drawing.Point(63, 85)
+        Me.dgvHistorialRe.Name = "dgvHistorialRe"
+        Me.dgvHistorialRe.RowTemplate.Height = 25
+        Me.dgvHistorialRe.Size = New System.Drawing.Size(450, 216)
+        Me.dgvHistorialRe.TabIndex = 0
+        '
+        'HistorialRecetas
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1239, 748)
-        Me.Name = "HistorialRPaciente"
-        Me.Text = "HistorialRPaciente"
+        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.dgvHistorialRe)
+        Me.Name = "HistorialRecetas"
+        Me.Text = "HistorialRecetas"
+        CType(Me.dgvHistorialRe, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
+
+    Friend WithEvents dgvHistorialRe As DataGridView
 End Class

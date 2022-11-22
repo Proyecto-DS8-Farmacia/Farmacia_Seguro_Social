@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Perfil
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+Partial Class ConsultarInventario
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,55 +20,53 @@ Partial Class Perfil
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Me.dgvConsultarIn = New System.Windows.Forms.DataGridView()
+        Me.txtNombreF = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.PanelMenu = New System.Windows.Forms.Panel()
         Me.btnSalir = New System.Windows.Forms.Button()
         Me.PanelMenuSmall = New System.Windows.Forms.Panel()
-        Me.btnInicioSesion = New System.Windows.Forms.Button()
         Me.btnPaciente = New System.Windows.Forms.Button()
         Me.btnFarmaceuta = New System.Windows.Forms.Button()
         Me.btnEncargado = New System.Windows.Forms.Button()
         Me.btnPerfil = New System.Windows.Forms.Button()
+        Me.btnInicioSesion = New System.Windows.Forms.Button()
         Me.btnMenu = New System.Windows.Forms.PictureBox()
-        Me.tmMostrarMenu = New System.Windows.Forms.Timer(Me.components)
         Me.tmOcultarMenu = New System.Windows.Forms.Timer(Me.components)
-        Me.btnAdministrador = New System.Windows.Forms.Button()
+        Me.tmMostrarMenu = New System.Windows.Forms.Timer(Me.components)
+        CType(Me.dgvConsultarIn, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelMenu.SuspendLayout()
         Me.PanelMenuSmall.SuspendLayout()
         CType(Me.btnMenu, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
+        'dgvConsultarIn
+        '
+        Me.dgvConsultarIn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvConsultarIn.Location = New System.Drawing.Point(345, 166)
+        Me.dgvConsultarIn.Name = "dgvConsultarIn"
+        Me.dgvConsultarIn.RowTemplate.Height = 25
+        Me.dgvConsultarIn.Size = New System.Drawing.Size(679, 214)
+        Me.dgvConsultarIn.TabIndex = 0
+        '
+        'txtNombreF
+        '
+        Me.txtNombreF.Location = New System.Drawing.Point(547, 109)
+        Me.txtNombreF.Name = "txtNombreF"
+        Me.txtNombreF.Size = New System.Drawing.Size(247, 23)
+        Me.txtNombreF.TabIndex = 1
+        '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(398, 44)
+        Me.Label1.Location = New System.Drawing.Point(345, 113)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(296, 15)
-        Me.Label1.TabIndex = 4
-        Me.Label1.Text = "Traer datos del admin/encargado/farmaceuta/paciente"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(398, 83)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(323, 15)
-        Me.Label4.TabIndex = 7
-        Me.Label4.Text = "Actualizar datos del admin/encargado/farmaceuta/paciente"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(398, 132)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(275, 15)
-        Me.Label2.TabIndex = 8
-        Me.Label2.Text = "Eliminar datos del encargado/farmaceuta/paciente"
+        Me.Label1.Size = New System.Drawing.Size(181, 15)
+        Me.Label1.TabIndex = 3
+        Me.Label1.Text = "Ingrese el nombre de la Farmacia"
         '
         'PanelMenu
         '
@@ -80,7 +78,7 @@ Partial Class Perfil
         Me.PanelMenu.Location = New System.Drawing.Point(0, 0)
         Me.PanelMenu.Name = "PanelMenu"
         Me.PanelMenu.Size = New System.Drawing.Size(220, 561)
-        Me.PanelMenu.TabIndex = 9
+        Me.PanelMenu.TabIndex = 13
         '
         'btnSalir
         '
@@ -103,34 +101,15 @@ Partial Class Perfil
         'PanelMenuSmall
         '
         Me.PanelMenuSmall.BackColor = System.Drawing.Color.Transparent
-        Me.PanelMenuSmall.Controls.Add(Me.btnAdministrador)
-        Me.PanelMenuSmall.Controls.Add(Me.btnInicioSesion)
         Me.PanelMenuSmall.Controls.Add(Me.btnPaciente)
         Me.PanelMenuSmall.Controls.Add(Me.btnFarmaceuta)
         Me.PanelMenuSmall.Controls.Add(Me.btnEncargado)
         Me.PanelMenuSmall.Controls.Add(Me.btnPerfil)
+        Me.PanelMenuSmall.Controls.Add(Me.btnInicioSesion)
         Me.PanelMenuSmall.Location = New System.Drawing.Point(3, 80)
         Me.PanelMenuSmall.Name = "PanelMenuSmall"
-        Me.PanelMenuSmall.Size = New System.Drawing.Size(214, 390)
+        Me.PanelMenuSmall.Size = New System.Drawing.Size(214, 334)
         Me.PanelMenuSmall.TabIndex = 1
-        '
-        'btnInicioSesion
-        '
-        Me.btnInicioSesion.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnInicioSesion.FlatAppearance.BorderSize = 0
-        Me.btnInicioSesion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnInicioSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnInicioSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnInicioSesion.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.btnInicioSesion.ForeColor = System.Drawing.Color.White
-        Me.btnInicioSesion.Image = Global.CapaPresentacion.My.Resources.Resources.logologin1
-        Me.btnInicioSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnInicioSesion.Location = New System.Drawing.Point(-1, 11)
-        Me.btnInicioSesion.Name = "btnInicioSesion"
-        Me.btnInicioSesion.Size = New System.Drawing.Size(215, 58)
-        Me.btnInicioSesion.TabIndex = 10
-        Me.btnInicioSesion.Text = "    Inicio Sesion"
-        Me.btnInicioSesion.UseVisualStyleBackColor = True
         '
         'btnPaciente
         '
@@ -204,6 +183,24 @@ Partial Class Perfil
         Me.btnPerfil.Text = "    Perfil"
         Me.btnPerfil.UseVisualStyleBackColor = True
         '
+        'btnInicioSesion
+        '
+        Me.btnInicioSesion.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnInicioSesion.FlatAppearance.BorderSize = 0
+        Me.btnInicioSesion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnInicioSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnInicioSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnInicioSesion.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.btnInicioSesion.ForeColor = System.Drawing.Color.White
+        Me.btnInicioSesion.Image = Global.CapaPresentacion.My.Resources.Resources.logologin1
+        Me.btnInicioSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnInicioSesion.Location = New System.Drawing.Point(0, 11)
+        Me.btnInicioSesion.Name = "btnInicioSesion"
+        Me.btnInicioSesion.Size = New System.Drawing.Size(215, 58)
+        Me.btnInicioSesion.TabIndex = 8
+        Me.btnInicioSesion.Text = "    Inicio Sesion"
+        Me.btnInicioSesion.UseVisualStyleBackColor = True
+        '
         'btnMenu
         '
         Me.btnMenu.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -215,42 +212,25 @@ Partial Class Perfil
         Me.btnMenu.TabIndex = 0
         Me.btnMenu.TabStop = False
         '
-        'tmMostrarMenu
-        '
-        '
         'tmOcultarMenu
         '
         '
-        'btnAdministrador
+        'tmMostrarMenu
         '
-        Me.btnAdministrador.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnAdministrador.FlatAppearance.BorderSize = 0
-        Me.btnAdministrador.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnAdministrador.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnAdministrador.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAdministrador.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.btnAdministrador.ForeColor = System.Drawing.Color.White
-        Me.btnAdministrador.Image = Global.CapaPresentacion.My.Resources.Resources.empleados
-        Me.btnAdministrador.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnAdministrador.Location = New System.Drawing.Point(-1, 329)
-        Me.btnAdministrador.Name = "btnAdministrador"
-        Me.btnAdministrador.Size = New System.Drawing.Size(215, 58)
-        Me.btnAdministrador.TabIndex = 16
-        Me.btnAdministrador.Text = "    Administrador"
-        Me.btnAdministrador.UseVisualStyleBackColor = True
         '
-        'Perfil
+        'ConsultarInventario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(1084, 561)
         Me.Controls.Add(Me.PanelMenu)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label1)
-        Me.Name = "Perfil"
-        Me.Text = "Perfil"
+        Me.Controls.Add(Me.txtNombreF)
+        Me.Controls.Add(Me.dgvConsultarIn)
+        Me.Name = "ConsultarInventario"
+        Me.Text = "ConsultarInventario"
+        CType(Me.dgvConsultarIn, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelMenu.ResumeLayout(False)
         Me.PanelMenuSmall.ResumeLayout(False)
         CType(Me.btnMenu, System.ComponentModel.ISupportInitialize).EndInit()
@@ -258,9 +238,10 @@ Partial Class Perfil
         Me.PerformLayout()
 
     End Sub
+
+    Friend WithEvents dgvConsultarIn As DataGridView
+    Friend WithEvents txtNombreF As TextBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label2 As Label
     Friend WithEvents PanelMenu As Panel
     Friend WithEvents btnSalir As Button
     Friend WithEvents PanelMenuSmall As Panel
@@ -268,9 +249,8 @@ Partial Class Perfil
     Friend WithEvents btnFarmaceuta As Button
     Friend WithEvents btnEncargado As Button
     Friend WithEvents btnPerfil As Button
-    Friend WithEvents btnMenu As PictureBox
     Friend WithEvents btnInicioSesion As Button
-    Friend WithEvents tmMostrarMenu As Timer
+    Friend WithEvents btnMenu As PictureBox
     Friend WithEvents tmOcultarMenu As Timer
-    Friend WithEvents btnAdministrador As Button
+    Friend WithEvents tmMostrarMenu As Timer
 End Class
