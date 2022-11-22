@@ -540,3 +540,20 @@ declare
 Select @cant_anterior = cant_disp from Farmacia_Sustancia where cod_farmacia = @cf and cod_sustancia = @cs
 update Farmacia_Sustancia set cant_disp = @cant_anterior + @cants where cod_farmacia = @cf and cod_sustancia = @cs
 
+
+create procedure Pa_Registro_paciente
+@cedula varchar(11),
+@nombre varchar(20),
+@apellido varchar(20),
+@carne_salud varchar(12),
+@fvence_cs varchar(10),
+@beneficiario varchar(2),
+@f_principal varchar(11),
+@correo_e varchar(25),
+@contraseña varchar(8),
+@telefono varchar(9)
+as
+insert into Paciente values 
+(@cedula,@nombre,@apellido,@carne_salud,@fvence_cs,@beneficiario,@f_principal,@correo_e,@contraseña,@telefono)
+
+
