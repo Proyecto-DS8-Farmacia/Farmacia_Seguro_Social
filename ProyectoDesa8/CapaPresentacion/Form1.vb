@@ -106,9 +106,21 @@ Public Class Form1
         Registrar_Usuariovb.Show()
         Me.Hide()
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim sc As Form2 = New Form2()
+        sc.Show()
+        Dim f As Form1 = New Form1()
+        f.Hide()
+    End Sub
+
     Private Sub btnRecuperarContra_Click(sender As Object, e As EventArgs) Handles btnRecuperarContra.Click
-        Recuperar_Contraseña.Show()
-        Me.Hide()
+        Dim sc As Form2 = New Form2()
+        sc.Show()
+        Dim f As Form1 = New Form1()
+        f.Hide()
+
+        Form2.Show()
     End Sub
 
     Private Sub btnAdministrador_Click(sender As Object, e As EventArgs) Handles btnAdministrador.Click
