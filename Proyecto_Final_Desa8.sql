@@ -226,7 +226,6 @@ select * from Paciente
 --Cada farmacia tiene 1 Paciente
 insert into Farmacia_Paciente values (1,'08-576-3359')
 insert into Farmacia_Paciente values (2,'09-999-9999')
-
 select * from Farmacia
 select * from Paciente
 select * from Farmacia_Paciente*/
@@ -320,7 +319,7 @@ insert into Receta_Sustancia values (1,3,15,1)
 select * from Receta
 select * from Sustancia
 select * from Receta_Sustancia
-
+select * from Farmacia
 
 -----TABLA Proveedor----
 --https://www.paginasamarillas.com.pa/b/distribuidores-de-productos-farmaceuticos
@@ -432,6 +431,27 @@ from Proveedor as p join Farmacia_Proveedor as fp on p.cod_proveedor = fp.cod_pr
 					join Sustancia_Proveedor as sp on sp.cod_proveedor = p.cod_proveedor
 					join Sustancia as s on s.cod_sustancia = sp.cod_sustancia
 
+--Saber los medicamentos independientemente de la farmacia
+select * from Sustancia
+select * from Farmacia_Sustancia
+select * from farmacia
+
+select nombre from Farmacia
+
+
+select s.nombre,s.tipo,s.dosis,fs.cant_disp,f.nombre,f.ubicacion,f.telefono
+from Sustancia as s 
+join Farmacia_Sustancia as fs on s.cod_sustancia = fs.cod_sustancia
+join Farmacia as f on fs.cod_farmacia = f.cod_farm
+where f.nombre = 'FARMACIA2'
+
+
+--Saber los funcionarios de una farmacia
+select u.cedula,u.nombre,u.apellido,u.tipo, f.cod_farm,f.nombre
+from Usuario as u join Farmacia as f on u.cod_farm = f.cod_farm
+
+select * from usuario
+select * from farmacia
 ------------------------------------------------------------------------------------------------
 ------------------------CREACION PROCEDIMIENTOS ALMACENADOS-------------------------------------
 ------------------------------------------------------------------------------------------------
@@ -467,6 +487,29 @@ select f.cod_farm,f.nombre,s.cod_sustancia,s.nombre,s.tipo,s.lote_fabricacion,s.
 from sustancia as s join Farmacia_Sustancia as fs on s.cod_sustancia = fs.cod_sustancia
 					join Farmacia as f on fs.cod_farmacia = f.cod_farm
 
+--Pantalla: Registrarme como Paciente
+create procedure Pa_Registro_paciente
+@cedula varchar(11),
+@nombre varchar(20),
+@apellido varchar(20),
+@carne_salud varchar(12),
+@fvence_cs varchar(10),
+@beneficiario varchar(2),
+@f_principal varchar(11), 
+@correo_e varchar(25),
+@contraseña varchar(8), 
+@telefono varchar(9)
+as
+insert into Paciente values 
+(@cedula,@nombre,@apellido,@carne_salud,@fvence_cs,@beneficiario,@f_principal,
+@correo_e,@contraseña,@telefono)
+
+select * from paciente
+
+
+
+
+
 
 --Pantalla: Historial de Recetas x paciente
 create procedure Pa_ListarTablaSustanciaPorCodFarmacia
@@ -478,24 +521,4 @@ from Sustancia as s join Farmacia_Sustancia as fs on s.cod_sustancia = fs.cod_su
 					join Farmacia as f on fs.cod_farmacia = f.cod_farm
 where f.cod_farm = @CODFARM*/
 
-------------------------------------------------------------------------------------------------
-------------------------CREACION PROCEDIMIENTOS Actualizar-------------------------------------
-------------------------------------------------------------------------------------------------
-
-create procedure Pa_Actualizar
-  @Cedula   varchar(20), @nombre  varchar(20),  @apellido  Varchar(20) ,  @telefono  Varchar(20) ,  @correo  Varchar(20) ,  @farma Varchar(20)
-as
-begin
-UPDATE [dbo].[Usuario] SET [nombre] = @nombre  ,[apellido] = @apellido, telefono =@telefono ,[correo_e] =@correo,[cod_farm] =  @farma 
- WHERE cedula=@Cedula 
- end
-
-
-------------------------------------------------------------------------------------------------
-------------------------CREACION PROCEDIMIENTOS Lista de usaurio-------------------------------------
-------------------------------------------------------------------------------------------------
-create procedure Pa_ListarDatosDeUsuario
-as
-select u.cedula, u.correo_e, u.nombre as nombre , u.apellido as apellido, u.telefono, u.tipo, f.nombre as farmacia
-from Usuario as u join Farmacia as f  on u.cod_farm = f.cod_farm
 
