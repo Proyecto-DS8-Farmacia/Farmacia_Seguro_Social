@@ -107,7 +107,7 @@ Public Class Form1
         Me.Hide()
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
         Dim sc As Form2 = New Form2()
         sc.Show()
         Dim f As Form1 = New Form1()
@@ -120,7 +120,6 @@ Public Class Form1
         Dim f As Form1 = New Form1()
         f.Hide()
 
-        Form2.Show()
     End Sub
 
     Private Sub btnAdministrador_Click(sender As Object, e As EventArgs) Handles btnAdministrador.Click
