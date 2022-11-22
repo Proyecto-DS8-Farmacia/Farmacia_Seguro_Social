@@ -32,9 +32,9 @@ Public Class Metodos
                         CM2.Parameters.AddWithValue("@codf", farmacia)
                         '   Try
                         If CN.State = ConnectionState.Closed Then
-                                CN.Open()
-                            End If
-                            CM2.ExecuteNonQuery()
+                            CN.Open()
+                        End If
+                        CM2.ExecuteNonQuery()
                         '  Catch ex As Exception
                         '   Console.WriteLine(ex.Message)
                         '     End Try
@@ -80,6 +80,27 @@ Public Class Metodos
             End Using
         End Using
     End Function
+
+
+    Public Shared Function ActualizarUSUARIO(cedula As String, nombre As String, apellido As String, correo As String, telefono As String, farmacia As String) As String
+        Using CN As New SqlConnection(My.Settings.Conexion)
+            Using CMD As New SqlCommand("Pa_Actualizar", CN)
+                CMD.CommandType = CommandType.StoredProcedure
+                'CMD.Parameters.AddWithValue("@ENSQLSERVER", ENVISUALSTUDIO)
+                CMD.Parameters.AddWithValue("@Cedula", cedula)
+                CMD.Parameters.AddWithValue("@nombre", nombre)
+                CMD.Parameters.AddWithValue("@apellido", apellido)
+                CMD.Parameters.AddWithValue("@telefono", telefono)
+                CMD.Parameters.AddWithValue("@correo", correo)
+                CMD.Parameters.AddWithValue("@farma", farmacia)
+                CN.Open()
+                Return CMD.ExecuteReader().HasRows.ToString
+
+            End Using
+        End Using
+
+
+    End Function
     Public Shared Function FARMACIAS() As DataTable
 
         Using CN As New SqlConnection(My.Settings.Conexion)
@@ -103,6 +124,7 @@ Public Class Metodos
             End Using
         End Using
     End Function
+
     Public Shared Function TIPOSDEUSUARIO() As DataTable
 
         Using CN As New SqlConnection(My.Settings.Conexion)
@@ -114,4 +136,7 @@ Public Class Metodos
             End Using
         End Using
     End Function
+
+
+
 End Class
