@@ -29,21 +29,18 @@ Partial Class HistorialRecetas
         'dgvHistorialRe
         '
         Me.dgvHistorialRe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvHistorialRe.Location = New System.Drawing.Point(79, 81)
-        Me.dgvHistorialRe.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.dgvHistorialRe.Location = New System.Drawing.Point(63, 85)
         Me.dgvHistorialRe.Name = "dgvHistorialRe"
-        Me.dgvHistorialRe.RowHeadersWidth = 51
         Me.dgvHistorialRe.RowTemplate.Height = 25
-        Me.dgvHistorialRe.Size = New System.Drawing.Size(514, 288)
+        Me.dgvHistorialRe.Size = New System.Drawing.Size(450, 216)
         Me.dgvHistorialRe.TabIndex = 0
         '
         'HistorialRecetas
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(914, 600)
+        Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.dgvHistorialRe)
-        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "HistorialRecetas"
         Me.Text = "HistorialRecetas"
         CType(Me.dgvHistorialRe, System.ComponentModel.ISupportInitialize).EndInit()

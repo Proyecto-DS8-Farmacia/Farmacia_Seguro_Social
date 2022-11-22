@@ -1,8 +1,8 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Perfil
+Partial Class Registrar_Usuariovb
     Inherits System.Windows.Forms.Form
 
-    'Form reemplaza a Dispose para limpiar la lista de componentes.
+    'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()> _
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
@@ -14,13 +14,13 @@ Partial Class Perfil
         End Try
     End Sub
 
-    'Requerido por el Diseñador de Windows Forms
+    'Required by the Windows Form Designer
     Private components As System.ComponentModel.IContainer
 
-    'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
-    'Se puede modificar usando el Diseñador de Windows Forms.  
-    'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    'NOTE: The following procedure is required by the Windows Form Designer
+    'It can be modified using the Windows Form Designer.  
+    'Do not modify it using the code editor.
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.PanelMenu = New System.Windows.Forms.Panel()
@@ -37,28 +37,28 @@ Partial Class Perfil
         Me.tmOcultarMenu = New System.Windows.Forms.Timer(Me.components)
         Me.cboFarmacia = New System.Windows.Forms.ComboBox()
         Me.cboTiposUsuario = New System.Windows.Forms.ComboBox()
-        Me.cboCedula = New System.Windows.Forms.ComboBox()
         Me.lblF = New System.Windows.Forms.Label()
         Me.lblTU = New System.Windows.Forms.Label()
-        Me.lblC = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.txtnombre = New System.Windows.Forms.Panel()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.cboFarmacia_Select = New System.Windows.Forms.ComboBox()
+        Me.txtContra2 = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.btnConsultar = New System.Windows.Forms.Button()
+        Me.txtContra = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.txt_Cedula = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.txtPerfilapellido = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtPerfilNombre = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtTelefono = New System.Windows.Forms.TextBox()
         Me.txtCorreo = New System.Windows.Forms.TextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.lblTipodeUsuario = New System.Windows.Forms.Label()
         Me.lblNombre = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.btnConsultar = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.PanelMenu.SuspendLayout()
@@ -81,7 +81,7 @@ Partial Class Perfil
         Me.PanelMenu.Location = New System.Drawing.Point(0, 0)
         Me.PanelMenu.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.PanelMenu.Name = "PanelMenu"
-        Me.PanelMenu.Size = New System.Drawing.Size(251, 748)
+        Me.PanelMenu.Size = New System.Drawing.Size(251, 754)
         Me.PanelMenu.TabIndex = 9
         '
         'btnSalir
@@ -254,7 +254,7 @@ Partial Class Perfil
         '
         Me.cboFarmacia.FormattingEnabled = True
         Me.cboFarmacia.Items.AddRange(New Object() {"-"})
-        Me.cboFarmacia.Location = New System.Drawing.Point(486, 149)
+        Me.cboFarmacia.Location = New System.Drawing.Point(584, 14)
         Me.cboFarmacia.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.cboFarmacia.Name = "cboFarmacia"
         Me.cboFarmacia.Size = New System.Drawing.Size(189, 28)
@@ -263,26 +263,17 @@ Partial Class Perfil
         'cboTiposUsuario
         '
         Me.cboTiposUsuario.FormattingEnabled = True
-        Me.cboTiposUsuario.Location = New System.Drawing.Point(486, 260)
+        Me.cboTiposUsuario.Location = New System.Drawing.Point(598, 56)
         Me.cboTiposUsuario.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.cboTiposUsuario.Name = "cboTiposUsuario"
         Me.cboTiposUsuario.Size = New System.Drawing.Size(189, 28)
         Me.cboTiposUsuario.TabIndex = 11
         '
-        'cboCedula
-        '
-        Me.cboCedula.FormattingEnabled = True
-        Me.cboCedula.Location = New System.Drawing.Point(486, 391)
-        Me.cboCedula.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.cboCedula.Name = "cboCedula"
-        Me.cboCedula.Size = New System.Drawing.Size(189, 28)
-        Me.cboCedula.TabIndex = 13
-        '
         'lblF
         '
         Me.lblF.AutoSize = True
         Me.lblF.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.lblF.Location = New System.Drawing.Point(303, 153)
+        Me.lblF.Location = New System.Drawing.Point(401, 18)
         Me.lblF.Name = "lblF"
         Me.lblF.Size = New System.Drawing.Size(166, 18)
         Me.lblF.TabIndex = 14
@@ -292,84 +283,116 @@ Partial Class Perfil
         '
         Me.lblTU.AutoSize = True
         Me.lblTU.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.lblTU.Location = New System.Drawing.Point(266, 266)
+        Me.lblTU.Location = New System.Drawing.Point(378, 61)
         Me.lblTU.Name = "lblTU"
         Me.lblTU.Size = New System.Drawing.Size(214, 18)
         Me.lblTU.TabIndex = 15
         Me.lblTU.Text = "Seleccione el tipo de usuario"
         '
-        'lblC
-        '
-        Me.lblC.AutoSize = True
-        Me.lblC.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.lblC.Location = New System.Drawing.Point(303, 395)
-        Me.lblC.Name = "lblC"
-        Me.lblC.Size = New System.Drawing.Size(154, 18)
-        Me.lblC.TabIndex = 16
-        Me.lblC.Text = "Seleccione la cedula"
-        '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption
-        Me.Panel1.Controls.Add(Me.Button2)
         Me.Panel1.Controls.Add(Me.txtnombre)
         Me.Panel1.Controls.Add(Me.lblTipodeUsuario)
         Me.Panel1.Controls.Add(Me.lblNombre)
         Me.Panel1.Controls.Add(Me.PictureBox1)
-        Me.Panel1.Location = New System.Drawing.Point(733, 107)
+        Me.Panel1.Location = New System.Drawing.Point(362, 84)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(443, 628)
+        Me.Panel1.Size = New System.Drawing.Size(831, 628)
         Me.Panel1.TabIndex = 18
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(170, 211)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(103, 31)
-        Me.Button2.TabIndex = 9
-        Me.Button2.Text = "Editar Perfil"
-        Me.Button2.UseVisualStyleBackColor = True
         '
         'txtnombre
         '
         Me.txtnombre.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtnombre.Controls.Add(Me.CheckBox1)
-        Me.txtnombre.Controls.Add(Me.cboFarmacia_Select)
+        Me.txtnombre.Controls.Add(Me.txtContra2)
+        Me.txtnombre.Controls.Add(Me.Label9)
+        Me.txtnombre.Controls.Add(Me.btnConsultar)
+        Me.txtnombre.Controls.Add(Me.txtContra)
+        Me.txtnombre.Controls.Add(Me.lblF)
+        Me.txtnombre.Controls.Add(Me.cboFarmacia)
+        Me.txtnombre.Controls.Add(Me.Label7)
+        Me.txtnombre.Controls.Add(Me.txt_Cedula)
+        Me.txtnombre.Controls.Add(Me.Label4)
+        Me.txtnombre.Controls.Add(Me.lblTU)
         Me.txtnombre.Controls.Add(Me.txtPerfilapellido)
+        Me.txtnombre.Controls.Add(Me.cboTiposUsuario)
         Me.txtnombre.Controls.Add(Me.Label2)
         Me.txtnombre.Controls.Add(Me.txtPerfilNombre)
         Me.txtnombre.Controls.Add(Me.Label1)
         Me.txtnombre.Controls.Add(Me.txtTelefono)
         Me.txtnombre.Controls.Add(Me.txtCorreo)
-        Me.txtnombre.Controls.Add(Me.Label8)
         Me.txtnombre.Controls.Add(Me.Label5)
         Me.txtnombre.Controls.Add(Me.Label6)
-        Me.txtnombre.Location = New System.Drawing.Point(19, 257)
+        Me.txtnombre.Location = New System.Drawing.Point(19, 201)
         Me.txtnombre.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtnombre.Name = "txtnombre"
-        Me.txtnombre.Size = New System.Drawing.Size(406, 348)
+        Me.txtnombre.Size = New System.Drawing.Size(787, 404)
         Me.txtnombre.TabIndex = 8
         '
-        'CheckBox1
+        'txtContra2
         '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(43, 293)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(18, 17)
-        Me.CheckBox1.TabIndex = 17
-        Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.txtContra2.Location = New System.Drawing.Point(181, 313)
+        Me.txtContra2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtContra2.Name = "txtContra2"
+        Me.txtContra2.Size = New System.Drawing.Size(161, 27)
+        Me.txtContra2.TabIndex = 23
         '
-        'cboFarmacia_Select
+        'Label9
         '
-        Me.cboFarmacia_Select.FormattingEnabled = True
-        Me.cboFarmacia_Select.Items.AddRange(New Object() {"-"})
-        Me.cboFarmacia_Select.Location = New System.Drawing.Point(181, 291)
-        Me.cboFarmacia_Select.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.cboFarmacia_Select.Name = "cboFarmacia_Select"
-        Me.cboFarmacia_Select.Size = New System.Drawing.Size(189, 28)
-        Me.cboFarmacia_Select.TabIndex = 16
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label9.Location = New System.Drawing.Point(38, 319)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(111, 19)
+        Me.Label9.TabIndex = 22
+        Me.Label9.Text = "Contraseña: "
+        '
+        'btnConsultar
+        '
+        Me.btnConsultar.Location = New System.Drawing.Point(506, 319)
+        Me.btnConsultar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnConsultar.Name = "btnConsultar"
+        Me.btnConsultar.Size = New System.Drawing.Size(86, 31)
+        Me.btnConsultar.TabIndex = 19
+        Me.btnConsultar.Text = "Registrar"
+        Me.btnConsultar.UseVisualStyleBackColor = True
+        '
+        'txtContra
+        '
+        Me.txtContra.Location = New System.Drawing.Point(181, 266)
+        Me.txtContra.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtContra.Name = "txtContra"
+        Me.txtContra.Size = New System.Drawing.Size(161, 27)
+        Me.txtContra.TabIndex = 21
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label7.Location = New System.Drawing.Point(38, 270)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(111, 19)
+        Me.Label7.TabIndex = 20
+        Me.Label7.Text = "Contraseña: "
+        '
+        'txt_Cedula
+        '
+        Me.txt_Cedula.Location = New System.Drawing.Point(181, 36)
+        Me.txt_Cedula.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txt_Cedula.Name = "txt_Cedula"
+        Me.txt_Cedula.Size = New System.Drawing.Size(161, 27)
+        Me.txt_Cedula.TabIndex = 19
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label4.Location = New System.Drawing.Point(67, 36)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(74, 19)
+        Me.Label4.TabIndex = 18
+        Me.Label4.Text = "Cedula: "
         '
         'txtPerfilapellido
         '
@@ -423,16 +446,6 @@ Partial Class Perfil
         Me.txtCorreo.Size = New System.Drawing.Size(161, 27)
         Me.txtCorreo.TabIndex = 9
         '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label8.Location = New System.Drawing.Point(67, 291)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(86, 19)
-        Me.Label8.TabIndex = 7
-        Me.Label8.Text = "Farmacia:"
-        '
         'Label5
         '
         Me.Label5.AutoSize = True
@@ -464,7 +477,7 @@ Partial Class Perfil
         '
         'lblNombre
         '
-        Me.lblNombre.Location = New System.Drawing.Point(112, 179)
+        Me.lblNombre.Location = New System.Drawing.Point(322, 158)
         Me.lblNombre.Name = "lblNombre"
         Me.lblNombre.Size = New System.Drawing.Size(223, 29)
         Me.lblNombre.TabIndex = 2
@@ -475,22 +488,12 @@ Partial Class Perfil
         '
         Me.PictureBox1.BackgroundImage = Global.CapaPresentacion.My.Resources.Resources.logouser
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox1.Location = New System.Drawing.Point(170, 61)
+        Me.PictureBox1.Location = New System.Drawing.Point(387, 38)
         Me.PictureBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(103, 105)
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
-        '
-        'btnConsultar
-        '
-        Me.btnConsultar.Location = New System.Drawing.Point(440, 537)
-        Me.btnConsultar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.btnConsultar.Name = "btnConsultar"
-        Me.btnConsultar.Size = New System.Drawing.Size(86, 31)
-        Me.btnConsultar.TabIndex = 19
-        Me.btnConsultar.Text = "Consultar"
-        Me.btnConsultar.UseVisualStyleBackColor = True
         '
         'DataGridView1
         '
@@ -522,25 +525,18 @@ Partial Class Perfil
         Me.DataGridView2.TabIndex = 21
         Me.DataGridView2.Visible = False
         '
-        'Perfil
+        'Registrar_Usuariovb
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.ClientSize = New System.Drawing.Size(1239, 748)
+        Me.ClientSize = New System.Drawing.Size(1239, 754)
         Me.Controls.Add(Me.DataGridView2)
         Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.btnConsultar)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.lblC)
-        Me.Controls.Add(Me.lblTU)
-        Me.Controls.Add(Me.lblF)
-        Me.Controls.Add(Me.cboCedula)
-        Me.Controls.Add(Me.cboTiposUsuario)
-        Me.Controls.Add(Me.cboFarmacia)
         Me.Controls.Add(Me.PanelMenu)
         Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Name = "Perfil"
+        Me.Name = "Registrar_Usuariovb"
         Me.Text = "Perfil"
         Me.PanelMenu.ResumeLayout(False)
         Me.PanelMenuSmall.ResumeLayout(False)
@@ -552,7 +548,6 @@ Partial Class Perfil
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents PanelMenu As Panel
@@ -569,19 +564,15 @@ Partial Class Perfil
     Friend WithEvents btnAdministrador As Button
     Friend WithEvents cboFarmacia As ComboBox
     Friend WithEvents cboTiposUsuario As ComboBox
-    Friend WithEvents cboCedula As ComboBox
     Friend WithEvents lblF As Label
     Friend WithEvents lblTU As Label
-    Friend WithEvents lblC As Label
     Friend WithEvents Panel1 As Panel
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents lblNombre As Label
-    Friend WithEvents Label8 As Label
     Friend WithEvents lblTipodeUsuario As Label
-    Friend WithEvents btnConsultar As Button
     Friend WithEvents txtnombre As Panel
     Friend WithEvents txtFarmacia As TextBox
     Friend WithEvents txtTelefono As TextBox
@@ -593,7 +584,11 @@ Partial Class Perfil
     Friend WithEvents Label2 As Label
     Friend WithEvents txtPerfilNombre As TextBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents cboFarmacia_Select As ComboBox
-    Friend WithEvents Button2 As Button
-    Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents txtContra2 As TextBox
+    Friend WithEvents Label9 As Label
+    Friend WithEvents txtContra As TextBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents txt_Cedula As TextBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents btnConsultar As Button
 End Class
