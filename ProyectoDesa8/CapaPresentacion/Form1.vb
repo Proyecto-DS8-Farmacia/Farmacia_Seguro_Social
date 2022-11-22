@@ -35,30 +35,6 @@ Public Class Form1
         End If
     End Sub
 
-    Private Sub btnInicioSesion_Click(sender As Object, e As EventArgs) Handles btnInicioSesion.Click
-        Me.Show()
-    End Sub
-
-    Private Sub btnPerfil_Click(sender As Object, e As EventArgs) Handles btnPerfil.Click
-        Perfil.Show()
-        Me.Hide()
-    End Sub
-
-    Private Sub btnEncargado_Click(sender As Object, e As EventArgs) Handles btnEncargado.Click
-        Encargado.Show()
-        Me.Hide()
-    End Sub
-
-    Private Sub btnFarmaceuta_Click(sender As Object, e As EventArgs) Handles btnFarmaceuta.Click
-        Farmaceuta.Show()
-        Me.Hide()
-    End Sub
-
-    Private Sub btnPaciente_Click(sender As Object, e As EventArgs) Handles btnPaciente.Click
-        Paciente.Show()
-        Me.Hide()
-    End Sub
-
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
         Me.Close()
     End Sub
@@ -86,6 +62,10 @@ Public Class Form1
                     Me.Hide()
                 ElseIf (CapaDatos.Metodos.INICIAR_SESION(txtCorreo.Text.ToString, txtContraseña.Text.ToString, "farmaceuta")) Then
                     Farmaceuta.Show()
+                    Me.Hide()
+                ElseIf ((CapaDatos.Metodos.INICIAR_SESIONPACIENTE(txtCorreo.Text.ToString, txtContraseña.Text.ToString))) Then
+                    HistorialRecetas.correo_paciente = txtCorreo.Text.ToString
+                    Paciente.Show()
                     Me.Hide()
                 Else
                     MessageBox.Show("No se inicio sesion. Revise sus credenciales.", "Aviso!!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
@@ -122,8 +102,4 @@ Public Class Form1
         Me.Hide()
     End Sub
 
-    Private Sub btnAdministrador_Click(sender As Object, e As EventArgs) Handles btnAdministrador.Click
-        Administrador.Show()
-        Me.Hide()
-    End Sub
 End Class
