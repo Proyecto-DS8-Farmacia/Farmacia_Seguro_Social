@@ -53,4 +53,8 @@
         Me.Hide()
     End Sub
 
+    Private Sub btnRegistrarRe_Click(sender As Object, e As EventArgs) Handles btnRegistrarRe.Click
+        RegistrarReceta.Show()
+        Me.Hide()
+    End Sub
 End Class
