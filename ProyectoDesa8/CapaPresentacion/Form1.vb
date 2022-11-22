@@ -114,6 +114,11 @@ Public Class Form1
         f.Hide()
     End Sub
 
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+        RegistrarPaciente.Show()
+        Me.Hide()
+    End Sub
+
     Private Sub btnRecuperarContra_Click(sender As Object, e As EventArgs) Handles btnRecuperarContra.Click
         Dim sc As Form2 = New Form2()
         sc.Show()
