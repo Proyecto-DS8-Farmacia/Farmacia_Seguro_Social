@@ -87,14 +87,18 @@ Public Class Form1
                 ElseIf (CapaDatos.Metodos.INICIAR_SESION(txtCorreo.Text.ToString, txtContraseña.Text.ToString, "farmaceuta")) Then
                     Farmaceuta.Show()
                     Me.Hide()
+                ElseIf ((CapaDatos.Metodos.INICIAR_SESIONPACIENTE(txtCorreo.Text.ToString, txtContraseña.Text.ToString))) Then
+                    HistorialRecetas.correo_paciente = txtCorreo.Text.ToString
+                    Paciente.Show()
+                    Me.Hide()
                 Else
                     MessageBox.Show("No se inicio sesion. Revise sus credenciales.", "Aviso!!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-                    End If
-
-
-                    'Administrador.Show()
-                    'Me.Hide()
                 End If
+
+
+                'Administrador.Show()
+                'Me.Hide()
+            End If
 
             'If (optAdmin.Checked) Then
             'Administrador.Show()
@@ -114,9 +118,10 @@ Public Class Form1
         f.Hide()
     End Sub
 
-    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
-        RegistrarPaciente.Show()
-        Me.Hide()
+
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 
     Private Sub btnRecuperarContra_Click(sender As Object, e As EventArgs) Handles btnRecuperarContra.Click

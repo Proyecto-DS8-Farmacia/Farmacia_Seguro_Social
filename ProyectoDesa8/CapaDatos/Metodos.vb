@@ -60,6 +60,21 @@ Public Class Metodos
         End Using
     End Function
 
+    Public Shared Function INICIAR_SESIONPACIENTE(CORREO As String, CONTRASEÑA As String) As String
+        Using CN As New SqlConnection(My.Settings.Conexion)
+            Using CMD As New SqlCommand("Pa_Login_paciente", CN)
+                CMD.CommandType = CommandType.StoredProcedure
+                'CMD.Parameters.AddWithValue("@ENSQLSERVER", ENVISUALSTUDIO)
+                CMD.Parameters.AddWithValue("@CORREO_E", CORREO)
+                CMD.Parameters.AddWithValue("@CONTRASEÑA", CONTRASEÑA)
+                CN.Open()
+                Return CMD.ExecuteReader().HasRows.ToString
+
+            End Using
+        End Using
+
+    End Function
+
 
     Public Shared Function LISTARSUSTANCIASPORFARMACIA() As DataTable
 
@@ -272,6 +287,25 @@ Public Class Metodos
 
     End Function
 
+
+
+    Public Shared Function HISTORIALRECETAPACIENTE(CORREO As String) As DataTable
+
+        Using CN As New SqlConnection(My.Settings.Conexion)
+            Using DA As New SqlDataAdapter("Pa_HistorialR_paciente  '" & CORREO & "'", CN)
+                ' Using DA As New SqlDataAdapter("Pa_HistorialR_paciente ", CN)
+                Using TABLA As New DataTable
+                    Try
+                        DA.Fill(TABLA)
+                    Catch ex As Exception
+                        MsgBox("Error: " & ex.ToString)
+                    End Try
+
+                    Return TABLA
+                End Using
+            End Using
+        End Using
+    End Function
 
 
 End Class

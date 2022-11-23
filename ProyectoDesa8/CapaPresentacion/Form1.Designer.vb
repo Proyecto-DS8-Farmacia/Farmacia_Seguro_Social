@@ -24,6 +24,7 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.PanelContenidoSmall = New System.Windows.Forms.Panel()
+        Me.btnRegistrarPaciente = New System.Windows.Forms.Button()
         Me.btnRecuperarContra = New System.Windows.Forms.Button()
         Me.btnRegistrar = New System.Windows.Forms.Button()
         Me.btnIngresar = New System.Windows.Forms.Button()
@@ -46,7 +47,6 @@ Partial Class Form1
         Me.btnMenu = New System.Windows.Forms.PictureBox()
         Me.tmOcultarMenu = New System.Windows.Forms.Timer(Me.components)
         Me.tmMostrarMenu = New System.Windows.Forms.Timer(Me.components)
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.PanelContenidoSmall.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -61,7 +61,7 @@ Partial Class Form1
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PanelContenidoSmall.BackColor = System.Drawing.Color.Transparent
-        Me.PanelContenidoSmall.Controls.Add(Me.Button1)
+        Me.PanelContenidoSmall.Controls.Add(Me.btnRegistrarPaciente)
         Me.PanelContenidoSmall.Controls.Add(Me.btnRecuperarContra)
         Me.PanelContenidoSmall.Controls.Add(Me.btnRegistrar)
         Me.PanelContenidoSmall.Controls.Add(Me.btnIngresar)
@@ -78,6 +78,23 @@ Partial Class Form1
         Me.PanelContenidoSmall.Size = New System.Drawing.Size(697, 676)
         Me.PanelContenidoSmall.TabIndex = 4
         '
+        'btnRegistrarPaciente
+        '
+        Me.btnRegistrarPaciente.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnRegistrarPaciente.FlatAppearance.BorderSize = 2
+        Me.btnRegistrarPaciente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnRegistrarPaciente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnRegistrarPaciente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnRegistrarPaciente.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.btnRegistrarPaciente.ForeColor = System.Drawing.Color.White
+        Me.btnRegistrarPaciente.Location = New System.Drawing.Point(257, 457)
+        Me.btnRegistrarPaciente.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnRegistrarPaciente.Name = "btnRegistrarPaciente"
+        Me.btnRegistrarPaciente.Size = New System.Drawing.Size(191, 83)
+        Me.btnRegistrarPaciente.TabIndex = 10
+        Me.btnRegistrarPaciente.Text = "REGISTRAR PACIENTE"
+        Me.btnRegistrarPaciente.UseVisualStyleBackColor = True
+        '
         'btnRecuperarContra
         '
         Me.btnRecuperarContra.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
@@ -87,7 +104,7 @@ Partial Class Form1
         Me.btnRecuperarContra.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnRecuperarContra.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.btnRecuperarContra.ForeColor = System.Drawing.Color.White
-        Me.btnRecuperarContra.Location = New System.Drawing.Point(317, 559)
+        Me.btnRecuperarContra.Location = New System.Drawing.Point(257, 561)
         Me.btnRecuperarContra.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnRecuperarContra.Name = "btnRecuperarContra"
         Me.btnRecuperarContra.Size = New System.Drawing.Size(191, 91)
@@ -104,7 +121,7 @@ Partial Class Form1
         Me.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnRegistrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.btnRegistrar.ForeColor = System.Drawing.Color.White
-        Me.btnRegistrar.Location = New System.Drawing.Point(317, 406)
+        Me.btnRegistrar.Location = New System.Drawing.Point(257, 389)
         Me.btnRegistrar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnRegistrar.Name = "btnRegistrar"
         Me.btnRegistrar.Size = New System.Drawing.Size(191, 47)
@@ -121,7 +138,7 @@ Partial Class Form1
         Me.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnIngresar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.btnIngresar.ForeColor = System.Drawing.Color.White
-        Me.btnIngresar.Location = New System.Drawing.Point(317, 336)
+        Me.btnIngresar.Location = New System.Drawing.Point(257, 321)
         Me.btnIngresar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnIngresar.Name = "btnIngresar"
         Me.btnIngresar.Size = New System.Drawing.Size(191, 47)
@@ -134,7 +151,7 @@ Partial Class Form1
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(235, 236)
+        Me.Label5.Location = New System.Drawing.Point(235, 211)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(124, 25)
         Me.Label5.TabIndex = 6
@@ -145,7 +162,7 @@ Partial Class Form1
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(235, 129)
+        Me.Label4.Location = New System.Drawing.Point(235, 104)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(78, 25)
         Me.Label4.TabIndex = 5
@@ -155,7 +172,7 @@ Partial Class Form1
         '
         Me.txtContraseña.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.txtContraseña.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.txtContraseña.Location = New System.Drawing.Point(235, 285)
+        Me.txtContraseña.Location = New System.Drawing.Point(235, 260)
         Me.txtContraseña.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtContraseña.Name = "txtContraseña"
         Me.txtContraseña.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
@@ -166,7 +183,7 @@ Partial Class Form1
         '
         Me.txtCorreo.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.txtCorreo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.txtCorreo.Location = New System.Drawing.Point(235, 160)
+        Me.txtCorreo.Location = New System.Drawing.Point(235, 135)
         Me.txtCorreo.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtCorreo.Name = "txtCorreo"
         Me.txtCorreo.Size = New System.Drawing.Size(371, 30)
@@ -175,7 +192,7 @@ Partial Class Form1
         'PictureBox2
         '
         Me.PictureBox2.Image = Global.CapaPresentacion.My.Resources.Resources.logopass
-        Me.PictureBox2.Location = New System.Drawing.Point(110, 243)
+        Me.PictureBox2.Location = New System.Drawing.Point(110, 217)
         Me.PictureBox2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(39, 59)
@@ -186,7 +203,7 @@ Partial Class Form1
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.CapaPresentacion.My.Resources.Resources.login
-        Me.PictureBox1.Location = New System.Drawing.Point(110, 136)
+        Me.PictureBox1.Location = New System.Drawing.Point(110, 111)
         Me.PictureBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(39, 59)
@@ -229,7 +246,7 @@ Partial Class Form1
         Me.btnSalir.ForeColor = System.Drawing.Color.White
         Me.btnSalir.Image = Global.CapaPresentacion.My.Resources.Resources.logout1
         Me.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSalir.Location = New System.Drawing.Point(6, 635)
+        Me.btnSalir.Location = New System.Drawing.Point(7, 655)
         Me.btnSalir.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(246, 77)
@@ -249,7 +266,7 @@ Partial Class Form1
         Me.PanelMenuSmall.Location = New System.Drawing.Point(3, 71)
         Me.PanelMenuSmall.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.PanelMenuSmall.Name = "PanelMenuSmall"
-        Me.PanelMenuSmall.Size = New System.Drawing.Size(245, 537)
+        Me.PanelMenuSmall.Size = New System.Drawing.Size(245, 576)
         Me.PanelMenuSmall.TabIndex = 1
         '
         'btnAdministrador
@@ -384,23 +401,6 @@ Partial Class Form1
         'tmMostrarMenu
         '
         '
-        'Button1
-        '
-        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Button1.FlatAppearance.BorderSize = 2
-        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(317, 461)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(191, 75)
-        Me.Button1.TabIndex = 10
-        Me.Button1.Text = "REGISTRAR PACIENTE"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
@@ -449,5 +449,5 @@ Partial Class Form1
     Friend WithEvents optAdmin As RadioButton
     Friend WithEvents optPaciente As RadioButton
     Friend WithEvents btnAdministrador As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnRegistrarPaciente As Button
 End Class
