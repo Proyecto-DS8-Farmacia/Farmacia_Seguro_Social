@@ -1,6 +1,66 @@
 ﻿Imports System.Data.SqlClient
 
 Public Class Metodos
+
+
+
+    Public Shared Sub REGISTRARRECETA(farmacia As String, medico As String, cedula As String, fecha As String, sustancias(,) As String)
+
+        Using CN As New SqlConnection(My.Settings.Conexion)
+            Using CMD As New SqlCommand("Pa_InsertarReceta", CN)
+                Dim identity As Integer
+                CMD.CommandType = CommandType.StoredProcedure
+                CMD.Parameters.AddWithValue("@med", medico)
+                CMD.Parameters.AddWithValue("@fecha", fecha)
+                CMD.Parameters.AddWithValue("@cedula", cedula)
+                CMD.Parameters.Add("@cod", SqlDbType.Int).Direction = ParameterDirection.Output
+
+                Try
+                    If CN.State = ConnectionState.Closed Then
+                        CN.Open()
+                    End If
+                    CMD.ExecuteNonQuery()
+                    identity = CMD.Parameters.Item("@cod").Value
+                Catch ex As Exception
+                    Console.WriteLine(ex.Message)
+                End Try
+                CN.Close()
+
+                For i As Integer = 0 To ((sustancias.Length / 3) - 1)
+                    Using CM2 As New SqlCommand("Pa_InsertarSustanciasPedidas", CN)
+                        CM2.CommandType = CommandType.StoredProcedure
+                        CM2.Parameters.AddWithValue("@codr", identity)
+                        CM2.Parameters.AddWithValue("@cods", sustancias(i, 0))
+                        CM2.Parameters.AddWithValue("@cantp", sustancias(i, 2))
+                        CM2.Parameters.AddWithValue("@codf", farmacia)
+                        '   Try
+                        If CN.State = ConnectionState.Closed Then
+                            CN.Open()
+                        End If
+                        CM2.ExecuteNonQuery()
+                        '  Catch ex As Exception
+                        '   Console.WriteLine(ex.Message)
+                        '     End Try
+                        CN.Close()
+                    End Using
+                Next
+            End Using
+        End Using
+    End Sub
+
+    Public Shared Function SUSTANCIAS() As DataTable
+
+        Using CN As New SqlConnection(My.Settings.Conexion)
+            Using DA As New SqlDataAdapter("select nombre, cod_sustancia from sustancia", CN)
+                Using Data As New DataTable
+                    DA.Fill(Data)
+                    Return Data
+                End Using
+            End Using
+        End Using
+    End Function
+
+
     Public Shared Function LISTARSUSTANCIASPORFARMACIA() As DataTable
 
         Using CN As New SqlConnection(My.Settings.Conexion)
