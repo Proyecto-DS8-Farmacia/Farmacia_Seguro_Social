@@ -212,6 +212,12 @@ Partial Class ConsultarInventario
         Me.btnMenu.TabIndex = 0
         Me.btnMenu.TabStop = False
         '
+        'tmOcultarMenu
+        '
+        '
+        'tmMostrarMenu
+        '
+        '
         'ConsultarInventario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)

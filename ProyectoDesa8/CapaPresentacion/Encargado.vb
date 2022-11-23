@@ -48,4 +48,8 @@
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
         Form1.Close()
     End Sub
+
+    Private Sub btnReStock_Click(sender As Object, e As EventArgs) Handles btnReStock.Click
+        ReStock.Show()
+    End Sub
 End Class
