@@ -193,7 +193,7 @@ Partial Class ReStock
         '
         Me.btnMenu.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnMenu.Image = Global.CapaPresentacion.My.Resources.Resources.Mobile_Menu_Icon
-        Me.btnMenu.Location = New System.Drawing.Point(243, 3)
+        Me.btnMenu.Location = New System.Drawing.Point(190, 12)
         Me.btnMenu.Name = "btnMenu"
         Me.btnMenu.Size = New System.Drawing.Size(56, 43)
         Me.btnMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -207,7 +207,7 @@ Partial Class ReStock
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(653, 50)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(198, 46)
+        Me.Label1.Size = New System.Drawing.Size(158, 37)
         Me.Label1.TabIndex = 18
         Me.Label1.Text = "Re-Stock"
         '
@@ -218,7 +218,7 @@ Partial Class ReStock
         Me.Label2.ForeColor = System.Drawing.Color.White
         Me.Label2.Location = New System.Drawing.Point(386, 231)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(117, 23)
+        Me.Label2.Size = New System.Drawing.Size(97, 18)
         Me.Label2.TabIndex = 19
         Me.Label2.Text = "Sustancias"
         '
@@ -229,7 +229,7 @@ Partial Class ReStock
         Me.Label3.ForeColor = System.Drawing.Color.White
         Me.Label3.Location = New System.Drawing.Point(970, 231)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(99, 23)
+        Me.Label3.Size = New System.Drawing.Size(80, 18)
         Me.Label3.TabIndex = 20
         Me.Label3.Text = "Cantidad"
         '
@@ -239,7 +239,7 @@ Partial Class ReStock
         Me.cbx_Sustancia.Items.AddRange(New Object() {"Panadol", "Tylenol", "Amikacina"})
         Me.cbx_Sustancia.Location = New System.Drawing.Point(368, 264)
         Me.cbx_Sustancia.Name = "cbx_Sustancia"
-        Me.cbx_Sustancia.Size = New System.Drawing.Size(151, 28)
+        Me.cbx_Sustancia.Size = New System.Drawing.Size(151, 23)
         Me.cbx_Sustancia.TabIndex = 22
         '
         'btn_ConfirmarPedido
@@ -262,7 +262,7 @@ Partial Class ReStock
         Me.Label4.ForeColor = System.Drawing.Color.White
         Me.Label4.Location = New System.Drawing.Point(791, 150)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(113, 23)
+        Me.Label4.Size = New System.Drawing.Size(92, 18)
         Me.Label4.TabIndex = 29
         Me.Label4.Text = "Proveedor"
         '
@@ -272,7 +272,7 @@ Partial Class ReStock
         Me.cbx_Proveedor.Items.AddRange(New Object() {"Panadol", "Tylenol", "Amikacina"})
         Me.cbx_Proveedor.Location = New System.Drawing.Point(934, 150)
         Me.cbx_Proveedor.Name = "cbx_Proveedor"
-        Me.cbx_Proveedor.Size = New System.Drawing.Size(151, 28)
+        Me.cbx_Proveedor.Size = New System.Drawing.Size(151, 23)
         Me.cbx_Proveedor.TabIndex = 30
         '
         'cbx_Farmacia
@@ -281,7 +281,7 @@ Partial Class ReStock
         Me.cbx_Farmacia.Items.AddRange(New Object() {"Panadol", "Tylenol", "Amikacina"})
         Me.cbx_Farmacia.Location = New System.Drawing.Point(487, 150)
         Me.cbx_Farmacia.Name = "cbx_Farmacia"
-        Me.cbx_Farmacia.Size = New System.Drawing.Size(151, 28)
+        Me.cbx_Farmacia.Size = New System.Drawing.Size(151, 23)
         Me.cbx_Farmacia.TabIndex = 32
         '
         'Label5
@@ -291,7 +291,7 @@ Partial Class ReStock
         Me.Label5.ForeColor = System.Drawing.Color.White
         Me.Label5.Location = New System.Drawing.Point(367, 150)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(102, 23)
+        Me.Label5.Size = New System.Drawing.Size(83, 18)
         Me.Label5.TabIndex = 33
         Me.Label5.Text = "Farmacia"
         '
@@ -325,7 +325,7 @@ Partial Class ReStock
         '
         Me.txt_Cantidad.Location = New System.Drawing.Point(983, 264)
         Me.txt_Cantidad.Name = "txt_Cantidad"
-        Me.txt_Cantidad.Size = New System.Drawing.Size(75, 27)
+        Me.txt_Cantidad.Size = New System.Drawing.Size(75, 23)
         Me.txt_Cantidad.TabIndex = 36
         '
         'dgv_ReStock

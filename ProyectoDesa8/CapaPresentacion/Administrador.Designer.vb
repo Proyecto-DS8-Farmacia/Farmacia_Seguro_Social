@@ -22,24 +22,33 @@ Partial Class Administrador
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
+        Me.tmOcultarMenu = New System.Windows.Forms.Timer(Me.components)
+        Me.tmMostrarMenu = New System.Windows.Forms.Timer(Me.components)
         Me.PanelMenu = New System.Windows.Forms.Panel()
         Me.btnSalir = New System.Windows.Forms.Button()
         Me.PanelMenuSmall = New System.Windows.Forms.Panel()
         Me.btnAdministrador = New System.Windows.Forms.Button()
-        Me.btnInicioSesion = New System.Windows.Forms.Button()
         Me.btnPaciente = New System.Windows.Forms.Button()
         Me.btnFarmaceuta = New System.Windows.Forms.Button()
         Me.btnEncargado = New System.Windows.Forms.Button()
         Me.btnPerfil = New System.Windows.Forms.Button()
+        Me.btnInicioSesion = New System.Windows.Forms.Button()
         Me.btnMenu = New System.Windows.Forms.PictureBox()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.btnRegistrarRe = New System.Windows.Forms.Button()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.btnConsultaPe = New System.Windows.Forms.Button()
         Me.btnConsultarIn = New System.Windows.Forms.Button()
         Me.PanelMenu.SuspendLayout()
         Me.PanelMenuSmall.SuspendLayout()
         CType(Me.btnMenu, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'tmOcultarMenu
+        '
+        '
+        'tmMostrarMenu
+        '
         '
         'PanelMenu
         '
@@ -51,20 +60,20 @@ Partial Class Administrador
         Me.PanelMenu.Location = New System.Drawing.Point(0, 0)
         Me.PanelMenu.Name = "PanelMenu"
         Me.PanelMenu.Size = New System.Drawing.Size(220, 561)
-        Me.PanelMenu.TabIndex = 18
+        Me.PanelMenu.TabIndex = 23
         '
         'btnSalir
         '
         Me.btnSalir.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnSalir.FlatAppearance.BorderSize = 0
-        Me.btnSalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnSalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
+        Me.btnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
         Me.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSalir.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.btnSalir.ForeColor = System.Drawing.Color.White
         Me.btnSalir.Image = Global.CapaPresentacion.My.Resources.Resources.logout1
         Me.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSalir.Location = New System.Drawing.Point(5, 476)
+        Me.btnSalir.Location = New System.Drawing.Point(6, 491)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(215, 58)
         Me.btnSalir.TabIndex = 13
@@ -75,58 +84,40 @@ Partial Class Administrador
         '
         Me.PanelMenuSmall.BackColor = System.Drawing.Color.Transparent
         Me.PanelMenuSmall.Controls.Add(Me.btnAdministrador)
-        Me.PanelMenuSmall.Controls.Add(Me.btnInicioSesion)
         Me.PanelMenuSmall.Controls.Add(Me.btnPaciente)
         Me.PanelMenuSmall.Controls.Add(Me.btnFarmaceuta)
         Me.PanelMenuSmall.Controls.Add(Me.btnEncargado)
         Me.PanelMenuSmall.Controls.Add(Me.btnPerfil)
-        Me.PanelMenuSmall.Location = New System.Drawing.Point(3, 80)
+        Me.PanelMenuSmall.Controls.Add(Me.btnInicioSesion)
+        Me.PanelMenuSmall.Location = New System.Drawing.Point(3, 53)
         Me.PanelMenuSmall.Name = "PanelMenuSmall"
-        Me.PanelMenuSmall.Size = New System.Drawing.Size(214, 378)
+        Me.PanelMenuSmall.Size = New System.Drawing.Size(214, 432)
         Me.PanelMenuSmall.TabIndex = 1
         '
         'btnAdministrador
         '
         Me.btnAdministrador.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnAdministrador.FlatAppearance.BorderSize = 0
-        Me.btnAdministrador.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnAdministrador.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnAdministrador.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
+        Me.btnAdministrador.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
         Me.btnAdministrador.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAdministrador.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.btnAdministrador.ForeColor = System.Drawing.Color.White
         Me.btnAdministrador.Image = Global.CapaPresentacion.My.Resources.Resources.empleados
         Me.btnAdministrador.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnAdministrador.Location = New System.Drawing.Point(-1, 320)
+        Me.btnAdministrador.Location = New System.Drawing.Point(2, 318)
         Me.btnAdministrador.Name = "btnAdministrador"
         Me.btnAdministrador.Size = New System.Drawing.Size(215, 58)
-        Me.btnAdministrador.TabIndex = 15
+        Me.btnAdministrador.TabIndex = 14
         Me.btnAdministrador.Text = "    Administrador"
         Me.btnAdministrador.UseVisualStyleBackColor = True
-        '
-        'btnInicioSesion
-        '
-        Me.btnInicioSesion.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnInicioSesion.FlatAppearance.BorderSize = 0
-        Me.btnInicioSesion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnInicioSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnInicioSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnInicioSesion.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.btnInicioSesion.ForeColor = System.Drawing.Color.White
-        Me.btnInicioSesion.Image = Global.CapaPresentacion.My.Resources.Resources.logologin1
-        Me.btnInicioSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnInicioSesion.Location = New System.Drawing.Point(-1, 11)
-        Me.btnInicioSesion.Name = "btnInicioSesion"
-        Me.btnInicioSesion.Size = New System.Drawing.Size(215, 58)
-        Me.btnInicioSesion.TabIndex = 10
-        Me.btnInicioSesion.Text = "    Inicio Sesion"
-        Me.btnInicioSesion.UseVisualStyleBackColor = True
         '
         'btnPaciente
         '
         Me.btnPaciente.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnPaciente.FlatAppearance.BorderSize = 0
-        Me.btnPaciente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnPaciente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnPaciente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
+        Me.btnPaciente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
         Me.btnPaciente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnPaciente.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.btnPaciente.ForeColor = System.Drawing.Color.White
@@ -143,8 +134,8 @@ Partial Class Administrador
         '
         Me.btnFarmaceuta.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnFarmaceuta.FlatAppearance.BorderSize = 0
-        Me.btnFarmaceuta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnFarmaceuta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnFarmaceuta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
+        Me.btnFarmaceuta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
         Me.btnFarmaceuta.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnFarmaceuta.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.btnFarmaceuta.ForeColor = System.Drawing.Color.White
@@ -161,8 +152,8 @@ Partial Class Administrador
         '
         Me.btnEncargado.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnEncargado.FlatAppearance.BorderSize = 0
-        Me.btnEncargado.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnEncargado.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnEncargado.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
+        Me.btnEncargado.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
         Me.btnEncargado.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnEncargado.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.btnEncargado.ForeColor = System.Drawing.Color.White
@@ -179,8 +170,8 @@ Partial Class Administrador
         '
         Me.btnPerfil.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnPerfil.FlatAppearance.BorderSize = 0
-        Me.btnPerfil.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnPerfil.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnPerfil.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
+        Me.btnPerfil.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
         Me.btnPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnPerfil.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.btnPerfil.ForeColor = System.Drawing.Color.White
@@ -193,85 +184,112 @@ Partial Class Administrador
         Me.btnPerfil.Text = "    Perfil"
         Me.btnPerfil.UseVisualStyleBackColor = True
         '
+        'btnInicioSesion
+        '
+        Me.btnInicioSesion.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnInicioSesion.FlatAppearance.BorderSize = 0
+        Me.btnInicioSesion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
+        Me.btnInicioSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
+        Me.btnInicioSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnInicioSesion.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.btnInicioSesion.ForeColor = System.Drawing.Color.White
+        Me.btnInicioSesion.Image = Global.CapaPresentacion.My.Resources.Resources.logologin1
+        Me.btnInicioSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnInicioSesion.Location = New System.Drawing.Point(0, 3)
+        Me.btnInicioSesion.Name = "btnInicioSesion"
+        Me.btnInicioSesion.Size = New System.Drawing.Size(215, 58)
+        Me.btnInicioSesion.TabIndex = 8
+        Me.btnInicioSesion.Text = "    Inicio Sesion"
+        Me.btnInicioSesion.UseVisualStyleBackColor = True
+        '
         'btnMenu
         '
         Me.btnMenu.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnMenu.Image = Global.CapaPresentacion.My.Resources.Resources.Mobile_Menu_Icon
-        Me.btnMenu.Location = New System.Drawing.Point(169, 3)
+        Me.btnMenu.Location = New System.Drawing.Point(168, 3)
         Me.btnMenu.Name = "btnMenu"
         Me.btnMenu.Size = New System.Drawing.Size(49, 33)
         Me.btnMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.btnMenu.TabIndex = 0
         Me.btnMenu.TabStop = False
         '
-        'Button2
+        'GroupBox1
         '
-        Me.Button2.Location = New System.Drawing.Point(844, 313)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(156, 50)
-        Me.Button2.TabIndex = 22
-        Me.Button2.Text = "Agregar Farmacia"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.GroupBox1.Controls.Add(Me.btnConsultaPe)
+        Me.GroupBox1.Controls.Add(Me.btnConsultarIn)
+        Me.GroupBox1.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.GroupBox1.ForeColor = System.Drawing.SystemColors.Control
+        Me.GroupBox1.Location = New System.Drawing.Point(384, 91)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(509, 196)
+        Me.GroupBox1.TabIndex = 24
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Menú Administrador:"
         '
-        'Button1
+        'btnConsultaPe
         '
-        Me.Button1.Location = New System.Drawing.Point(844, 234)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(156, 50)
-        Me.Button1.TabIndex = 21
-        Me.Button1.Text = "Consultar Inventario"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'btnRegistrarRe
-        '
-        Me.btnRegistrarRe.Location = New System.Drawing.Point(844, 169)
-        Me.btnRegistrarRe.Name = "btnRegistrarRe"
-        Me.btnRegistrarRe.Size = New System.Drawing.Size(156, 30)
-        Me.btnRegistrarRe.TabIndex = 20
-        Me.btnRegistrarRe.Text = "Consultar Perfil"
-        Me.btnRegistrarRe.UseVisualStyleBackColor = True
+        Me.btnConsultaPe.BackColor = System.Drawing.Color.Black
+        Me.btnConsultaPe.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.btnConsultaPe.FlatAppearance.BorderSize = 2
+        Me.btnConsultaPe.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
+        Me.btnConsultaPe.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
+        Me.btnConsultaPe.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnConsultaPe.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btnConsultaPe.ForeColor = System.Drawing.Color.White
+        Me.btnConsultaPe.Location = New System.Drawing.Point(294, 66)
+        Me.btnConsultaPe.Name = "btnConsultaPe"
+        Me.btnConsultaPe.Size = New System.Drawing.Size(135, 72)
+        Me.btnConsultaPe.TabIndex = 26
+        Me.btnConsultaPe.Text = "Consultar Perfil"
+        Me.btnConsultaPe.UseVisualStyleBackColor = False
         '
         'btnConsultarIn
         '
-        Me.btnConsultarIn.Location = New System.Drawing.Point(844, 119)
+        Me.btnConsultarIn.BackColor = System.Drawing.Color.Black
+        Me.btnConsultarIn.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.btnConsultarIn.FlatAppearance.BorderSize = 2
+        Me.btnConsultarIn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
+        Me.btnConsultarIn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
+        Me.btnConsultarIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnConsultarIn.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btnConsultarIn.ForeColor = System.Drawing.Color.White
+        Me.btnConsultarIn.Location = New System.Drawing.Point(64, 66)
         Me.btnConsultarIn.Name = "btnConsultarIn"
-        Me.btnConsultarIn.Size = New System.Drawing.Size(156, 30)
-        Me.btnConsultarIn.TabIndex = 19
-        Me.btnConsultarIn.Text = "Registrar Personal"
-        Me.btnConsultarIn.UseVisualStyleBackColor = True
+        Me.btnConsultarIn.Size = New System.Drawing.Size(167, 72)
+        Me.btnConsultarIn.TabIndex = 25
+        Me.btnConsultarIn.Text = "Consultar Inventario"
+        Me.btnConsultarIn.UseVisualStyleBackColor = False
         '
         'Administrador
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.BackColor = System.Drawing.Color.Navy
         Me.ClientSize = New System.Drawing.Size(1084, 561)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.btnRegistrarRe)
-        Me.Controls.Add(Me.btnConsultarIn)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.PanelMenu)
         Me.Name = "Administrador"
         Me.Text = "Administrador"
         Me.PanelMenu.ResumeLayout(False)
         Me.PanelMenuSmall.ResumeLayout(False)
         CType(Me.btnMenu, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
-
+    Friend WithEvents tmOcultarMenu As Timer
+    Friend WithEvents tmMostrarMenu As Timer
     Friend WithEvents PanelMenu As Panel
     Friend WithEvents btnSalir As Button
     Friend WithEvents PanelMenuSmall As Panel
     Friend WithEvents btnAdministrador As Button
-    Friend WithEvents btnInicioSesion As Button
     Friend WithEvents btnPaciente As Button
     Friend WithEvents btnFarmaceuta As Button
     Friend WithEvents btnEncargado As Button
     Friend WithEvents btnPerfil As Button
+    Friend WithEvents btnInicioSesion As Button
     Friend WithEvents btnMenu As PictureBox
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
-    Friend WithEvents btnRegistrarRe As Button
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents btnConsultaPe As Button
     Friend WithEvents btnConsultarIn As Button
 End Class
