@@ -57,7 +57,7 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-3E8U4HN;Initial Catalog=Proyecto_Final_Desa8;Integrated Secur" &
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-R7DFTSMJ;Initial Catalog=Proyecto_Final_Desa8;Integrated Secur" &
             "ity=True")>
         Public ReadOnly Property Conexion() As String
             Get

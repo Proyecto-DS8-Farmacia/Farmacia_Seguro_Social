@@ -139,7 +139,7 @@
         cboFarmacia_Select.Enabled = False
     End Sub
 
-    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
+    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged, CheckBox2.CheckedChanged
         If (CheckBox1.Checked) Then
             cboFarmacia_Select.Enabled = True
 
@@ -150,5 +150,6 @@
             Farmacia = (cboFarmacia.SelectedIndex + 1).ToString
         End If
     End Sub
+
 
 End Class
