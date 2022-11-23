@@ -53,12 +53,12 @@ Namespace My
                 Return defaultInstance
             End Get
         End Property
-        
-        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-TO7JHQK;Initial Catalog=Proyecto_Final_Desa8;Integrated Secur"& _ 
-            "ity=True")>  _
+
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-3E8U4HN;Initial Catalog=Proyecto_Final_Desa8;Integrated Secur" &
+            "ity=True")>
         Public ReadOnly Property Conexion() As String
             Get
                 Return CType(Me("Conexion"),String)

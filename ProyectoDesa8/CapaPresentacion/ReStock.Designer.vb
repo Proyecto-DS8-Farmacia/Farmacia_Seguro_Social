@@ -45,10 +45,14 @@ Partial Class ReStock
         Me.btn_registrar = New System.Windows.Forms.Button()
         Me.btn_Limpiar = New System.Windows.Forms.Button()
         Me.txt_Cantidad = New System.Windows.Forms.TextBox()
+        Me.dgv_ReStock = New System.Windows.Forms.DataGridView()
+        Me.Sustancia = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PanelMenu.SuspendLayout()
         Me.PanelMenuSmall.SuspendLayout()
         CType(Me.btnMenu, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgv_ReStock, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PanelMenu
@@ -244,7 +248,7 @@ Partial Class ReStock
         Me.btn_ConfirmarPedido.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btn_ConfirmarPedido.Font = New System.Drawing.Font("Arial Rounded MT Bold", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.btn_ConfirmarPedido.ForeColor = System.Drawing.Color.White
-        Me.btn_ConfirmarPedido.Location = New System.Drawing.Point(629, 548)
+        Me.btn_ConfirmarPedido.Location = New System.Drawing.Point(640, 614)
         Me.btn_ConfirmarPedido.Name = "btn_ConfirmarPedido"
         Me.btn_ConfirmarPedido.Size = New System.Drawing.Size(251, 51)
         Me.btn_ConfirmarPedido.TabIndex = 28
@@ -285,7 +289,7 @@ Partial Class ReStock
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(368, 150)
+        Me.Label5.Location = New System.Drawing.Point(367, 150)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(102, 23)
         Me.Label5.TabIndex = 33
@@ -297,7 +301,7 @@ Partial Class ReStock
         Me.btn_registrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btn_registrar.Font = New System.Drawing.Font("Arial Rounded MT Bold", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.btn_registrar.ForeColor = System.Drawing.Color.White
-        Me.btn_registrar.Location = New System.Drawing.Point(344, 548)
+        Me.btn_registrar.Location = New System.Drawing.Point(354, 614)
         Me.btn_registrar.Name = "btn_registrar"
         Me.btn_registrar.Size = New System.Drawing.Size(177, 51)
         Me.btn_registrar.TabIndex = 34
@@ -310,7 +314,7 @@ Partial Class ReStock
         Me.btn_Limpiar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btn_Limpiar.Font = New System.Drawing.Font("Arial Rounded MT Bold", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.btn_Limpiar.ForeColor = System.Drawing.Color.White
-        Me.btn_Limpiar.Location = New System.Drawing.Point(959, 548)
+        Me.btn_Limpiar.Location = New System.Drawing.Point(970, 614)
         Me.btn_Limpiar.Name = "btn_Limpiar"
         Me.btn_Limpiar.Size = New System.Drawing.Size(177, 51)
         Me.btn_Limpiar.TabIndex = 35
@@ -324,11 +328,37 @@ Partial Class ReStock
         Me.txt_Cantidad.Size = New System.Drawing.Size(75, 27)
         Me.txt_Cantidad.TabIndex = 36
         '
+        'dgv_ReStock
+        '
+        Me.dgv_ReStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgv_ReStock.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Sustancia, Me.Cantidad})
+        Me.dgv_ReStock.Location = New System.Drawing.Point(591, 352)
+        Me.dgv_ReStock.Name = "dgv_ReStock"
+        Me.dgv_ReStock.RowHeadersWidth = 51
+        Me.dgv_ReStock.RowTemplate.Height = 29
+        Me.dgv_ReStock.Size = New System.Drawing.Size(300, 188)
+        Me.dgv_ReStock.TabIndex = 37
+        '
+        'Sustancia
+        '
+        Me.Sustancia.HeaderText = "Sustancia"
+        Me.Sustancia.MinimumWidth = 6
+        Me.Sustancia.Name = "Sustancia"
+        Me.Sustancia.Width = 125
+        '
+        'Cantidad
+        '
+        Me.Cantidad.HeaderText = "Cantidad"
+        Me.Cantidad.MinimumWidth = 6
+        Me.Cantidad.Name = "Cantidad"
+        Me.Cantidad.Width = 125
+        '
         'ReStock
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
         Me.BackColor = System.Drawing.Color.Navy
         Me.ClientSize = New System.Drawing.Size(1239, 748)
+        Me.Controls.Add(Me.dgv_ReStock)
         Me.Controls.Add(Me.txt_Cantidad)
         Me.Controls.Add(Me.btn_Limpiar)
         Me.Controls.Add(Me.btn_registrar)
@@ -348,6 +378,7 @@ Partial Class ReStock
         Me.PanelMenuSmall.ResumeLayout(False)
         CType(Me.btnMenu, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgv_ReStock, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -375,4 +406,7 @@ Partial Class ReStock
     Friend WithEvents btn_registrar As Button
     Friend WithEvents btn_Limpiar As Button
     Friend WithEvents txt_Cantidad As TextBox
+    Friend WithEvents dgv_ReStock As DataGridView
+    Friend WithEvents Sustancia As DataGridViewTextBoxColumn
+    Friend WithEvents Cantidad As DataGridViewTextBoxColumn
 End Class

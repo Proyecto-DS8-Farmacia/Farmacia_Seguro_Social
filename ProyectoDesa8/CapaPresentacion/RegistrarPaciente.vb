@@ -43,6 +43,17 @@
             MessageBox.Show("Las contraseñas deben coincidir.", "Aviso!!", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
 
+        txtTelefono.Text = ""
+        txtFamiliarP.Text = ""
+        txtContraseña.Text = ""
+        txtContraseñaDN.Text = ""
+        txtCarneS.Text = ""
+        txtCorreo.Text = ""
+        txtFechav.Text = ""
+        txtCedula.Text = ""
+        txtNombre.Text = ""
+        txtApellido.Text = ""
+
     End Sub
 
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click

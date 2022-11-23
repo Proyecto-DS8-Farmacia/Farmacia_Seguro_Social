@@ -177,18 +177,12 @@ Public Class Metodos
 
         Using CN As New SqlConnection(My.Settings.Conexion)
             Using CMD As New SqlCommand("Pa_ReStock", CN)
+                CMD.CommandType = CommandType.StoredProcedure
                 CMD.Parameters.AddWithValue("@cf", codf)
                 CMD.Parameters.AddWithValue("@cs", cods)
                 CMD.Parameters.AddWithValue("@cants", cants)
-
-                Try
-                    If CN.State = ConnectionState.Closed Then
-                        CN.Open()
-                    End If
-                    CMD.ExecuteNonQuery()
-                Catch ex As Exception
-                End Try
-                CN.Close()
+                CN.Open()
+                CMD.ExecuteNonQuery()
             End Using
         End Using
     End Function

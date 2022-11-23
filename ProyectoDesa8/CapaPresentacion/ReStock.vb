@@ -1,4 +1,5 @@
-﻿Public Class ReStock
+﻿
+Public Class ReStock
 
 
     Private Sub Farmacia_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -28,8 +29,27 @@
         End If
     End Sub
 
+
     Private Sub btn_registrar_Click(sender As Object, e As EventArgs) Handles btn_registrar.Click
-        CapaDatos.Metodos.RESTOCK(cbx_Farmacia.SelectedValue, cbx_Sustancia.SelectedValue, txt_Cantidad.Text)
+        CapaDatos.Metodos.RESTOCK(cbx_Farmacia.SelectedValue, cbx_Sustancia.SelectedValue, Conversion.Int(txt_Cantidad.Text))
+        dgv_ReStock.Rows.Add(cbx_Sustancia.Text, txt_Cantidad.Text)
+        Correo.dgv_ReStockC.Rows.Add(cbx_Sustancia.Text, txt_Cantidad.Text)
+        txt_Cantidad.Text = ""
+
     End Sub
 
+    Private Sub btn_Limpiar_Click(sender As Object, e As EventArgs) Handles btn_Limpiar.Click
+        txt_Cantidad.Text = ""
+        cbx_Proveedor.SelectedIndex = 0
+        cbx_Farmacia.SelectedIndex = 0
+        dgv_ReStock.Rows.Clear()
+    End Sub
+
+
+    Private Sub btn_ConfirmarPedido_Click(sender As Object, e As EventArgs) Handles btn_ConfirmarPedido.Click
+        Correo.txt_ProveedorC.Text = cbx_Proveedor.Text
+        Correo.txt_FarmaciaC.Text = cbx_Farmacia.Text
+        dgv_ReStock.Rows.Clear()
+        Correo.Show()
+    End Sub
 End Class
