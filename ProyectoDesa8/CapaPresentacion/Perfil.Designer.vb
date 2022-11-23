@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Perfil
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Perfil
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.PanelMenu = New System.Windows.Forms.Panel()
@@ -44,6 +44,7 @@ Partial Class Perfil
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.txtnombre = New System.Windows.Forms.Panel()
+        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.cboFarmacia_Select = New System.Windows.Forms.ComboBox()
         Me.txtPerfilapellido = New System.Windows.Forms.TextBox()
@@ -51,6 +52,7 @@ Partial Class Perfil
         Me.txtPerfilNombre = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtTelefono = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.txtCorreo = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -242,84 +244,99 @@ Partial Class Perfil
         '
         'cboFarmacia
         '
+        Me.cboFarmacia.Font = New System.Drawing.Font("Arial Rounded MT Bold", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.cboFarmacia.FormattingEnabled = True
         Me.cboFarmacia.Items.AddRange(New Object() {"-"})
-        Me.cboFarmacia.Location = New System.Drawing.Point(425, 112)
+        Me.cboFarmacia.Location = New System.Drawing.Point(320, 112)
         Me.cboFarmacia.Name = "cboFarmacia"
-        Me.cboFarmacia.Size = New System.Drawing.Size(166, 23)
+        Me.cboFarmacia.Size = New System.Drawing.Size(193, 25)
         Me.cboFarmacia.TabIndex = 10
         '
         'cboTiposUsuario
         '
+        Me.cboTiposUsuario.Font = New System.Drawing.Font("Arial Rounded MT Bold", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.cboTiposUsuario.FormattingEnabled = True
-        Me.cboTiposUsuario.Location = New System.Drawing.Point(425, 195)
+        Me.cboTiposUsuario.Location = New System.Drawing.Point(320, 221)
         Me.cboTiposUsuario.Name = "cboTiposUsuario"
-        Me.cboTiposUsuario.Size = New System.Drawing.Size(166, 23)
+        Me.cboTiposUsuario.Size = New System.Drawing.Size(193, 25)
         Me.cboTiposUsuario.TabIndex = 11
         '
         'cboCedula
         '
+        Me.cboCedula.Font = New System.Drawing.Font("Arial Rounded MT Bold", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.cboCedula.FormattingEnabled = True
-        Me.cboCedula.Location = New System.Drawing.Point(425, 293)
+        Me.cboCedula.Location = New System.Drawing.Point(320, 325)
         Me.cboCedula.Name = "cboCedula"
-        Me.cboCedula.Size = New System.Drawing.Size(166, 23)
+        Me.cboCedula.Size = New System.Drawing.Size(193, 25)
         Me.cboCedula.TabIndex = 13
         '
         'lblF
         '
         Me.lblF.AutoSize = True
-        Me.lblF.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.lblF.Location = New System.Drawing.Point(265, 115)
+        Me.lblF.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.lblF.ForeColor = System.Drawing.Color.White
+        Me.lblF.Location = New System.Drawing.Point(320, 80)
         Me.lblF.Name = "lblF"
-        Me.lblF.Size = New System.Drawing.Size(137, 15)
+        Me.lblF.Size = New System.Drawing.Size(211, 18)
         Me.lblF.TabIndex = 14
         Me.lblF.Text = "Seleccione la farmacia"
         '
         'lblTU
         '
         Me.lblTU.AutoSize = True
-        Me.lblTU.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.lblTU.Location = New System.Drawing.Point(233, 200)
+        Me.lblTU.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.lblTU.ForeColor = System.Drawing.Color.White
+        Me.lblTU.Location = New System.Drawing.Point(284, 195)
         Me.lblTU.Name = "lblTU"
-        Me.lblTU.Size = New System.Drawing.Size(170, 15)
+        Me.lblTU.Size = New System.Drawing.Size(266, 18)
         Me.lblTU.TabIndex = 15
         Me.lblTU.Text = "Seleccione el tipo de usuario"
         '
         'lblC
         '
         Me.lblC.AutoSize = True
-        Me.lblC.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.lblC.Location = New System.Drawing.Point(265, 296)
+        Me.lblC.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.lblC.ForeColor = System.Drawing.Color.White
+        Me.lblC.Location = New System.Drawing.Point(320, 295)
         Me.lblC.Name = "lblC"
-        Me.lblC.Size = New System.Drawing.Size(124, 15)
+        Me.lblC.Size = New System.Drawing.Size(193, 18)
         Me.lblC.TabIndex = 16
         Me.lblC.Text = "Seleccione la cedula"
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Panel1.Controls.Add(Me.Button2)
         Me.Panel1.Controls.Add(Me.txtnombre)
         Me.Panel1.Controls.Add(Me.lblTipodeUsuario)
         Me.Panel1.Controls.Add(Me.lblNombre)
         Me.Panel1.Controls.Add(Me.PictureBox1)
-        Me.Panel1.Location = New System.Drawing.Point(641, 80)
+        Me.Panel1.ForeColor = System.Drawing.Color.White
+        Me.Panel1.Location = New System.Drawing.Point(635, 46)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(388, 471)
         Me.Panel1.TabIndex = 18
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(149, 158)
+        Me.Button2.BackColor = System.Drawing.Color.Black
+        Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.Button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
+        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Button2.ForeColor = System.Drawing.Color.White
+        Me.Button2.Location = New System.Drawing.Point(135, 159)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(90, 23)
+        Me.Button2.Size = New System.Drawing.Size(124, 29)
         Me.Button2.TabIndex = 9
         Me.Button2.Text = "Editar Perfil"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Button2.UseVisualStyleBackColor = False
         '
         'txtnombre
         '
-        Me.txtnombre.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtnombre.BackColor = System.Drawing.Color.Navy
+        Me.txtnombre.Controls.Add(Me.CheckBox2)
         Me.txtnombre.Controls.Add(Me.CheckBox1)
         Me.txtnombre.Controls.Add(Me.cboFarmacia_Select)
         Me.txtnombre.Controls.Add(Me.txtPerfilapellido)
@@ -327,6 +344,7 @@ Partial Class Perfil
         Me.txtnombre.Controls.Add(Me.txtPerfilNombre)
         Me.txtnombre.Controls.Add(Me.Label1)
         Me.txtnombre.Controls.Add(Me.txtTelefono)
+        Me.txtnombre.Controls.Add(Me.Label4)
         Me.txtnombre.Controls.Add(Me.txtCorreo)
         Me.txtnombre.Controls.Add(Me.Label8)
         Me.txtnombre.Controls.Add(Me.Label5)
@@ -336,10 +354,20 @@ Partial Class Perfil
         Me.txtnombre.Size = New System.Drawing.Size(355, 261)
         Me.txtnombre.TabIndex = 8
         '
+        'CheckBox2
+        '
+        Me.CheckBox2.AutoSize = True
+        Me.CheckBox2.Location = New System.Drawing.Point(36, 195)
+        Me.CheckBox2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.CheckBox2.Name = "CheckBox2"
+        Me.CheckBox2.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox2.TabIndex = 17
+        Me.CheckBox2.UseVisualStyleBackColor = True
+        '
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(38, 220)
+        Me.CheckBox1.Location = New System.Drawing.Point(36, 195)
         Me.CheckBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(15, 14)
@@ -350,101 +378,120 @@ Partial Class Perfil
         '
         Me.cboFarmacia_Select.FormattingEnabled = True
         Me.cboFarmacia_Select.Items.AddRange(New Object() {"-"})
-        Me.cboFarmacia_Select.Location = New System.Drawing.Point(158, 218)
+        Me.cboFarmacia_Select.Location = New System.Drawing.Point(181, 291)
+        Me.cboFarmacia_Select.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.cboFarmacia_Select.Name = "cboFarmacia_Select"
         Me.cboFarmacia_Select.Size = New System.Drawing.Size(166, 23)
         Me.cboFarmacia_Select.TabIndex = 16
         '
         'txtPerfilapellido
-        '
-        Me.txtPerfilapellido.Location = New System.Drawing.Point(158, 95)
-        Me.txtPerfilapellido.Name = "txtPerfilapellido"
-        Me.txtPerfilapellido.Size = New System.Drawing.Size(141, 23)
+        Me.txtPerfilapellido.Location = New System.Drawing.Point(156, 74)
+        Me.txtPerfilapellido.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtPerfilapellido.Size = New System.Drawing.Size(166, 21)
+        Me.txtPerfilapellido.Size = New System.Drawing.Size(161, 27)
         Me.txtPerfilapellido.TabIndex = 15
         '
         'Label2
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label2.Location = New System.Drawing.Point(59, 95)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(72, 16)
+        Me.Label2.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(57, 74)
+        Me.Label2.Location = New System.Drawing.Point(67, 127)
+        Me.Label2.Size = New System.Drawing.Size(81, 18)
+        Me.Label2.Size = New System.Drawing.Size(82, 19)
         Me.Label2.TabIndex = 14
         Me.Label2.Text = "Apellido: "
         '
         'txtPerfilNombre
-        '
-        Me.txtPerfilNombre.Location = New System.Drawing.Point(158, 59)
-        Me.txtPerfilNombre.Name = "txtPerfilNombre"
-        Me.txtPerfilNombre.Size = New System.Drawing.Size(141, 23)
+        Me.txtPerfilNombre.Location = New System.Drawing.Point(156, 38)
+        Me.txtPerfilNombre.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtPerfilNombre.Size = New System.Drawing.Size(166, 21)
+        Me.txtPerfilNombre.Size = New System.Drawing.Size(161, 27)
         Me.txtPerfilNombre.TabIndex = 13
         '
         'Label1
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.Location = New System.Drawing.Point(59, 59)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(70, 16)
+        Me.Label1.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(57, 38)
+        Me.Label1.Location = New System.Drawing.Point(67, 79)
+        Me.Label1.Size = New System.Drawing.Size(80, 18)
+        Me.Label1.Size = New System.Drawing.Size(82, 19)
         Me.Label1.TabIndex = 12
         Me.Label1.Text = "Nombre: "
         '
         'txtTelefono
-        '
-        Me.txtTelefono.Location = New System.Drawing.Point(158, 164)
-        Me.txtTelefono.Name = "txtTelefono"
-        Me.txtTelefono.Size = New System.Drawing.Size(141, 23)
+        Me.txtTelefono.Location = New System.Drawing.Point(156, 143)
+        Me.txtTelefono.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtTelefono.Size = New System.Drawing.Size(166, 21)
+        Me.txtTelefono.Size = New System.Drawing.Size(161, 27)
         Me.txtTelefono.TabIndex = 10
         '
-        'txtCorreo
+        'Label4
         '
-        Me.txtCorreo.Location = New System.Drawing.Point(158, 130)
-        Me.txtCorreo.Name = "txtCorreo"
-        Me.txtCorreo.Size = New System.Drawing.Size(141, 23)
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label4.ForeColor = System.Drawing.Color.White
+        Me.Label4.Location = New System.Drawing.Point(57, 191)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(88, 18)
+        Me.Label4.TabIndex = 7
+        Me.Label4.Text = "Farmacia:"
+        '
+        'txtCorreo
+        Me.txtCorreo.Location = New System.Drawing.Point(156, 109)
+        Me.txtCorreo.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtCorreo.Size = New System.Drawing.Size(166, 21)
+        Me.txtCorreo.Size = New System.Drawing.Size(161, 27)
         Me.txtCorreo.TabIndex = 9
         '
         'Label8
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label8.Location = New System.Drawing.Point(59, 218)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(74, 16)
+        Me.Label8.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label8.ForeColor = System.Drawing.Color.White
+        Me.Label8.Location = New System.Drawing.Point(57, 189)
+        Me.Label8.Location = New System.Drawing.Point(67, 291)
+        Me.Label8.Size = New System.Drawing.Size(88, 18)
+        Me.Label8.Size = New System.Drawing.Size(86, 19)
         Me.Label8.TabIndex = 7
         Me.Label8.Text = "Farmacia:"
         '
         'Label5
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label5.Location = New System.Drawing.Point(59, 132)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(60, 16)
+        Me.Label5.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label5.ForeColor = System.Drawing.Color.White
+        Me.Label5.Location = New System.Drawing.Point(57, 111)
+        Me.Label5.Location = New System.Drawing.Point(67, 176)
+        Me.Label5.Size = New System.Drawing.Size(69, 18)
+        Me.Label5.Size = New System.Drawing.Size(70, 19)
         Me.Label5.TabIndex = 4
         Me.Label5.Text = "Correo:"
         '
         'Label6
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label6.Location = New System.Drawing.Point(59, 168)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(76, 16)
+        Me.Label6.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label6.ForeColor = System.Drawing.Color.White
+        Me.Label6.Location = New System.Drawing.Point(57, 147)
+        Me.Label6.Location = New System.Drawing.Point(67, 224)
+        Me.Label6.Size = New System.Drawing.Size(86, 18)
+        Me.Label6.Size = New System.Drawing.Size(86, 19)
         Me.Label6.TabIndex = 5
         Me.Label6.Text = "Telefono: "
         '
         'lblTipodeUsuario
-        '
-        Me.lblTipodeUsuario.Font = New System.Drawing.Font("Arial", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.lblTipodeUsuario.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.lblTipodeUsuario.Location = New System.Drawing.Point(98, 14)
+        Me.lblTipodeUsuario.Location = New System.Drawing.Point(112, 19)
         Me.lblTipodeUsuario.Name = "lblTipodeUsuario"
         Me.lblTipodeUsuario.Size = New System.Drawing.Size(195, 18)
         Me.lblTipodeUsuario.TabIndex = 6
         Me.lblTipodeUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'lblNombre
-        '
-        Me.lblNombre.Location = New System.Drawing.Point(98, 134)
+        Me.lblNombre.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.lblNombre.ForeColor = System.Drawing.Color.White
+        Me.lblNombre.Location = New System.Drawing.Point(98, 128)
+        Me.lblNombre.Location = New System.Drawing.Point(112, 179)
         Me.lblNombre.Name = "lblNombre"
         Me.lblNombre.Size = New System.Drawing.Size(195, 22)
         Me.lblNombre.TabIndex = 2
@@ -454,21 +501,28 @@ Partial Class Perfil
         'PictureBox1
         '
         Me.PictureBox1.BackgroundImage = Global.CapaPresentacion.My.Resources.Resources.logouser
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox1.Location = New System.Drawing.Point(149, 46)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(90, 79)
+        Me.PictureBox1.Location = New System.Drawing.Point(156, 57)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.PictureBox1.Size = New System.Drawing.Size(81, 68)
+        Me.PictureBox1.Size = New System.Drawing.Size(103, 105)
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
         'btnConsultar
-        '
-        Me.btnConsultar.Location = New System.Drawing.Point(385, 403)
-        Me.btnConsultar.Name = "btnConsultar"
-        Me.btnConsultar.Size = New System.Drawing.Size(75, 23)
+        Me.btnConsultar.BackColor = System.Drawing.Color.Black
+        Me.btnConsultar.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.btnConsultar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
+        Me.btnConsultar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
+        Me.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnConsultar.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btnConsultar.ForeColor = System.Drawing.Color.White
+        Me.btnConsultar.Location = New System.Drawing.Point(364, 403)
+        Me.btnConsultar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnConsultar.Size = New System.Drawing.Size(103, 36)
+        Me.btnConsultar.Size = New System.Drawing.Size(86, 31)
         Me.btnConsultar.TabIndex = 19
         Me.btnConsultar.Text = "Consultar"
-        Me.btnConsultar.UseVisualStyleBackColor = True
+        Me.btnConsultar.UseVisualStyleBackColor = False
         '
         'DataGridView1
         '
@@ -571,4 +625,6 @@ Partial Class Perfil
     Friend WithEvents cboFarmacia_Select As ComboBox
     Friend WithEvents Button2 As Button
     Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents CheckBox2 As CheckBox
+    Friend WithEvents Label4 As Label
 End Class
