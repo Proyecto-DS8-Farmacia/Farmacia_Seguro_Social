@@ -66,4 +66,9 @@ Public Class ConsultarInventario
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
         Form1.Close()
     End Sub
+
+    Private Sub btnAdministrador_Click(sender As Object, e As EventArgs) Handles btnAdministrador.Click
+        Administrador.Show()
+        Me.Hide()
+    End Sub
 End Class

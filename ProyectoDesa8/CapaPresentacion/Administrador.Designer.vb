@@ -38,10 +38,12 @@ Partial Class Administrador
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.btnConsultaPe = New System.Windows.Forms.Button()
         Me.btnConsultarIn = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PanelMenu.SuspendLayout()
         Me.PanelMenuSmall.SuspendLayout()
         CType(Me.btnMenu, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'tmOcultarMenu
@@ -260,12 +262,23 @@ Partial Class Administrador
         Me.btnConsultarIn.Text = "Consultar Inventario"
         Me.btnConsultarIn.UseVisualStyleBackColor = False
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.CapaPresentacion.My.Resources.Resources.MicrosoftTeams_image__1_
+        Me.PictureBox1.Location = New System.Drawing.Point(463, 333)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(350, 183)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 25
+        Me.PictureBox1.TabStop = False
+        '
         'Administrador
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Navy
         Me.ClientSize = New System.Drawing.Size(1084, 561)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.PanelMenu)
         Me.Name = "Administrador"
@@ -274,6 +287,7 @@ Partial Class Administrador
         Me.PanelMenuSmall.ResumeLayout(False)
         CType(Me.btnMenu, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -292,4 +306,5 @@ Partial Class Administrador
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents btnConsultaPe As Button
     Friend WithEvents btnConsultarIn As Button
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

@@ -37,6 +37,7 @@ Partial Class ConsultarInventario
         Me.btnMenu = New System.Windows.Forms.PictureBox()
         Me.tmOcultarMenu = New System.Windows.Forms.Timer(Me.components)
         Me.tmMostrarMenu = New System.Windows.Forms.Timer(Me.components)
+        Me.btnAdministrador = New System.Windows.Forms.Button()
         CType(Me.dgvConsultarIn, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelMenu.SuspendLayout()
         Me.PanelMenuSmall.SuspendLayout()
@@ -46,15 +47,15 @@ Partial Class ConsultarInventario
         'dgvConsultarIn
         '
         Me.dgvConsultarIn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvConsultarIn.Location = New System.Drawing.Point(345, 166)
+        Me.dgvConsultarIn.Location = New System.Drawing.Point(257, 191)
         Me.dgvConsultarIn.Name = "dgvConsultarIn"
         Me.dgvConsultarIn.RowTemplate.Height = 25
-        Me.dgvConsultarIn.Size = New System.Drawing.Size(679, 214)
+        Me.dgvConsultarIn.Size = New System.Drawing.Size(776, 214)
         Me.dgvConsultarIn.TabIndex = 0
         '
         'txtNombreF
         '
-        Me.txtNombreF.Location = New System.Drawing.Point(547, 109)
+        Me.txtNombreF.Location = New System.Drawing.Point(257, 126)
         Me.txtNombreF.Name = "txtNombreF"
         Me.txtNombreF.Size = New System.Drawing.Size(247, 23)
         Me.txtNombreF.TabIndex = 1
@@ -62,15 +63,18 @@ Partial Class ConsultarInventario
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(345, 113)
+        Me.Label1.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(257, 91)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(181, 15)
+        Me.Label1.Size = New System.Drawing.Size(273, 18)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Ingrese el nombre de la Farmacia"
         '
         'PanelMenu
         '
         Me.PanelMenu.BackColor = System.Drawing.Color.Transparent
+        Me.PanelMenu.Controls.Add(Me.btnAdministrador)
         Me.PanelMenu.Controls.Add(Me.btnSalir)
         Me.PanelMenu.Controls.Add(Me.PanelMenuSmall)
         Me.PanelMenu.Controls.Add(Me.btnMenu)
@@ -84,8 +88,8 @@ Partial Class ConsultarInventario
         '
         Me.btnSalir.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnSalir.FlatAppearance.BorderSize = 0
-        Me.btnSalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnSalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
+        Me.btnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
         Me.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSalir.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.btnSalir.ForeColor = System.Drawing.Color.White
@@ -115,8 +119,8 @@ Partial Class ConsultarInventario
         '
         Me.btnPaciente.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnPaciente.FlatAppearance.BorderSize = 0
-        Me.btnPaciente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnPaciente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnPaciente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
+        Me.btnPaciente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
         Me.btnPaciente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnPaciente.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.btnPaciente.ForeColor = System.Drawing.Color.White
@@ -133,8 +137,8 @@ Partial Class ConsultarInventario
         '
         Me.btnFarmaceuta.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnFarmaceuta.FlatAppearance.BorderSize = 0
-        Me.btnFarmaceuta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnFarmaceuta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnFarmaceuta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
+        Me.btnFarmaceuta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
         Me.btnFarmaceuta.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnFarmaceuta.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.btnFarmaceuta.ForeColor = System.Drawing.Color.White
@@ -151,8 +155,8 @@ Partial Class ConsultarInventario
         '
         Me.btnEncargado.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnEncargado.FlatAppearance.BorderSize = 0
-        Me.btnEncargado.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnEncargado.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnEncargado.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
+        Me.btnEncargado.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
         Me.btnEncargado.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnEncargado.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.btnEncargado.ForeColor = System.Drawing.Color.White
@@ -169,8 +173,8 @@ Partial Class ConsultarInventario
         '
         Me.btnPerfil.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnPerfil.FlatAppearance.BorderSize = 0
-        Me.btnPerfil.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnPerfil.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnPerfil.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
+        Me.btnPerfil.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
         Me.btnPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnPerfil.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.btnPerfil.ForeColor = System.Drawing.Color.White
@@ -187,8 +191,8 @@ Partial Class ConsultarInventario
         '
         Me.btnInicioSesion.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnInicioSesion.FlatAppearance.BorderSize = 0
-        Me.btnInicioSesion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnInicioSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnInicioSesion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
+        Me.btnInicioSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
         Me.btnInicioSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnInicioSesion.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.btnInicioSesion.ForeColor = System.Drawing.Color.White
@@ -218,11 +222,29 @@ Partial Class ConsultarInventario
         'tmMostrarMenu
         '
         '
+        'btnAdministrador
+        '
+        Me.btnAdministrador.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnAdministrador.FlatAppearance.BorderSize = 0
+        Me.btnAdministrador.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
+        Me.btnAdministrador.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
+        Me.btnAdministrador.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAdministrador.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.btnAdministrador.ForeColor = System.Drawing.Color.White
+        Me.btnAdministrador.Image = Global.CapaPresentacion.My.Resources.Resources.empleados
+        Me.btnAdministrador.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnAdministrador.Location = New System.Drawing.Point(3, 420)
+        Me.btnAdministrador.Name = "btnAdministrador"
+        Me.btnAdministrador.Size = New System.Drawing.Size(215, 58)
+        Me.btnAdministrador.TabIndex = 15
+        Me.btnAdministrador.Text = "    Administrador"
+        Me.btnAdministrador.UseVisualStyleBackColor = True
+        '
         'ConsultarInventario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.BackColor = System.Drawing.Color.Navy
         Me.ClientSize = New System.Drawing.Size(1084, 561)
         Me.Controls.Add(Me.PanelMenu)
         Me.Controls.Add(Me.Label1)
@@ -253,4 +275,5 @@ Partial Class ConsultarInventario
     Friend WithEvents btnMenu As PictureBox
     Friend WithEvents tmOcultarMenu As Timer
     Friend WithEvents tmMostrarMenu As Timer
+    Friend WithEvents btnAdministrador As Button
 End Class
