@@ -557,3 +557,60 @@ insert into Paciente values
 (@cedula,@nombre,@apellido,@carne_salud,@fvence_cs,@beneficiario,@f_principal,@correo_e,@contraseña,@telefono)
 
 
+------------------------------------------------------------------------------------------------
+------------------------CREACION PROCEDIMIENTOS TRIGGER INSERT RECETA-------------------------------------
+------------------------------------------------------------------------------------------------
+use Proyecto_Final_Desa8
+create trigger TriggerPrueba
+on Receta
+for Insert 
+as 
+begin
+	select * from Receta
+end
+------------------------------------------------------------------------------------------------
+------------------------CREACION PROCEDIMIENTOS INSERCCION REGISTRO RECETA-------------------------------------
+------------------------------------------------------------------------------------------------
+create procedure Pa_Registro_paciente
+@cedula varchar(11),
+@nombre varchar(20),
+@apellido varchar(20),
+@carne_salud varchar(12),
+@fvence_cs varchar(10),
+@beneficiario varchar(2),
+@f_principal varchar(11),
+@correo_e varchar(25),
+@contraseña varchar(8),
+@telefono varchar(9)
+as
+insert into Paciente values 
+(@cedula,@nombre,@apellido,@carne_salud,@fvence_cs,@beneficiario,@f_principal,@correo_e,@contraseña,@telefono)
+
+
+------------------------------------------------------------------------------------------------
+------------------------CREACION PROCEDIMIENTOS  INSERCION RECETA-------------------------------------
+------------------------------------------------------------------------------------------------
+
+create procedure Pa_InsertarReceta
+@med varchar (25),
+@fecha varchar (10),
+@cedula varchar (11),
+@cod int output
+as
+begin
+insert into Receta(medico,fecha,cedula) values (@med, @fecha, @cedula)
+set @cod = SCOPE_IDENTITY()
+select @cod
+end 
+------------------------------------------------------------------------------------------------
+------------------------CREACION PROCEDIMIENTOS Pa_InsertarSustanciasPedidas-------------------------------------
+------------------------------------------------------------------------------------------------
+create procedure Pa_InsertarSustanciasPedidas
+@codr int,
+@cods int,
+@cantp int,
+@codf int
+as
+insert into Receta_Sustancia values(@codr,@cods,@cantp,@codf)
+
+
