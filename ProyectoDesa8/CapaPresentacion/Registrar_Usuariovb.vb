@@ -91,7 +91,7 @@
 
     Private Sub btnConsultar_Click(sender As Object, e As EventArgs) Handles btnConsultar.Click
         'Dim Data As New DataView(CapaDatos.Metodos.DATOSDEUSUARIO)
-        Dim contr, contr2, cedula, nombre, apellido, telefono, correo_e, tipo As String
+        Dim contr, contr2, cedula, nombre, apellido, telefono, correo_e, tipo, con As String
         Dim farma As Integer
 
         contr = txtContra.Text.ToString
@@ -110,8 +110,13 @@
 
 
                 Try
-                    CapaDatos.Metodos.RegistrarUsuario(cedula, nombre, apellido, correo_e, telefono, contr2, tipo, farma)
-                    MsgBox("Usuario registrado con Exito")
+                    con = CapaDatos.Metodos.RegistrarUsuario(cedula, nombre, apellido, correo_e, telefono, contr2, tipo, farma).ToString
+                    If (con.Equals("False")) Then
+                        MsgBox("Error de registro")
+
+                    Else
+                        MsgBox("Usuario registrado con Exito")
+                    End If
                 Catch ex As Exception
                     MsgBox("ERROR DE REGISTRO")
                     MsgBox("Error: " & ex.ToString)
