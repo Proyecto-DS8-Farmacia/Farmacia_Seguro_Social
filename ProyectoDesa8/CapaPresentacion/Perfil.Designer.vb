@@ -82,8 +82,9 @@ Partial Class Perfil
         Me.PanelMenu.Controls.Add(Me.btnMenu)
         Me.PanelMenu.Dock = System.Windows.Forms.DockStyle.Left
         Me.PanelMenu.Location = New System.Drawing.Point(0, 0)
+        Me.PanelMenu.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.PanelMenu.Name = "PanelMenu"
-        Me.PanelMenu.Size = New System.Drawing.Size(220, 561)
+        Me.PanelMenu.Size = New System.Drawing.Size(251, 748)
         Me.PanelMenu.TabIndex = 9
         '
         'btnSalir
@@ -97,9 +98,10 @@ Partial Class Perfil
         Me.btnSalir.ForeColor = System.Drawing.Color.White
         Me.btnSalir.Image = Global.CapaPresentacion.My.Resources.Resources.logout1
         Me.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSalir.Location = New System.Drawing.Point(5, 476)
+        Me.btnSalir.Location = New System.Drawing.Point(6, 635)
+        Me.btnSalir.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnSalir.Name = "btnSalir"
-        Me.btnSalir.Size = New System.Drawing.Size(215, 58)
+        Me.btnSalir.Size = New System.Drawing.Size(246, 77)
         Me.btnSalir.TabIndex = 13
         Me.btnSalir.Text = "    Salir"
         Me.btnSalir.UseVisualStyleBackColor = True
@@ -113,9 +115,10 @@ Partial Class Perfil
         Me.PanelMenuSmall.Controls.Add(Me.btnFarmaceuta)
         Me.PanelMenuSmall.Controls.Add(Me.btnEncargado)
         Me.PanelMenuSmall.Controls.Add(Me.btnPerfil)
-        Me.PanelMenuSmall.Location = New System.Drawing.Point(3, 80)
+        Me.PanelMenuSmall.Location = New System.Drawing.Point(3, 107)
+        Me.PanelMenuSmall.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.PanelMenuSmall.Name = "PanelMenuSmall"
-        Me.PanelMenuSmall.Size = New System.Drawing.Size(214, 390)
+        Me.PanelMenuSmall.Size = New System.Drawing.Size(245, 520)
         Me.PanelMenuSmall.TabIndex = 1
         '
         'btnAdministrador
@@ -129,9 +132,10 @@ Partial Class Perfil
         Me.btnAdministrador.ForeColor = System.Drawing.Color.White
         Me.btnAdministrador.Image = Global.CapaPresentacion.My.Resources.Resources.empleados
         Me.btnAdministrador.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnAdministrador.Location = New System.Drawing.Point(-1, 329)
+        Me.btnAdministrador.Location = New System.Drawing.Point(-1, 439)
+        Me.btnAdministrador.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnAdministrador.Name = "btnAdministrador"
-        Me.btnAdministrador.Size = New System.Drawing.Size(215, 58)
+        Me.btnAdministrador.Size = New System.Drawing.Size(246, 77)
         Me.btnAdministrador.TabIndex = 16
         Me.btnAdministrador.Text = "    Administrador"
         Me.btnAdministrador.UseVisualStyleBackColor = True
@@ -147,9 +151,10 @@ Partial Class Perfil
         Me.btnInicioSesion.ForeColor = System.Drawing.Color.White
         Me.btnInicioSesion.Image = Global.CapaPresentacion.My.Resources.Resources.logologin1
         Me.btnInicioSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnInicioSesion.Location = New System.Drawing.Point(-1, 11)
+        Me.btnInicioSesion.Location = New System.Drawing.Point(-1, 15)
+        Me.btnInicioSesion.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnInicioSesion.Name = "btnInicioSesion"
-        Me.btnInicioSesion.Size = New System.Drawing.Size(215, 58)
+        Me.btnInicioSesion.Size = New System.Drawing.Size(246, 77)
         Me.btnInicioSesion.TabIndex = 10
         Me.btnInicioSesion.Text = "    Inicio Sesion"
         Me.btnInicioSesion.UseVisualStyleBackColor = True
@@ -165,9 +170,10 @@ Partial Class Perfil
         Me.btnPaciente.ForeColor = System.Drawing.Color.White
         Me.btnPaciente.Image = Global.CapaPresentacion.My.Resources.Resources.clientes
         Me.btnPaciente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnPaciente.Location = New System.Drawing.Point(0, 267)
+        Me.btnPaciente.Location = New System.Drawing.Point(0, 356)
+        Me.btnPaciente.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnPaciente.Name = "btnPaciente"
-        Me.btnPaciente.Size = New System.Drawing.Size(215, 58)
+        Me.btnPaciente.Size = New System.Drawing.Size(246, 77)
         Me.btnPaciente.TabIndex = 12
         Me.btnPaciente.Text = "    Paciente"
         Me.btnPaciente.UseVisualStyleBackColor = True
@@ -183,9 +189,10 @@ Partial Class Perfil
         Me.btnFarmaceuta.ForeColor = System.Drawing.Color.White
         Me.btnFarmaceuta.Image = Global.CapaPresentacion.My.Resources.Resources.clientes
         Me.btnFarmaceuta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnFarmaceuta.Location = New System.Drawing.Point(3, 203)
+        Me.btnFarmaceuta.Location = New System.Drawing.Point(3, 271)
+        Me.btnFarmaceuta.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnFarmaceuta.Name = "btnFarmaceuta"
-        Me.btnFarmaceuta.Size = New System.Drawing.Size(215, 58)
+        Me.btnFarmaceuta.Size = New System.Drawing.Size(246, 77)
         Me.btnFarmaceuta.TabIndex = 11
         Me.btnFarmaceuta.Text = "    Farmaceuta"
         Me.btnFarmaceuta.UseVisualStyleBackColor = True
@@ -201,9 +208,10 @@ Partial Class Perfil
         Me.btnEncargado.ForeColor = System.Drawing.Color.White
         Me.btnEncargado.Image = Global.CapaPresentacion.My.Resources.Resources.logofile1
         Me.btnEncargado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnEncargado.Location = New System.Drawing.Point(3, 139)
+        Me.btnEncargado.Location = New System.Drawing.Point(3, 185)
+        Me.btnEncargado.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnEncargado.Name = "btnEncargado"
-        Me.btnEncargado.Size = New System.Drawing.Size(215, 58)
+        Me.btnEncargado.Size = New System.Drawing.Size(246, 77)
         Me.btnEncargado.TabIndex = 10
         Me.btnEncargado.Text = "    Encargado"
         Me.btnEncargado.UseVisualStyleBackColor = True
@@ -219,9 +227,10 @@ Partial Class Perfil
         Me.btnPerfil.ForeColor = System.Drawing.Color.White
         Me.btnPerfil.Image = Global.CapaPresentacion.My.Resources.Resources.logouser
         Me.btnPerfil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnPerfil.Location = New System.Drawing.Point(0, 75)
+        Me.btnPerfil.Location = New System.Drawing.Point(0, 100)
+        Me.btnPerfil.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnPerfil.Name = "btnPerfil"
-        Me.btnPerfil.Size = New System.Drawing.Size(215, 58)
+        Me.btnPerfil.Size = New System.Drawing.Size(246, 77)
         Me.btnPerfil.TabIndex = 9
         Me.btnPerfil.Text = "    Perfil"
         Me.btnPerfil.UseVisualStyleBackColor = True
@@ -230,9 +239,10 @@ Partial Class Perfil
         '
         Me.btnMenu.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnMenu.Image = Global.CapaPresentacion.My.Resources.Resources.Mobile_Menu_Icon
-        Me.btnMenu.Location = New System.Drawing.Point(168, 3)
+        Me.btnMenu.Location = New System.Drawing.Point(192, 4)
+        Me.btnMenu.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnMenu.Name = "btnMenu"
-        Me.btnMenu.Size = New System.Drawing.Size(49, 33)
+        Me.btnMenu.Size = New System.Drawing.Size(56, 44)
         Me.btnMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.btnMenu.TabIndex = 0
         Me.btnMenu.TabStop = False
@@ -248,27 +258,30 @@ Partial Class Perfil
         Me.cboFarmacia.Font = New System.Drawing.Font("Arial Rounded MT Bold", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.cboFarmacia.FormattingEnabled = True
         Me.cboFarmacia.Items.AddRange(New Object() {"-"})
-        Me.cboFarmacia.Location = New System.Drawing.Point(320, 112)
+        Me.cboFarmacia.Location = New System.Drawing.Point(366, 149)
+        Me.cboFarmacia.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.cboFarmacia.Name = "cboFarmacia"
-        Me.cboFarmacia.Size = New System.Drawing.Size(193, 25)
+        Me.cboFarmacia.Size = New System.Drawing.Size(220, 29)
         Me.cboFarmacia.TabIndex = 10
         '
         'cboTiposUsuario
         '
         Me.cboTiposUsuario.Font = New System.Drawing.Font("Arial Rounded MT Bold", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.cboTiposUsuario.FormattingEnabled = True
-        Me.cboTiposUsuario.Location = New System.Drawing.Point(320, 221)
+        Me.cboTiposUsuario.Location = New System.Drawing.Point(366, 295)
+        Me.cboTiposUsuario.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.cboTiposUsuario.Name = "cboTiposUsuario"
-        Me.cboTiposUsuario.Size = New System.Drawing.Size(193, 25)
+        Me.cboTiposUsuario.Size = New System.Drawing.Size(220, 29)
         Me.cboTiposUsuario.TabIndex = 11
         '
         'cboCedula
         '
         Me.cboCedula.Font = New System.Drawing.Font("Arial Rounded MT Bold", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.cboCedula.FormattingEnabled = True
-        Me.cboCedula.Location = New System.Drawing.Point(320, 325)
+        Me.cboCedula.Location = New System.Drawing.Point(366, 433)
+        Me.cboCedula.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.cboCedula.Name = "cboCedula"
-        Me.cboCedula.Size = New System.Drawing.Size(193, 25)
+        Me.cboCedula.Size = New System.Drawing.Size(220, 29)
         Me.cboCedula.TabIndex = 13
         '
         'lblF
@@ -276,9 +289,9 @@ Partial Class Perfil
         Me.lblF.AutoSize = True
         Me.lblF.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.lblF.ForeColor = System.Drawing.Color.White
-        Me.lblF.Location = New System.Drawing.Point(320, 80)
+        Me.lblF.Location = New System.Drawing.Point(366, 107)
         Me.lblF.Name = "lblF"
-        Me.lblF.Size = New System.Drawing.Size(211, 18)
+        Me.lblF.Size = New System.Drawing.Size(253, 23)
         Me.lblF.TabIndex = 14
         Me.lblF.Text = "Seleccione la farmacia"
         '
@@ -287,9 +300,9 @@ Partial Class Perfil
         Me.lblTU.AutoSize = True
         Me.lblTU.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.lblTU.ForeColor = System.Drawing.Color.White
-        Me.lblTU.Location = New System.Drawing.Point(284, 195)
+        Me.lblTU.Location = New System.Drawing.Point(325, 260)
         Me.lblTU.Name = "lblTU"
-        Me.lblTU.Size = New System.Drawing.Size(266, 18)
+        Me.lblTU.Size = New System.Drawing.Size(318, 23)
         Me.lblTU.TabIndex = 15
         Me.lblTU.Text = "Seleccione el tipo de usuario"
         '
@@ -298,9 +311,9 @@ Partial Class Perfil
         Me.lblC.AutoSize = True
         Me.lblC.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.lblC.ForeColor = System.Drawing.Color.White
-        Me.lblC.Location = New System.Drawing.Point(320, 295)
+        Me.lblC.Location = New System.Drawing.Point(366, 393)
         Me.lblC.Name = "lblC"
-        Me.lblC.Size = New System.Drawing.Size(193, 18)
+        Me.lblC.Size = New System.Drawing.Size(230, 23)
         Me.lblC.TabIndex = 16
         Me.lblC.Text = "Seleccione la cedula"
         '
@@ -313,9 +326,10 @@ Partial Class Perfil
         Me.Panel1.Controls.Add(Me.lblNombre)
         Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.ForeColor = System.Drawing.Color.White
-        Me.Panel1.Location = New System.Drawing.Point(635, 46)
+        Me.Panel1.Location = New System.Drawing.Point(726, 61)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(388, 471)
+        Me.Panel1.Size = New System.Drawing.Size(443, 628)
         Me.Panel1.TabIndex = 18
         '
         'Button2
@@ -327,9 +341,10 @@ Partial Class Perfil
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(147, 158)
+        Me.Button2.Location = New System.Drawing.Point(168, 211)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(124, 29)
+        Me.Button2.Size = New System.Drawing.Size(142, 39)
         Me.Button2.TabIndex = 9
         Me.Button2.Text = "Editar Perfil"
         Me.Button2.UseVisualStyleBackColor = False
@@ -351,36 +366,36 @@ Partial Class Perfil
         Me.txtnombre.Controls.Add(Me.Label8)
         Me.txtnombre.Controls.Add(Me.Label5)
         Me.txtnombre.Controls.Add(Me.Label6)
-        Me.txtnombre.Location = New System.Drawing.Point(17, 193)
+        Me.txtnombre.Location = New System.Drawing.Point(19, 257)
+        Me.txtnombre.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtnombre.Name = "txtnombre"
-        Me.txtnombre.Size = New System.Drawing.Size(355, 261)
+        Me.txtnombre.Size = New System.Drawing.Size(406, 348)
         Me.txtnombre.TabIndex = 8
         '
         'cboFarmaciaSelect
         '
         Me.cboFarmaciaSelect.FormattingEnabled = True
-        Me.cboFarmaciaSelect.Location = New System.Drawing.Point(161, 191)
+        Me.cboFarmaciaSelect.Location = New System.Drawing.Point(184, 255)
+        Me.cboFarmaciaSelect.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.cboFarmaciaSelect.Name = "cboFarmaciaSelect"
-        Me.cboFarmaciaSelect.Size = New System.Drawing.Size(121, 23)
+        Me.cboFarmaciaSelect.Size = New System.Drawing.Size(138, 28)
         Me.cboFarmaciaSelect.TabIndex = 18
         '
         'CheckBox2
         '
         Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Location = New System.Drawing.Point(36, 195)
-        Me.CheckBox2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.CheckBox2.Location = New System.Drawing.Point(41, 260)
         Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox2.Size = New System.Drawing.Size(18, 17)
         Me.CheckBox2.TabIndex = 17
         Me.CheckBox2.UseVisualStyleBackColor = True
         '
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(36, 195)
-        Me.CheckBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.CheckBox1.Location = New System.Drawing.Point(41, 260)
         Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox1.Size = New System.Drawing.Size(18, 17)
         Me.CheckBox1.TabIndex = 17
         Me.CheckBox1.UseVisualStyleBackColor = True
         '
@@ -388,54 +403,54 @@ Partial Class Perfil
         '
         Me.cboFarmacia_Select.FormattingEnabled = True
         Me.cboFarmacia_Select.Items.AddRange(New Object() {"-"})
-        Me.cboFarmacia_Select.Location = New System.Drawing.Point(181, 291)
-        Me.cboFarmacia_Select.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.cboFarmacia_Select.Location = New System.Drawing.Point(207, 388)
+        Me.cboFarmacia_Select.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
         Me.cboFarmacia_Select.Name = "cboFarmacia_Select"
-        Me.cboFarmacia_Select.Size = New System.Drawing.Size(166, 23)
+        Me.cboFarmacia_Select.Size = New System.Drawing.Size(189, 28)
         Me.cboFarmacia_Select.TabIndex = 16
         '
         'txtPerfilapellido
         '
-        Me.txtPerfilapellido.Location = New System.Drawing.Point(130, 74)
-        Me.txtPerfilapellido.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtPerfilapellido.Location = New System.Drawing.Point(149, 99)
+        Me.txtPerfilapellido.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
         Me.txtPerfilapellido.Name = "txtPerfilapellido"
-        Me.txtPerfilapellido.Size = New System.Drawing.Size(197, 23)
+        Me.txtPerfilapellido.Size = New System.Drawing.Size(225, 27)
         Me.txtPerfilapellido.TabIndex = 15
         '
         'Label2
         '
         Me.Label2.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(36, 74)
+        Me.Label2.Location = New System.Drawing.Point(41, 99)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(82, 19)
+        Me.Label2.Size = New System.Drawing.Size(94, 25)
         Me.Label2.TabIndex = 14
         Me.Label2.Text = "Apellido: "
         '
         'txtPerfilNombre
         '
-        Me.txtPerfilNombre.Location = New System.Drawing.Point(130, 38)
-        Me.txtPerfilNombre.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtPerfilNombre.Location = New System.Drawing.Point(149, 51)
+        Me.txtPerfilNombre.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
         Me.txtPerfilNombre.Name = "txtPerfilNombre"
-        Me.txtPerfilNombre.Size = New System.Drawing.Size(197, 23)
+        Me.txtPerfilNombre.Size = New System.Drawing.Size(225, 27)
         Me.txtPerfilNombre.TabIndex = 13
         '
         'Label1
         '
         Me.Label1.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(39, 42)
+        Me.Label1.Location = New System.Drawing.Point(45, 56)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(82, 19)
+        Me.Label1.Size = New System.Drawing.Size(94, 25)
         Me.Label1.TabIndex = 12
         Me.Label1.Text = "Nombre: "
         '
         'txtTelefono
         '
-        Me.txtTelefono.Location = New System.Drawing.Point(130, 143)
-        Me.txtTelefono.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtTelefono.Location = New System.Drawing.Point(149, 191)
+        Me.txtTelefono.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
         Me.txtTelefono.Name = "txtTelefono"
-        Me.txtTelefono.Size = New System.Drawing.Size(197, 23)
+        Me.txtTelefono.Size = New System.Drawing.Size(225, 27)
         Me.txtTelefono.TabIndex = 10
         '
         'Label4
@@ -443,27 +458,27 @@ Partial Class Perfil
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(57, 191)
+        Me.Label4.Location = New System.Drawing.Point(65, 255)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(88, 18)
+        Me.Label4.Size = New System.Drawing.Size(108, 23)
         Me.Label4.TabIndex = 7
         Me.Label4.Text = "Farmacia:"
         '
         'txtCorreo
         '
-        Me.txtCorreo.Location = New System.Drawing.Point(130, 109)
-        Me.txtCorreo.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtCorreo.Location = New System.Drawing.Point(149, 145)
+        Me.txtCorreo.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
         Me.txtCorreo.Name = "txtCorreo"
-        Me.txtCorreo.Size = New System.Drawing.Size(197, 23)
+        Me.txtCorreo.Size = New System.Drawing.Size(225, 27)
         Me.txtCorreo.TabIndex = 9
         '
         'Label8
         '
         Me.Label8.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label8.ForeColor = System.Drawing.Color.White
-        Me.Label8.Location = New System.Drawing.Point(67, 291)
+        Me.Label8.Location = New System.Drawing.Point(77, 388)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(86, 19)
+        Me.Label8.Size = New System.Drawing.Size(98, 25)
         Me.Label8.TabIndex = 7
         Me.Label8.Text = "Farmacia:"
         '
@@ -471,9 +486,9 @@ Partial Class Perfil
         '
         Me.Label5.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(39, 113)
+        Me.Label5.Location = New System.Drawing.Point(45, 151)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(70, 19)
+        Me.Label5.Size = New System.Drawing.Size(80, 25)
         Me.Label5.TabIndex = 4
         Me.Label5.Text = "Correo:"
         '
@@ -481,18 +496,18 @@ Partial Class Perfil
         '
         Me.Label6.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(32, 147)
+        Me.Label6.Location = New System.Drawing.Point(37, 196)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(86, 19)
+        Me.Label6.Size = New System.Drawing.Size(98, 25)
         Me.Label6.TabIndex = 5
         Me.Label6.Text = "Telefono: "
         '
         'lblTipodeUsuario
         '
         Me.lblTipodeUsuario.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lblTipodeUsuario.Location = New System.Drawing.Point(112, 19)
+        Me.lblTipodeUsuario.Location = New System.Drawing.Point(128, 25)
         Me.lblTipodeUsuario.Name = "lblTipodeUsuario"
-        Me.lblTipodeUsuario.Size = New System.Drawing.Size(195, 18)
+        Me.lblTipodeUsuario.Size = New System.Drawing.Size(223, 24)
         Me.lblTipodeUsuario.TabIndex = 6
         Me.lblTipodeUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -500,9 +515,9 @@ Partial Class Perfil
         '
         Me.lblNombre.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.lblNombre.ForeColor = System.Drawing.Color.White
-        Me.lblNombre.Location = New System.Drawing.Point(112, 133)
+        Me.lblNombre.Location = New System.Drawing.Point(128, 177)
         Me.lblNombre.Name = "lblNombre"
-        Me.lblNombre.Size = New System.Drawing.Size(195, 22)
+        Me.lblNombre.Size = New System.Drawing.Size(223, 29)
         Me.lblNombre.TabIndex = 2
         Me.lblNombre.Text = "Nombre"
         Me.lblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -511,10 +526,10 @@ Partial Class Perfil
         '
         Me.PictureBox1.BackgroundImage = Global.CapaPresentacion.My.Resources.Resources.logouser
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox1.Location = New System.Drawing.Point(161, 41)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.PictureBox1.Location = New System.Drawing.Point(184, 55)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(98, 95)
+        Me.PictureBox1.Size = New System.Drawing.Size(112, 127)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
@@ -528,10 +543,10 @@ Partial Class Perfil
         Me.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnConsultar.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.btnConsultar.ForeColor = System.Drawing.Color.White
-        Me.btnConsultar.Location = New System.Drawing.Point(364, 403)
-        Me.btnConsultar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnConsultar.Location = New System.Drawing.Point(416, 537)
+        Me.btnConsultar.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
         Me.btnConsultar.Name = "btnConsultar"
-        Me.btnConsultar.Size = New System.Drawing.Size(124, 31)
+        Me.btnConsultar.Size = New System.Drawing.Size(142, 41)
         Me.btnConsultar.TabIndex = 19
         Me.btnConsultar.Text = "Consultar"
         Me.btnConsultar.UseVisualStyleBackColor = False
@@ -542,12 +557,13 @@ Partial Class Perfil
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.Navy
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(570, 542)
+        Me.DataGridView1.Location = New System.Drawing.Point(651, 723)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 23
-        Me.DataGridView1.Size = New System.Drawing.Size(10, 10)
+        Me.DataGridView1.Size = New System.Drawing.Size(11, 13)
         Me.DataGridView1.TabIndex = 20
         Me.DataGridView1.Visible = False
         '
@@ -557,21 +573,22 @@ Partial Class Perfil
         Me.DataGridView2.AllowUserToDeleteRows = False
         Me.DataGridView2.BackgroundColor = System.Drawing.Color.Navy
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Location = New System.Drawing.Point(584, 542)
+        Me.DataGridView2.Location = New System.Drawing.Point(667, 723)
+        Me.DataGridView2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.DataGridView2.Name = "DataGridView2"
         Me.DataGridView2.ReadOnly = True
         Me.DataGridView2.RowHeadersWidth = 51
         Me.DataGridView2.RowTemplate.Height = 23
-        Me.DataGridView2.Size = New System.Drawing.Size(10, 10)
+        Me.DataGridView2.Size = New System.Drawing.Size(11, 13)
         Me.DataGridView2.TabIndex = 21
         Me.DataGridView2.Visible = False
         '
         'Perfil
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Navy
-        Me.ClientSize = New System.Drawing.Size(1084, 561)
+        Me.ClientSize = New System.Drawing.Size(1239, 748)
         Me.Controls.Add(Me.DataGridView2)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.btnConsultar)
@@ -583,6 +600,7 @@ Partial Class Perfil
         Me.Controls.Add(Me.cboTiposUsuario)
         Me.Controls.Add(Me.cboFarmacia)
         Me.Controls.Add(Me.PanelMenu)
+        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "Perfil"
         Me.Text = "Perfil"
         Me.PanelMenu.ResumeLayout(False)

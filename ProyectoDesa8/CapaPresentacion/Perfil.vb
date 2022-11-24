@@ -64,10 +64,13 @@
         Dim farmacias As New DataView(CapaDatos.Metodos.FARMACIAS)
         cboFarmacia.ValueMember = "nombre"
         cboFarmacia.DisplayMember = "nombre"
+
         cboFarmacia_Select.ValueMember = "nombre"
         cboFarmacia_Select.DisplayMember = "nombre"
+
         cboTiposUsuario.ValueMember = "tipo"
         cboTiposUsuario.DisplayMember = "tipo"
+
         cboFarmacia_Select.DataSource = farmacias
         cboFarmacia.DataSource = farmacias
         cboTiposUsuario.DataSource = tiposusuario

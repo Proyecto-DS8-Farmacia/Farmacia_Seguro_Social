@@ -2,15 +2,19 @@
 
     Public Farmacia As String
 
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
+    Private Sub Registrar_Usuariovb_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim tiposusuario As New DataView(CapaDatos.Metodos.TIPOSDEUSUARIO)
         Dim farmacias As New DataView(CapaDatos.Metodos.FARMACIAS)
         cboFarmacia.ValueMember = "nombre"
         cboFarmacia.DisplayMember = "nombre"
-        ' cboFarmacia_Select.ValueMember = "nombre"
-        ' cboFarmacia_Select.DisplayMember = "nombre"
+
+        'cboFarmacia_Select.ValueMember = "nombre"
+        'cboFarmacia_Select.DisplayMember = "nombre"
+
         cboTiposUsuario.ValueMember = "tipo"
         cboTiposUsuario.DisplayMember = "tipo"
+
         '  cboFarmacia_Select.DataSource = farmacias
         cboFarmacia.DataSource = farmacias
         cboTiposUsuario.DataSource = tiposusuario
@@ -58,7 +62,7 @@
         Form1.Close()
     End Sub
 
-    Private Sub cboFarmacia_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboFarmacia.SelectedValueChanged
+    Private Sub cboFarmacia_SelectedIndexChanged_1(sender As Object, e As EventArgs) Handles cboFarmacia.SelectedIndexChanged
         Dim Data As New DataView(CapaDatos.Metodos.DATOSDEUSUARIO)
         If (cboFarmacia.SelectedValue IsNot Nothing And cboTiposUsuario.SelectedValue IsNot Nothing) Then
             Data.RowFilter = "farmacia like '" & cboFarmacia.SelectedValue.ToString & "' and tipo like '" & cboTiposUsuario.SelectedValue.ToString & "' "
@@ -66,11 +70,14 @@
 
             ''    cboCedula.ValueMember = "cedula"
             '   cboCedula.DisplayMember = "cedula"
-            ''   cboCedula.DataSource = Data
+            '   cboCedula.DataSource = Data
 
         End If
 
+
+
     End Sub
+
 
     Private Sub cboTiposUsuario_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboTiposUsuario.SelectedIndexChanged
         Dim Data As New DataView(CapaDatos.Metodos.DATOSDEUSUARIO)
@@ -120,13 +127,9 @@
 
     End Sub
 
-    Private Sub cboFarmacia_SelectedIndexChanged_1(sender As Object, e As EventArgs) Handles cboFarmacia.SelectedIndexChanged
 
-    End Sub
 
-    Private Sub Registrar_Usuariovb_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-    End Sub
 
     Private Sub btnAdministrador_Click(sender As Object, e As EventArgs) Handles btnAdministrador.Click
 
