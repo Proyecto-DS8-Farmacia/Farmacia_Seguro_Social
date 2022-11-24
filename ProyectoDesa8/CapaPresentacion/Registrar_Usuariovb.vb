@@ -108,11 +108,16 @@
         Else
             If (contr.Equals(contr2)) Then
 
-                If (CapaDatos.Metodos.RegistrarUsuario(cedula, nombre, apellido, correo_e, telefono, contr2, tipo, farma)) Then
+
+                Try
+                    CapaDatos.Metodos.RegistrarUsuario(cedula, nombre, apellido, correo_e, telefono, contr2, tipo, farma)
                     MsgBox("Usuario registrado con Exito")
-                Else
+                Catch ex As Exception
                     MsgBox("ERROR DE REGISTRO")
-                End If
+                    MsgBox("Error: " & ex.ToString)
+                End Try
+
+
             Else
                 MsgBox("Contraseña incorrecta")
 

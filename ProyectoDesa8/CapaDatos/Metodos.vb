@@ -1,5 +1,4 @@
 ﻿Imports System.Data.SqlClient
-
 Public Class Metodos
 
 
@@ -173,7 +172,14 @@ Public Class Metodos
                 CMD.Parameters.AddWithValue("@farma", farmacia)
 
                 CN.Open()
-                Return CMD.ExecuteReader().HasRows.ToString
+                Try
+                    Return CMD.ExecuteReader().HasRows.ToString
+                Catch ex As Exception
+
+                    MsgBox("Error: " & ex.ToString)
+                    Return "False"
+                End Try
+
 
             End Using
         End Using
