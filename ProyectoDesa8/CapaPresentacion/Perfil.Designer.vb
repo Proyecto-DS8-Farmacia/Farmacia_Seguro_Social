@@ -44,6 +44,7 @@ Partial Class Perfil
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.txtnombre = New System.Windows.Forms.Panel()
+        Me.cboFarmaciaSelect = New System.Windows.Forms.ComboBox()
         Me.CheckBox2 = New System.Windows.Forms.CheckBox()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.cboFarmacia_Select = New System.Windows.Forms.ComboBox()
@@ -89,8 +90,8 @@ Partial Class Perfil
         '
         Me.btnSalir.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnSalir.FlatAppearance.BorderSize = 0
-        Me.btnSalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnSalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
+        Me.btnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
         Me.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSalir.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.btnSalir.ForeColor = System.Drawing.Color.White
@@ -121,8 +122,8 @@ Partial Class Perfil
         '
         Me.btnAdministrador.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnAdministrador.FlatAppearance.BorderSize = 0
-        Me.btnAdministrador.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnAdministrador.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnAdministrador.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
+        Me.btnAdministrador.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
         Me.btnAdministrador.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAdministrador.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.btnAdministrador.ForeColor = System.Drawing.Color.White
@@ -139,8 +140,8 @@ Partial Class Perfil
         '
         Me.btnInicioSesion.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnInicioSesion.FlatAppearance.BorderSize = 0
-        Me.btnInicioSesion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnInicioSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnInicioSesion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
+        Me.btnInicioSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
         Me.btnInicioSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnInicioSesion.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.btnInicioSesion.ForeColor = System.Drawing.Color.White
@@ -157,8 +158,8 @@ Partial Class Perfil
         '
         Me.btnPaciente.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnPaciente.FlatAppearance.BorderSize = 0
-        Me.btnPaciente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnPaciente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnPaciente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
+        Me.btnPaciente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
         Me.btnPaciente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnPaciente.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.btnPaciente.ForeColor = System.Drawing.Color.White
@@ -175,8 +176,8 @@ Partial Class Perfil
         '
         Me.btnFarmaceuta.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnFarmaceuta.FlatAppearance.BorderSize = 0
-        Me.btnFarmaceuta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnFarmaceuta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnFarmaceuta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
+        Me.btnFarmaceuta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
         Me.btnFarmaceuta.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnFarmaceuta.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.btnFarmaceuta.ForeColor = System.Drawing.Color.White
@@ -193,8 +194,8 @@ Partial Class Perfil
         '
         Me.btnEncargado.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnEncargado.FlatAppearance.BorderSize = 0
-        Me.btnEncargado.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnEncargado.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnEncargado.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
+        Me.btnEncargado.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
         Me.btnEncargado.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnEncargado.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.btnEncargado.ForeColor = System.Drawing.Color.White
@@ -211,8 +212,8 @@ Partial Class Perfil
         '
         Me.btnPerfil.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnPerfil.FlatAppearance.BorderSize = 0
-        Me.btnPerfil.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnPerfil.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnPerfil.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
+        Me.btnPerfil.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
         Me.btnPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnPerfil.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.btnPerfil.ForeColor = System.Drawing.Color.White
@@ -326,7 +327,7 @@ Partial Class Perfil
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(135, 159)
+        Me.Button2.Location = New System.Drawing.Point(147, 158)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(124, 29)
         Me.Button2.TabIndex = 9
@@ -336,6 +337,7 @@ Partial Class Perfil
         'txtnombre
         '
         Me.txtnombre.BackColor = System.Drawing.Color.Navy
+        Me.txtnombre.Controls.Add(Me.cboFarmaciaSelect)
         Me.txtnombre.Controls.Add(Me.CheckBox2)
         Me.txtnombre.Controls.Add(Me.CheckBox1)
         Me.txtnombre.Controls.Add(Me.cboFarmacia_Select)
@@ -353,6 +355,14 @@ Partial Class Perfil
         Me.txtnombre.Name = "txtnombre"
         Me.txtnombre.Size = New System.Drawing.Size(355, 261)
         Me.txtnombre.TabIndex = 8
+        '
+        'cboFarmaciaSelect
+        '
+        Me.cboFarmaciaSelect.FormattingEnabled = True
+        Me.cboFarmaciaSelect.Location = New System.Drawing.Point(161, 191)
+        Me.cboFarmaciaSelect.Name = "cboFarmaciaSelect"
+        Me.cboFarmaciaSelect.Size = New System.Drawing.Size(121, 23)
+        Me.cboFarmaciaSelect.TabIndex = 18
         '
         'CheckBox2
         '
@@ -386,17 +396,17 @@ Partial Class Perfil
         '
         'txtPerfilapellido
         '
-        Me.txtPerfilapellido.Location = New System.Drawing.Point(156, 74)
+        Me.txtPerfilapellido.Location = New System.Drawing.Point(130, 74)
         Me.txtPerfilapellido.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtPerfilapellido.Name = "txtPerfilapellido"
-        Me.txtPerfilapellido.Size = New System.Drawing.Size(161, 23)
+        Me.txtPerfilapellido.Size = New System.Drawing.Size(197, 23)
         Me.txtPerfilapellido.TabIndex = 15
         '
         'Label2
         '
         Me.Label2.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(67, 127)
+        Me.Label2.Location = New System.Drawing.Point(36, 74)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(82, 19)
         Me.Label2.TabIndex = 14
@@ -404,17 +414,17 @@ Partial Class Perfil
         '
         'txtPerfilNombre
         '
-        Me.txtPerfilNombre.Location = New System.Drawing.Point(156, 38)
+        Me.txtPerfilNombre.Location = New System.Drawing.Point(130, 38)
         Me.txtPerfilNombre.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtPerfilNombre.Name = "txtPerfilNombre"
-        Me.txtPerfilNombre.Size = New System.Drawing.Size(161, 23)
+        Me.txtPerfilNombre.Size = New System.Drawing.Size(197, 23)
         Me.txtPerfilNombre.TabIndex = 13
         '
         'Label1
         '
         Me.Label1.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(67, 79)
+        Me.Label1.Location = New System.Drawing.Point(39, 42)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(82, 19)
         Me.Label1.TabIndex = 12
@@ -422,10 +432,10 @@ Partial Class Perfil
         '
         'txtTelefono
         '
-        Me.txtTelefono.Location = New System.Drawing.Point(156, 143)
+        Me.txtTelefono.Location = New System.Drawing.Point(130, 143)
         Me.txtTelefono.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtTelefono.Name = "txtTelefono"
-        Me.txtTelefono.Size = New System.Drawing.Size(161, 23)
+        Me.txtTelefono.Size = New System.Drawing.Size(197, 23)
         Me.txtTelefono.TabIndex = 10
         '
         'Label4
@@ -441,10 +451,10 @@ Partial Class Perfil
         '
         'txtCorreo
         '
-        Me.txtCorreo.Location = New System.Drawing.Point(156, 109)
+        Me.txtCorreo.Location = New System.Drawing.Point(130, 109)
         Me.txtCorreo.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtCorreo.Name = "txtCorreo"
-        Me.txtCorreo.Size = New System.Drawing.Size(161, 23)
+        Me.txtCorreo.Size = New System.Drawing.Size(197, 23)
         Me.txtCorreo.TabIndex = 9
         '
         'Label8
@@ -461,7 +471,7 @@ Partial Class Perfil
         '
         Me.Label5.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(67, 176)
+        Me.Label5.Location = New System.Drawing.Point(39, 113)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(70, 19)
         Me.Label5.TabIndex = 4
@@ -471,7 +481,7 @@ Partial Class Perfil
         '
         Me.Label6.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(67, 224)
+        Me.Label6.Location = New System.Drawing.Point(32, 147)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(86, 19)
         Me.Label6.TabIndex = 5
@@ -490,7 +500,7 @@ Partial Class Perfil
         '
         Me.lblNombre.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.lblNombre.ForeColor = System.Drawing.Color.White
-        Me.lblNombre.Location = New System.Drawing.Point(112, 179)
+        Me.lblNombre.Location = New System.Drawing.Point(112, 133)
         Me.lblNombre.Name = "lblNombre"
         Me.lblNombre.Size = New System.Drawing.Size(195, 22)
         Me.lblNombre.TabIndex = 2
@@ -500,10 +510,11 @@ Partial Class Perfil
         'PictureBox1
         '
         Me.PictureBox1.BackgroundImage = Global.CapaPresentacion.My.Resources.Resources.logouser
-        Me.PictureBox1.Location = New System.Drawing.Point(156, 57)
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox1.Location = New System.Drawing.Point(161, 41)
         Me.PictureBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(103, 105)
+        Me.PictureBox1.Size = New System.Drawing.Size(98, 95)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
@@ -520,7 +531,7 @@ Partial Class Perfil
         Me.btnConsultar.Location = New System.Drawing.Point(364, 403)
         Me.btnConsultar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnConsultar.Name = "btnConsultar"
-        Me.btnConsultar.Size = New System.Drawing.Size(86, 31)
+        Me.btnConsultar.Size = New System.Drawing.Size(124, 31)
         Me.btnConsultar.TabIndex = 19
         Me.btnConsultar.Text = "Consultar"
         Me.btnConsultar.UseVisualStyleBackColor = False
@@ -529,6 +540,7 @@ Partial Class Perfil
         '
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
+        Me.DataGridView1.BackgroundColor = System.Drawing.Color.Navy
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(570, 542)
         Me.DataGridView1.Name = "DataGridView1"
@@ -543,6 +555,7 @@ Partial Class Perfil
         '
         Me.DataGridView2.AllowUserToAddRows = False
         Me.DataGridView2.AllowUserToDeleteRows = False
+        Me.DataGridView2.BackgroundColor = System.Drawing.Color.Navy
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView2.Location = New System.Drawing.Point(584, 542)
         Me.DataGridView2.Name = "DataGridView2"
@@ -628,4 +641,5 @@ Partial Class Perfil
     Friend WithEvents CheckBox1 As CheckBox
     Friend WithEvents CheckBox2 As CheckBox
     Friend WithEvents Label4 As Label
+    Friend WithEvents cboFarmaciaSelect As ComboBox
 End Class

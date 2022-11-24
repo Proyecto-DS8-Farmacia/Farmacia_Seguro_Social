@@ -198,7 +198,7 @@ Public Class Metodos
     Public Shared Function FARMACIAS() As DataTable
 
         Using CN As New SqlConnection(My.Settings.Conexion)
-            Using DA As New SqlDataAdapter("select nombre from farmacia", CN)
+            Using DA As New SqlDataAdapter("select nombre, cod_farm from farmacia", CN)
                 Using Data As New DataTable
                     DA.Fill(Data)
 
@@ -307,5 +307,33 @@ Public Class Metodos
         End Using
     End Function
 
+
+    Public Shared Function BUSCAR_CORREO_USUARIO(CORREO As String) As String
+        Using CN As New SqlConnection(My.Settings.Conexion)
+            Using CMD As New SqlCommand("Pa_busca_correo_usuario", CN)
+                CMD.CommandType = CommandType.StoredProcedure
+                'CMD.Parameters.AddWithValue("@ENSQLSERVER", ENVISUALSTUDIO)
+                CMD.Parameters.AddWithValue("@CORREO", CORREO)
+                CN.Open()
+                Return CMD.ExecuteReader().HasRows.ToString
+
+            End Using
+        End Using
+
+    End Function
+
+    Public Shared Function BUSCAR_CORREO_PACIENTE(CORREO As String) As String
+        Using CN As New SqlConnection(My.Settings.Conexion)
+            Using CMD As New SqlCommand("Pa_busca_correo_paciente", CN)
+                CMD.CommandType = CommandType.StoredProcedure
+                'CMD.Parameters.AddWithValue("@ENSQLSERVER", ENVISUALSTUDIO)
+                CMD.Parameters.AddWithValue("@CORREO", CORREO)
+                CN.Open()
+                Return CMD.ExecuteReader().HasRows.ToString
+
+            End Using
+        End Using
+
+    End Function
 
 End Class

@@ -26,6 +26,7 @@ Partial Class ReStock
         Me.PanelMenu = New System.Windows.Forms.Panel()
         Me.btnSalir = New System.Windows.Forms.Button()
         Me.PanelMenuSmall = New System.Windows.Forms.Panel()
+        Me.btnAdministrador = New System.Windows.Forms.Button()
         Me.btnPaciente = New System.Windows.Forms.Button()
         Me.btnFarmaceuta = New System.Windows.Forms.Button()
         Me.btnEncargado = New System.Windows.Forms.Button()
@@ -48,6 +49,8 @@ Partial Class ReStock
         Me.dgv_ReStock = New System.Windows.Forms.DataGridView()
         Me.Sustancia = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.tmMostrarMenu = New System.Windows.Forms.Timer(Me.components)
+        Me.tmOcultarMenu = New System.Windows.Forms.Timer(Me.components)
         Me.PanelMenu.SuspendLayout()
         Me.PanelMenuSmall.SuspendLayout()
         CType(Me.btnMenu, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -64,15 +67,15 @@ Partial Class ReStock
         Me.PanelMenu.Dock = System.Windows.Forms.DockStyle.Left
         Me.PanelMenu.Location = New System.Drawing.Point(0, 0)
         Me.PanelMenu.Name = "PanelMenu"
-        Me.PanelMenu.Size = New System.Drawing.Size(251, 748)
+        Me.PanelMenu.Size = New System.Drawing.Size(220, 748)
         Me.PanelMenu.TabIndex = 17
         '
         'btnSalir
         '
         Me.btnSalir.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnSalir.FlatAppearance.BorderSize = 0
-        Me.btnSalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnSalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
+        Me.btnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
         Me.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSalir.Font = New System.Drawing.Font("Arial Rounded MT Bold", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.btnSalir.ForeColor = System.Drawing.Color.White
@@ -80,7 +83,7 @@ Partial Class ReStock
         Me.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnSalir.Location = New System.Drawing.Point(5, 635)
         Me.btnSalir.Name = "btnSalir"
-        Me.btnSalir.Size = New System.Drawing.Size(245, 77)
+        Me.btnSalir.Size = New System.Drawing.Size(220, 50)
         Me.btnSalir.TabIndex = 13
         Me.btnSalir.Text = "    Salir"
         Me.btnSalir.UseVisualStyleBackColor = True
@@ -88,6 +91,7 @@ Partial Class ReStock
         'PanelMenuSmall
         '
         Me.PanelMenuSmall.BackColor = System.Drawing.Color.Transparent
+        Me.PanelMenuSmall.Controls.Add(Me.btnAdministrador)
         Me.PanelMenuSmall.Controls.Add(Me.btnPaciente)
         Me.PanelMenuSmall.Controls.Add(Me.btnFarmaceuta)
         Me.PanelMenuSmall.Controls.Add(Me.btnEncargado)
@@ -96,15 +100,33 @@ Partial Class ReStock
         Me.PanelMenuSmall.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.PanelMenuSmall.Location = New System.Drawing.Point(1, 107)
         Me.PanelMenuSmall.Name = "PanelMenuSmall"
-        Me.PanelMenuSmall.Size = New System.Drawing.Size(245, 445)
+        Me.PanelMenuSmall.Size = New System.Drawing.Size(245, 509)
         Me.PanelMenuSmall.TabIndex = 1
+        '
+        'btnAdministrador
+        '
+        Me.btnAdministrador.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnAdministrador.FlatAppearance.BorderSize = 0
+        Me.btnAdministrador.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
+        Me.btnAdministrador.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
+        Me.btnAdministrador.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAdministrador.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.btnAdministrador.ForeColor = System.Drawing.Color.White
+        Me.btnAdministrador.Image = Global.CapaPresentacion.My.Resources.Resources.empleados
+        Me.btnAdministrador.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnAdministrador.Location = New System.Drawing.Point(0, 424)
+        Me.btnAdministrador.Name = "btnAdministrador"
+        Me.btnAdministrador.Size = New System.Drawing.Size(220, 50)
+        Me.btnAdministrador.TabIndex = 16
+        Me.btnAdministrador.Text = "    Administrador"
+        Me.btnAdministrador.UseVisualStyleBackColor = True
         '
         'btnPaciente
         '
         Me.btnPaciente.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnPaciente.FlatAppearance.BorderSize = 0
-        Me.btnPaciente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnPaciente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnPaciente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
+        Me.btnPaciente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
         Me.btnPaciente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnPaciente.Font = New System.Drawing.Font("Arial Rounded MT Bold", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.btnPaciente.ForeColor = System.Drawing.Color.White
@@ -112,7 +134,7 @@ Partial Class ReStock
         Me.btnPaciente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnPaciente.Location = New System.Drawing.Point(0, 357)
         Me.btnPaciente.Name = "btnPaciente"
-        Me.btnPaciente.Size = New System.Drawing.Size(245, 77)
+        Me.btnPaciente.Size = New System.Drawing.Size(220, 50)
         Me.btnPaciente.TabIndex = 12
         Me.btnPaciente.Text = "    Paciente"
         Me.btnPaciente.UseVisualStyleBackColor = True
@@ -121,8 +143,8 @@ Partial Class ReStock
         '
         Me.btnFarmaceuta.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnFarmaceuta.FlatAppearance.BorderSize = 0
-        Me.btnFarmaceuta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnFarmaceuta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnFarmaceuta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
+        Me.btnFarmaceuta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
         Me.btnFarmaceuta.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnFarmaceuta.Font = New System.Drawing.Font("Arial Rounded MT Bold", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.btnFarmaceuta.ForeColor = System.Drawing.Color.White
@@ -130,7 +152,7 @@ Partial Class ReStock
         Me.btnFarmaceuta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnFarmaceuta.Location = New System.Drawing.Point(3, 271)
         Me.btnFarmaceuta.Name = "btnFarmaceuta"
-        Me.btnFarmaceuta.Size = New System.Drawing.Size(245, 77)
+        Me.btnFarmaceuta.Size = New System.Drawing.Size(220, 50)
         Me.btnFarmaceuta.TabIndex = 11
         Me.btnFarmaceuta.Text = "    Farmaceuta"
         Me.btnFarmaceuta.UseVisualStyleBackColor = True
@@ -139,8 +161,8 @@ Partial Class ReStock
         '
         Me.btnEncargado.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnEncargado.FlatAppearance.BorderSize = 0
-        Me.btnEncargado.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnEncargado.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnEncargado.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
+        Me.btnEncargado.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
         Me.btnEncargado.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnEncargado.Font = New System.Drawing.Font("Arial Rounded MT Bold", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.btnEncargado.ForeColor = System.Drawing.Color.White
@@ -148,7 +170,7 @@ Partial Class ReStock
         Me.btnEncargado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnEncargado.Location = New System.Drawing.Point(3, 185)
         Me.btnEncargado.Name = "btnEncargado"
-        Me.btnEncargado.Size = New System.Drawing.Size(245, 77)
+        Me.btnEncargado.Size = New System.Drawing.Size(220, 50)
         Me.btnEncargado.TabIndex = 10
         Me.btnEncargado.Text = "    Encargado"
         Me.btnEncargado.UseVisualStyleBackColor = True
@@ -157,8 +179,8 @@ Partial Class ReStock
         '
         Me.btnPerfil.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnPerfil.FlatAppearance.BorderSize = 0
-        Me.btnPerfil.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnPerfil.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnPerfil.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
+        Me.btnPerfil.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
         Me.btnPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnPerfil.Font = New System.Drawing.Font("Arial Rounded MT Bold", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.btnPerfil.ForeColor = System.Drawing.Color.White
@@ -166,7 +188,7 @@ Partial Class ReStock
         Me.btnPerfil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnPerfil.Location = New System.Drawing.Point(0, 100)
         Me.btnPerfil.Name = "btnPerfil"
-        Me.btnPerfil.Size = New System.Drawing.Size(245, 77)
+        Me.btnPerfil.Size = New System.Drawing.Size(220, 50)
         Me.btnPerfil.TabIndex = 9
         Me.btnPerfil.Text = "    Perfil"
         Me.btnPerfil.UseVisualStyleBackColor = True
@@ -175,8 +197,8 @@ Partial Class ReStock
         '
         Me.btnInicioSesion.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnInicioSesion.FlatAppearance.BorderSize = 0
-        Me.btnInicioSesion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnInicioSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnInicioSesion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
+        Me.btnInicioSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
         Me.btnInicioSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnInicioSesion.Font = New System.Drawing.Font("Arial Rounded MT Bold", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.btnInicioSesion.ForeColor = System.Drawing.Color.White
@@ -184,7 +206,7 @@ Partial Class ReStock
         Me.btnInicioSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnInicioSesion.Location = New System.Drawing.Point(0, 15)
         Me.btnInicioSesion.Name = "btnInicioSesion"
-        Me.btnInicioSesion.Size = New System.Drawing.Size(245, 77)
+        Me.btnInicioSesion.Size = New System.Drawing.Size(220, 50)
         Me.btnInicioSesion.TabIndex = 8
         Me.btnInicioSesion.Text = "    Inicio Sesion"
         Me.btnInicioSesion.UseVisualStyleBackColor = True
@@ -193,7 +215,7 @@ Partial Class ReStock
         '
         Me.btnMenu.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnMenu.Image = Global.CapaPresentacion.My.Resources.Resources.Mobile_Menu_Icon
-        Me.btnMenu.Location = New System.Drawing.Point(190, 12)
+        Me.btnMenu.Location = New System.Drawing.Point(159, 12)
         Me.btnMenu.Name = "btnMenu"
         Me.btnMenu.Size = New System.Drawing.Size(56, 43)
         Me.btnMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -409,4 +431,7 @@ Partial Class ReStock
     Friend WithEvents dgv_ReStock As DataGridView
     Friend WithEvents Sustancia As DataGridViewTextBoxColumn
     Friend WithEvents Cantidad As DataGridViewTextBoxColumn
+    Friend WithEvents btnAdministrador As Button
+    Friend WithEvents tmMostrarMenu As Timer
+    Friend WithEvents tmOcultarMenu As Timer
 End Class

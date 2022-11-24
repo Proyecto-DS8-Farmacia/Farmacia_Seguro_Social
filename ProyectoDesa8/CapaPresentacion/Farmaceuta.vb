@@ -1,7 +1,5 @@
 ﻿Public Class Farmaceuta
-    Private Sub btnConsultarIn_Click(sender As Object, e As EventArgs) Handles btnConsultarIn.Click
-        ConsultarInventario.Show()
-    End Sub
+
     Private Sub PanelMenu_Paint(sender As Object, e As PaintEventArgs) Handles PanelMenu.Paint
         PanelMenu.BackColor = Color.FromArgb(100, 0, 35, 0)
     End Sub
@@ -48,9 +46,13 @@
         Form1.Close()
     End Sub
 
-    Private Sub btnPaciente_Click(sender As Object, e As EventArgs) Handles btnPaciente.Click
-        Paciente.Show()
-        Me.Hide()
+
+    Private Sub btnConsultarIn_Click(sender As Object, e As EventArgs) Handles btnConsultarIn.Click
+        ConsultarInventario.Show()
     End Sub
 
+    Private Sub btnRegistrarReceta_Click(sender As Object, e As EventArgs) Handles btnRegistrarReceta.Click
+        RegistrarReceta.Show()
+        Me.Hide()
+    End Sub
 End Class

@@ -33,35 +33,38 @@ Partial Class Form2
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.Silver
-        Me.Label1.Location = New System.Drawing.Point(44, 65)
+        Me.Label1.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(111, 77)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(52, 21)
+        Me.Label1.Size = New System.Drawing.Size(50, 18)
         Me.Label1.TabIndex = 11
         Me.Label1.Text = "email"
         '
         'txtEmail
         '
-        Me.txtEmail.BackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(94, Byte), Integer), CType(CType(129, Byte), Integer))
+        Me.txtEmail.BackColor = System.Drawing.Color.White
         Me.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtEmail.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEmail.ForeColor = System.Drawing.Color.White
-        Me.txtEmail.Location = New System.Drawing.Point(48, 89)
+        Me.txtEmail.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.txtEmail.ForeColor = System.Drawing.Color.Black
+        Me.txtEmail.Location = New System.Drawing.Point(116, 105)
+        Me.txtEmail.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.txtEmail.Name = "txtEmail"
-        Me.txtEmail.Size = New System.Drawing.Size(350, 20)
+        Me.txtEmail.Size = New System.Drawing.Size(408, 19)
         Me.txtEmail.TabIndex = 10
         '
         'btnSend
         '
-        Me.btnSend.BackColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(238, Byte), Integer))
+        Me.btnSend.BackColor = System.Drawing.Color.Black
         Me.btnSend.FlatAppearance.BorderSize = 0
         Me.btnSend.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSend.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSend.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.btnSend.ForeColor = System.Drawing.Color.White
-        Me.btnSend.Location = New System.Drawing.Point(147, 115)
+        Me.btnSend.Location = New System.Drawing.Point(232, 135)
+        Me.btnSend.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.btnSend.Name = "btnSend"
-        Me.btnSend.Size = New System.Drawing.Size(162, 31)
+        Me.btnSend.Size = New System.Drawing.Size(189, 36)
         Me.btnSend.TabIndex = 14
         Me.btnSend.Text = "Enviar"
         Me.btnSend.UseVisualStyleBackColor = False
@@ -69,50 +72,55 @@ Partial Class Form2
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.Silver
-        Me.Label2.Location = New System.Drawing.Point(44, 196)
+        Me.Label2.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(111, 228)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(65, 21)
+        Me.Label2.Size = New System.Drawing.Size(62, 18)
         Me.Label2.TabIndex = 16
         Me.Label2.Text = "codigo"
         '
         'txtVerify
         '
-        Me.txtVerify.BackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(94, Byte), Integer), CType(CType(129, Byte), Integer))
+        Me.txtVerify.BackColor = System.Drawing.Color.White
         Me.txtVerify.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtVerify.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtVerify.ForeColor = System.Drawing.Color.White
-        Me.txtVerify.Location = New System.Drawing.Point(48, 220)
+        Me.txtVerify.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.txtVerify.ForeColor = System.Drawing.Color.Black
+        Me.txtVerify.Location = New System.Drawing.Point(116, 256)
+        Me.txtVerify.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.txtVerify.Name = "txtVerify"
-        Me.txtVerify.Size = New System.Drawing.Size(350, 20)
+        Me.txtVerify.Size = New System.Drawing.Size(408, 19)
         Me.txtVerify.TabIndex = 15
         '
         'btnVerify
         '
-        Me.btnVerify.BackColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(238, Byte), Integer))
+        Me.btnVerify.BackColor = System.Drawing.Color.Black
         Me.btnVerify.FlatAppearance.BorderSize = 0
         Me.btnVerify.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnVerify.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnVerify.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.btnVerify.ForeColor = System.Drawing.Color.White
-        Me.btnVerify.Location = New System.Drawing.Point(147, 246)
+        Me.btnVerify.Location = New System.Drawing.Point(232, 286)
+        Me.btnVerify.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.btnVerify.Name = "btnVerify"
-        Me.btnVerify.Size = New System.Drawing.Size(162, 31)
+        Me.btnVerify.Size = New System.Drawing.Size(189, 36)
         Me.btnVerify.TabIndex = 17
         Me.btnVerify.Text = "Verificar"
         Me.btnVerify.UseVisualStyleBackColor = False
         '
         'Form2
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.BackColor = System.Drawing.Color.Navy
+        Me.ClientSize = New System.Drawing.Size(662, 365)
         Me.Controls.Add(Me.btnVerify)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.txtVerify)
         Me.Controls.Add(Me.btnSend)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txtEmail)
+        Me.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Name = "Form2"
         Me.Text = "Enviar codigo"
         Me.ResumeLayout(False)

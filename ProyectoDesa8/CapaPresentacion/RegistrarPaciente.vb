@@ -60,7 +60,11 @@
         Form1.Close()
     End Sub
 
-    Private Sub RegistrarPaciente_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+    Private Sub cboBeneficiario_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboBeneficiario.SelectedIndexChanged
+        If (cboBeneficiario.SelectedItem.Equals("No")) Then
+            txtFamiliarP.ReadOnly = True
+        Else
+            txtFamiliarP.ReadOnly = False
+        End If
     End Sub
 End Class

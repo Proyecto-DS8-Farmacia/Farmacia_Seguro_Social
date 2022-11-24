@@ -13,7 +13,7 @@ Public Class Form2
         toUser = txtEmail.Text
         from = "leonelvargas5012@gmail.com"
         pass = "hsvnfhcoiofuzddv"
-        messageBody = "tu codigo es" + RandowCode
+        messageBody = "tu codigo es " + RandowCode
         message.To.Add(toUser)
         message.From = New MailAddress(from)
         message.Body = messageBody
@@ -23,13 +23,26 @@ Public Class Form2
         smtp.Port = 587
         smtp.DeliveryMethod = smtp.DeliveryMethod.Network
         smtp.Credentials = New NetworkCredential(from, pass)
-        Try
-            smtp.Send(message)
-            MessageBox.Show("verifica tu correo electronico y introduce el codigo ")
 
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        End Try
+        If (CapaDatos.Metodos.BUSCAR_CORREO_USUARIO(txtEmail.Text.ToString)) Then
+            Try
+                smtp.Send(message)
+                MessageBox.Show("verifica tu correo electronico y introduce el codigo ")
+
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+            End Try
+        ElseIf (CapaDatos.Metodos.BUSCAR_CORREO_PACIENTE(txtEmail.Text.ToString)) Then
+            Try
+                smtp.Send(message)
+                MessageBox.Show("verifica tu correo electronico y introduce el codigo ")
+
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+            End Try
+
+        End If
+
     End Sub
 
     Private Sub btnVerify_Click(sender As Object, e As EventArgs) Handles btnVerify.Click

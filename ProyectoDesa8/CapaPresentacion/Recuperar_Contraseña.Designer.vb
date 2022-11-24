@@ -22,9 +22,16 @@ Partial Class Recuperar_Contraseña
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        components = New System.ComponentModel.Container
+        Me.SuspendLayout()
+        '
+        'Recuperar_Contraseña
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Name = "Recuperar_Contraseña"
         Me.Text = "Recuperar_Contraseña"
+        Me.ResumeLayout(False)
+
     End Sub
 End Class

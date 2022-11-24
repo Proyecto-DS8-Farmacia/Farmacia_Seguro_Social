@@ -80,6 +80,9 @@ Public Class Form1
             'Administrador.Show()
             'End If
         End If
+        txtCorreo.Text = ""
+        txtContraseña.Text = ""
+
     End Sub
 
     Private Sub btnRegistrar_Click(sender As Object, e As EventArgs) Handles btnRegistrar.Click
@@ -94,11 +97,13 @@ Public Class Form1
         f.Hide()
     End Sub
 
-
-
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub btnRegistrarPaciente_Click(sender As Object, e As EventArgs) Handles btnRegistrarPaciente.Click
+        RegistrarPaciente.Show()
+        Me.Hide()
 
     End Sub
+
+
 
     Private Sub btnRecuperarContra_Click(sender As Object, e As EventArgs) Handles btnRecuperarContra.Click
         Dim sc As Form2 = New Form2()

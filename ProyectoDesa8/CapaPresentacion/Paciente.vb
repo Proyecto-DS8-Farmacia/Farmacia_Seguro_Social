@@ -1,11 +1,6 @@
 ﻿Public Class Paciente
-    Private Sub btnConsultarIn_Click(sender As Object, e As EventArgs) Handles btnConsultarIn.Click
-        ConsultarInventario.Show()
-    End Sub
 
-    Private Sub btnHistorialRe_Click(sender As Object, e As EventArgs) Handles btnHistorialRe.Click
-        HistorialRecetas.Show()
-    End Sub
+
     Private Sub PanelMenu_Paint(sender As Object, e As PaintEventArgs) Handles PanelMenu.Paint
         PanelMenu.BackColor = Color.FromArgb(100, 0, 35, 0)
     End Sub
@@ -39,17 +34,21 @@
         Me.Hide()
     End Sub
 
-    Private Sub btnPerfil_Click(sender As Object, e As EventArgs) Handles btnPerfil.Click
-        Perfil.Show()
-        Me.Hide()
-    End Sub
-
     Private Sub btnPaciente_Click(sender As Object, e As EventArgs) Handles btnPaciente.Click
         Me.Show()
     End Sub
 
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
         Form1.Close()
+    End Sub
+
+    Private Sub btnConsultarIn_Click_1(sender As Object, e As EventArgs) Handles btnConsultarIn.Click
+        ConsultarInventario.Show()
+    End Sub
+
+    Private Sub btnHistorialRe_Click_1(sender As Object, e As EventArgs) Handles btnHistorialRe.Click
+        HistorialRecetas.Show()
+        Me.Hide()
     End Sub
 
 End Class

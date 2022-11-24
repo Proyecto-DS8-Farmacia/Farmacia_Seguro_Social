@@ -54,7 +54,20 @@
 
     End Sub
 
-    Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
+
+
+    Private Sub RegistrarReceta_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim data As New DataView(CapaDatos.Metodos.SUSTANCIAS)
+        Dim farmacias As New DataView(CapaDatos.Metodos.FARMACIAS)
+        cbxSustancia.ValueMember = "cod_sustancia"
+        cbxSustancia.DisplayMember = "nombre"
+        cbxSustancia.DataSource = data
+        cbxFarmacia.ValueMember = "cod_farm"
+        cbxFarmacia.DisplayMember = "nombre"
+        cbxFarmacia.DataSource = farmacias
+    End Sub
+
+    Private Sub btnAgregar_Click_1(sender As Object, e As EventArgs) Handles btnAgregar.Click
         Dim Lista As ListViewItem = New ListViewItem(cbxSustancia.SelectedValue.ToString)
         Dim id = cbxSustancia.SelectedValue.ToString
         Dim nombre = cbxSustancia.Text
@@ -73,18 +86,7 @@
         nudCant.Value = 1
     End Sub
 
-    Private Sub RegistrarReceta_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim data As New DataView(CapaDatos.Metodos.SUSTANCIAS)
-        Dim farmacias As New DataView(CapaDatos.Metodos.FARMACIAS)
-        cbxSustancia.ValueMember = "cod_sustancia"
-        cbxSustancia.DisplayMember = "nombre"
-        cbxSustancia.DataSource = data
-        cbxFarmacia.ValueMember = "cod_farm"
-        cbxFarmacia.DisplayMember = "nombre"
-        cbxFarmacia.DataSource = farmacias
-    End Sub
-
-    Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
+    Private Sub btnRegistrar_Click(sender As Object, e As EventArgs) Handles btnRegistrar.Click
         Dim dia As String, mes As String, an As String
         dia = dtpFecha.Value.Day
         mes = dtpFecha.Value.Month

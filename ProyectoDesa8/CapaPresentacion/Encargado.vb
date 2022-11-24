@@ -1,7 +1,5 @@
 ﻿Public Class Encargado
-    Private Sub btnConsultarIn_Click(sender As Object, e As EventArgs) Handles btnConsultarIn.Click
-        ConsultarInventario.Show()
-    End Sub
+
     Private Sub PanelMenu_Paint(sender As Object, e As PaintEventArgs) Handles PanelMenu.Paint
         PanelMenu.BackColor = Color.FromArgb(100, 0, 35, 0)
     End Sub
@@ -49,7 +47,12 @@
         Form1.Close()
     End Sub
 
-    Private Sub btnReStock_Click(sender As Object, e As EventArgs) Handles btnReStock.Click
+    Private Sub btnConsultarIn_Click(sender As Object, e As EventArgs) Handles btnConsultarIn.Click
+        ConsultarInventario.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub btnReStock_Click_1(sender As Object, e As EventArgs) Handles btnReStock.Click
         ReStock.Show()
     End Sub
 End Class
